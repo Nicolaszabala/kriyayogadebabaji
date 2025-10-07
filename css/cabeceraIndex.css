@@ -1,0 +1,43 @@
+#cabeceraIndex{/*amarillo*/
+	background-color:#FFF;
+	height:auto;
+
+	}
+	
+
+
+
+#cabecera {
+
+float:left;
+display:inline;
+
+}
+
+#cabecera li{
+
+float:left;
+display:inline;
+
+}	
+	
+	
+	
+	
+#cita{/*verde*/
+
+	width:890px;
+	border:1px solid #FFC621;
+	border-style:solid;
+	text-align:center;
+	padding:15px;
+	background-color:#FFF;
+	
+	font-family:Lato, Times, serif;
+	font-size:17px;
+	color:#AC1429;
+	font-style:normal;
+	font-weight:normal;
+}
+
+

@@ -1,0 +1,150 @@
+h1{
+	font-family:Lato, Helvetica, sans-serif;
+	font-size:18px;
+	font-weight:normal;
+	color:#333232;
+	line-height:115%;
+	text-align:justify;
+}
+
+h1 a:link{
+	text-decoration:none; 
+	color :#AC1429;
+}
+	
+h1 a:hover{
+	text-decoration:underline; color:#FFB321;font-weight: underline;
+}
+
+h1 a:visited{
+	 text-decoration:none;
+	 color:#AC1429;
+}
+
+
+
+
+
+
+
+
+h2{
+	font-family:Lato, Helvetica, sans-serif;
+	font-size:17px;
+	font-weight:normal;
+	color:#000;
+	line-height:117%;
+	text-align:justify;
+}
+	
+h2 a:link{
+	text-decoration:none; 
+	color :#AC1429;
+}
+	
+h2 a:hover{
+	text-decoration:underline; color:#FFB321;font-weight: underline;
+}
+
+h2 a:visited{
+	 text-decoration:none;
+	 color:#AC1429;
+}
+
+
+
+
+h4{
+	font-family:Lato, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:normal;
+	color:#000;
+	line-height:130%;
+	text-align:justify;
+}
+	
+h4 a:link{
+	text-decoration:none; 
+	color :#AC1429;
+}
+	
+h4 a:hover{
+	text-decoration:underline; color:#FFB321;font-weight: underline
+}
+
+h4 a:visited{
+	 text-decoration:none;
+	 color:#AC1429;
+}
+
+
+h5{
+	font-family:Lato, Helvetica, sans-serif;
+	font-size:16px;
+	font-weight:normal;
+	color:#AC1429;
+	line-height:130%;
+	text-align:justify;
+}
+
+
+h5 a:link{
+	text-decoration:none; 
+	color :#AC1429;
+}
+	
+h5 a:hover{
+	text-decoration:underline; color:#FFB321;font-weight: underline;
+}
+
+h5 a:visited{
+	 text-decoration:none;
+	 color:#AC1429;
+}
+	
+h6 a:hover{
+	text-decoration:underline; color:#FFB321;font-weight: underline
+}
+
+h6 a:visited{
+	 text-decoration:none;
+	 color:#AC1429;}
+
+
+h6 a:link{
+	text-decoration:none; 
+	color :#AC1429;}
+
+h6{
+	font-family:Lato, sans-serif;
+	font-size:18px;
+	font-weight:normal;
+	color:#AC1429;
+	line-height:130%;
+	text-align:center;	}
+
+	
+
+h3{
+	font-family:Lato, Helvetica, sans-serif;
+	font-size:16px;
+	font-weight:normal;
+	color:#000;
+	line-height:130%;
+	text-align:center;	}
+	
+	h3 a:link{
+	text-decoration:none; 
+	color :#AC1429;}
+	
+	h3 a:hover{
+	text-decoration:underline; color:#AC1429; font-weight:underline;}
+
+h3 a:visited{
+	 text-decoration:none;
+	 color:#AC1429;}
+
+
+
+
+	

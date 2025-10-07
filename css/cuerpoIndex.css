@@ -1,0 +1,440 @@
+.bienvenidos{
+width:100%;
+clear:right;}
+
+.bienvenidosUl li {
+float:left;
+display:inline;}
+
+.textoBienvenidos {
+background-color:#FFF;
+width:586px;
+height:255px;}
+	
+.blanco {
+margin-right:0px;
+width:30px; 
+height:255px;
+background-color: #FFF;/* verdeoscuro*/
+height:255px;}
+
+#barra {
+clear:left;
+background-color:#FFF;
+width:922px;	}
+
+
+#contenidos2 li{
+float:left;
+display:inline;
+background-color:#FFF;
+}
+
+
+#buscador {
+	clear:left;}
+
+#lateral{
+width:200px;
+background-color:#FFF;/*gris*/
+height:auto;}
+
+#lateral2 li{
+clear:left;}
+
+#blanco2 {
+margin-right:0px;
+width:30px; height:auto;
+/*rojo*/
+}
+
+#noticias {
+background-color: #FFF;/*verde*/
+width:692px;
+height:auto;
+}
+
+#noticiasA {
+background-color: #FFF;/*verde*/
+width:680px;
+height:auto;
+}
+
+.noticias1{/*azul*/
+width:100%;
+background-color:#FFF;/*gris*/
+height:auto;}
+
+.noticias1Ul li{
+float:left;
+background-color:#FFF}/*gris*/
+
+#fotoNoticias1{
+width:175px; height:175px;
+background-color:#FFF;/*verde*/
+}
+
+#blancoNoticias1 {
+width:30px; height:175px;
+background-color: #FFF;/*azul*/
+}
+
+#textoNoticias1 {
+width:487px; height:175px;
+background-color:#FFF;/*naranja*/
+}
+
+
+
+.a8{
+width:80px; height:115px;
+background-color:#FFF;/*verde*/
+}
+
+.b8 {
+width:30px; height:115px;
+background-color: #FFF;/*azul*/
+}
+
+.c8 {
+width:582px; height:115px;
+background-color:#FFF;/*naranja*/
+}
+
+
+
+
+
+
+
+
+
+
+
+#textoNoticias2 {
+width:342px; height:175px;
+background-color:#FFF;/*naranja*/
+}
+
+#blancoNoticias2 {
+width:30px; height:240px;
+background-color: #FFF;/*azul*/
+}
+
+#imagenRota{
+width:320px; height:240px;
+background-color:#FFF;/*verde*/
+}
+
+#noticias2Ul li{
+float:left;
+background-color:#FFF}
+
+
+#textoNoticias3 {
+width:442px; height:250px;
+background-color:#FFF;/*naranja*/
+}
+
+#blancoNoticias3 {
+width:30px; height:250px;
+background-color: #FFF;/*azul*/
+}
+
+#fotoNoticias3{
+width:220px; height:250px;
+background-color:#FFF;/*verde*/
+}
+
+
+#textoNoticias4 {
+width:412px; height:175px;
+background-color:#FFF;/*naranja*/
+}
+
+#textoNoticiasx {
+width:412px; height:306px;
+background-color:#FFF;/*naranja*/
+}
+
+
+#blancoNoticias4 {
+width:30px; height:240px;
+background-color: #FFF;/*azul*/
+}
+
+#fotoNoticias4{
+width:250px; height:240px;
+background-color:#FFF;/*verde*/
+text-align:center;
+font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	color:#000;
+}
+
+
+
+#textoLibros {
+width:512px; height:210px;
+background-color:#FFF;/*naranja*/
+}
+
+#blancoLibros {
+width:30px; height:210px;
+background-color: #FFF;/*azul*/
+}
+
+#fotoLibros{
+width:150px; height:210px;
+background-color:#FFF;/*verde*/
+}
+
+
+
+#textoLibros2 {
+width:512px; height:103px;
+background-color:#FFF;/*naranja*/
+}
+
+#blancoLibros2 {
+width:30px; height:103px;
+background-color: #FFF;/*azul*/
+}
+
+#fotoLibros{
+width:150px; height:103px;
+background-color:#FFF;/*verde*/
+}
+
+
+
+#textoNoticias5 {
+width:379px; height:103px;
+background-color:#FFF;/*naranja*/
+}
+
+#blancoNoticias5 {
+width:30px; height:103px;
+background-color: #FFF;/*azul*/
+}
+
+#fotoNoticias5{
+width:283px; height:103px;
+background-color:#FFF;/*verde*/
+}
+
+#citaInterna{/*verde*/
+
+	width:97%;
+	height:auto;
+	border:1px solid #FADD86;
+	border-style:solid;
+	padding:1%;
+	background-color:#FFF;
+	
+	font-family:Lato, Helvetica, sans-serif;
+	font-size:16px;
+	font-weight:normal;
+	color:#333232;
+	line-height:130%;
+	text-align:justify;
+}
+
+#citaInterna2{/*verde*/
+
+	width:97%;
+	height:auto;
+	border:1px solid #FADD86;
+	border-style:solid;
+	padding:1%;
+	background-color:#FFF;
+	
+	font-family:Lato, Helvetica, sans-serif;
+	font-size:16px;
+	font-weight:normal;
+	color:#333232;
+	line-height:130%;
+	text-align:center;
+	}
+
+#citaInterna2 a:link{
+	text-decoration:none; 
+	color :#AC1429;
+}
+	
+#citaInterna2 a:hover{
+	text-decoration:underline; color:#FFB321;font-weight: underline;
+}
+
+#citaInterna2 a:visited{
+	 text-decoration:none;
+	 color:#AC1429;
+}
+
+#citaInterna3{/*verde*/
+
+	width:97%;
+	height:auto;
+	background-color:#FFF;
+	text-align:center;
+	}
+
+#texto{/*azul*/
+width:100%;
+background-color:#FFF;
+height:auto;
+clear:left;}
+
+
+
+#fotoLibro{
+width:175px; height:210px;
+background-color:#096;/*verde*/
+}
+
+#blancoLibro {
+width:30px; height:210px;
+background-color: #FFF;/*azul*/
+}
+
+#textoLibro {
+width:487px; height:210px;
+background-color:#FFF;/*naranja*/
+}
+
+#final{
+width:100%;
+clear:right;}
+
+#finalUl li {
+float:left;
+display:inline;}
+
+#texto1 {
+background-color:#FFF;
+width:320px;
+height:auto;}
+	
+#blancoFinal {
+margin-right:0px;
+width:70px; height:255px;
+background-color: #FFF;/* verdeoscuro*/
+height:auto;}
+
+#texto2 {
+background-color:#FFF;/* verdeoscuro*/
+width:532px;
+height:auto;}
+
+
+#noticias1{/*azul*/
+width:100%;
+background-color:#FFF;
+height:auto;
+}
+
+#foto {
+	width:692px;
+
+text-align:center;	
+	
+	}
+
+.foto2 {
+	width:692px;
+
+text-align:center;	
+	
+	}
+	
+	.afoto {
+	width:692px;
+
+text-align:center;	
+	
+	}
+
+.foto2 {
+	width:692px;
+
+text-align:center;	
+	
+	}
+
+#titulo {
+	
+	font-family:Lato, Helvetica, sans-serif;
+	font-size:16px;
+	font-weight:normal;
+	color:#000;
+	line-height:135%;
+	text-align:center;
+}
+
+
+
+
+
+#recuadro {
+	width:500px;
+	border:1px solid #FFC621;
+	background-color:#FFF;
+	border-style:solid;
+	text-align:center;
+	padding:15px;
+	
+	}
+	
+	#fin {
+width:100%;
+height:auto;
+	background-color:#FFF;
+	text-align:center;
+    	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	color: #999;
+  bottom:2px;
+}
+
+
+	#fin a{
+
+
+	font-size:12px;
+	font-weight:normal;
+	color: #999;
+  bottom:2px;
+}
+
+
+#botones{
+	width:200px;
+margin-left:auto;
+margin-right:auto;
+background-color:#FFF;	
+	}
+	
+	.pdf{
+	font-family:Lato, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:normal;
+	color:#000;
+	line-height:130%;
+	text-align:center;
+}
+
+.pdf a:link{
+	text-decoration:none; 
+	color :#AC1429;
+}
+	
+.pdf a:hover{
+	text-decoration:underline; color:#FFB321;font-weight: underline
+}
+
+.pdf a:visited{
+	 text-decoration:none;
+	 color:#AC1429;
+}

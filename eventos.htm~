@@ -1,0 +1,391 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="//www.kriyayogadebabaji.net/favicon2.ico" /><link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<title>Kriya Yoga de Babaji - Agenda</title>
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" href="css/arquitectura.css" />
+<link rel="stylesheet" type="text/css" href="css/cabeceraIndex.css" />
+<link rel="stylesheet" type="text/css" href="css/textos.css" />
+<link rel="stylesheet" type="text/css" href="css/menus.css" />
+<link rel="stylesheet" type="text/css" href="css/cuerpoIndex.css" />
+<link rel="stylesheet" type="text/css" href="css/fuentes.css" /></head>
+
+<body >
+<div id="contenedor">
+  <div id="todaPagina"> <div id="todaPaginaB">
+    <div id="cabeceraIndex"> <img src="imagenes/logAgenda.png" alt="Kriya Yoga de Babaji" name="logo" width="922" height="101" border="0" usemap="#logoMap2" id="logo" /> 
+      <map name="logoMap2" id="logoMap2">
+        <area shape="rect" coords="1,18,376,66" href="index.htm" />
+      </map>
+    </div>
+
+    <!-- de cabeceraIndex-->
+    <br />
+     <div id="menu"> <ul> <li><a href="kriya.htm">KRIYA YOGA</a></li> <li> | </li> <li><a href="seminarios.htm">INICIACIONES</a></li> <li> | </li> <li><a href="eventos.htm">PRÓXIMOS CURSOS</a></li> <li> | </li> <li><a href="articulos.htm">PARA LEER</a></li> <li> | </li> <li><a href="libros.htm">LIBROS</a></li> <li> | </li> <li><a href="contacto.htm">CONTACTO</a></li> </ul> </div>
+<!-- de menu--><p>&nbsp;</p>
+<p>&nbsp;</p> <div id="barra"><img src="imagenes/a-barra2.gif" width="922" height="1" /></div> <p>&nbsp;</p> 
+    <ul id="contenidos2">
+      <li>
+        <div id="lateral"> 
+          
+<ul id="lateral2">
+  <li><a href="index.htm">Inicio</a></li>
+		   <li><a href="videos.htm">Vídeos</a></li>
+		   <li><a href="descargas.htm">Mantras y música</a></li>
+			<li><a href="18siddhas.htm">La tradición de los 18 Siddhas</a></li>
+			<li><a href="kriyababaji.htm">Historias de Kriya Babaji</a></li>
+			<li><a href="babaji.htm">Babaji</a></li>
+			<li><a href="empezar.htm">¿Cómo empezar?</a></li>
+			<li><a href="18posturas.htm">18 posturas</a></li>
+			<li><a href="viaje_norte.htm">Viajes India</a></li>
+			<li><a href="satsang.htm">Grupos de estudiantes</a></li>		
+             <li><a href="tercer/menu.htm">Tercera Iniciación</a></li>
+			 <li><a href="http://www.cristianismoyyoga.com">Cristianismo 
+              y Yoga</a></li>
+            <li><a href="enlaces.htm">Enlaces</a></li>
+  <!-- de lateral2-->
+  <div id="buscador"> 
+    <p>&nbsp;</p>
+    <h2><font color="#AC1429">Buscar en la página</font></h2>
+    <FORM method=GET action="http://www.google.com/search">
+      <input type=hidden name=ie value=UTF-8>
+      <input type=hidden name=oe value=UTF-8>
+      <a href="http://www.google.com/"> </a> 
+      <input maxlength="255" value="" name="q" size="24" type="text"/>
+      <p>&nbsp;</p>
+      <input type="submit" value="Buscar"/>
+      <input type="hidden" name="sitesearch" value="www.kriyayogadebabaji.net" />
+    </form>
+  </div>
+  <!-- de buscador-->
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <div id="botones"> 
+    <!-- AddThis Button BEGIN -->
+    <div class="addthis_toolbox addthis_default_style "> <a class="addthis_button_preferred_1"></a> 
+      <a class="addthis_button_preferred_2"></a> <a class="addthis_button_preferred_3"></a> 
+      <a class="addthis_button_preferred_4"></a> <a class="addthis_button_compact"></a> 
+      <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4dcddcb73e3ba0d2"></script>
+      <!-- AddThis Button END -->
+    </div>
+    <!-- addthis_toolbox addthis_default_style -->
+  </div>
+  <!-- botones --></div>
+  <!-- de lateral--></li>
+  <!-- de lateral-->
+  <li> 
+    <div id="blanco2">&nbsp;</div>
+  </li>
+  <li> 
+    <div id="noticias"> 
+      <p>&nbsp;</p>
+      <!--coge aqui texto-->
+      <p>&nbsp;</p>
+      <h2> <b><u>Próximas conferencias e Iniciaciones con Nityananda:</u></b><br />
+        <a href="mailto:info@kriyayogadebabaji.net">&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;</a>, 
+        tel. 649145057. <br />
+        <br />
+    
+        En Valencia: <br />
+        <br />
+        <img src="imagenes/YogaRio.jpg" width="480" height="390" /> <br />
+        <br /><br />
+        - <a href="seminarios1.htm">Primera Iniciación</a>: 21-22 noviembre 2020.
+		<br />
+        <br /><br />
+        <!-- - Charla audiovisual: "El Kriya Yoga de Babaji". Viernes 2 mayo a las 20 horas. Un viaje a la India de los Siddhas inmortales. La historia de los 18 Siddhas o seres perfeccionados, recorriendo los diversos lugares de poder asociados a cada uno de ellos. Un recorrido visual por una India fascinante y secreta, más allá de los senderos conocidos. Con proyección de imágenes. En C/ Ruzafa 43, 2, Valencia. Entrada libre, previa reserva de plaza: <a href="mailto:info@kriyayogadebabaji.net">&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;</a>, 
+                tel. 649145057.<br /><br /><br /> 
+				
+				
+      <img src="imagenes/badriP.jpg" /><br /><br />
+				- Charla audiovisual: "Viaje a Badrinath". Un viaje a este valle en lo profundo del Himalaya, lugar santificado durante siglos por la presencia 
+				de yoguis, sadhus y santos. Imágenes recientes tras la vuelta de India, donde hemos disfrutado del nuevo ashram de Kriya Yoga en Badrinath. Podrás también 
+				comprar artículos recién traídos de allí (aprovecha, se agotan pronto): malas y semillas de rudraksha de Shiva y Shakti. En C/ Ruzafa 43, 2, Valencia. Entrada libre, previa reserva de plaza: <a href="mailto:info@kriyayogadebabaji.net">&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;</a>, 
+                tel. 649145057.<br /><br /><br /> 
+				
+      - <a href="imagenes/conferencia-MadreParashakti.jpg">Conferencia-audiovisual: 
+        "Enseñanzas de la Madre</a>" - presentación del libro. Conversaciones 
+        de la Madre, del ashram de Sri Aurobindo, India. Palabras y consejos imprescindibles 
+        para una vida más plena, libre de las limitaciones del pasado; una vida 
+        que finalmente reconcilia materia y espíritu. Viernes 23 de octubre a 
+        las 20:00 horas, en Parashakti, Gran Vía Ramón y Cajal 16, pta. 1, 2, 
+        Valencia. Entrada libre. <br />
+        <br />
+				-->
+        <!-- - Charla-satsang: "El sendero del Kriya Yoga de Babaji", viernes 6 de noviembre a las 20:00 horas. El origen del Kriya Yoga; Babaji y el sendero de los 18 Siddhas; en qué consiste el Kriya Yoga y lo que podemos conseguir con su práctica. Con proyección de imágenes. También se podrán comprar libros y materiales sobre Kriya Yoga. Todos están invitados.
+<br /><br />
+En calle Ruzafa 43, 2, Valencia. Entrada libre - avisar para reservar plaza: <a href="mailto:info@kriyayogadebabaji.net">&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;</a>, tel. 649145057. 
+<br /><br /><br />
+
+				
+				
+				
+				<img src="imagenes/babaji2.png" /><br /><br />
+				- <a href="seminarios1.htm">Primera Iniciación</a>: 21-22 noviembre. Aprende las técnicas fundamentales del Kriya Yoga de Babaji, la base de este sendero.
+				
+				
+				
+				- Charla-satsang: "El sendero del Kriya Yoga de Babaji", viernes 23 de junio a las 20:00 horas. El origen del Kriya Yoga; Babaji y el sendero de los 18 Siddhas; en qué consiste el Kriya Yoga y lo que podemos conseguir con su práctica. Con proyección de imágenes. También se podrán comprar libros y materiales sobre Kriya Yoga. Todos están invitados.
+<br /><br />
+En calle Ruzafa 43, 2, Valencia. Entrada libre - avisar para reservar plaza: <a href="mailto:info@kriyayogadebabaji.net">&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;</a>, tel. 649145057. 
+
+		<br /><br /><br />
+		- <a href="seminarios2.htm">Segunda Iniciación</a>: 21-23 octubre. Retiro de Kriya en el que aprenderemos como integrar nuestra 
+		práctica de Yoga en todos los aspectos de la vida cotidiana. Culminará con la celebración de un Mantra Yagna (fuego consagrado) y la iniciación en 
+		mantras o sonidos divinos. 
+
+<br /><br /><br />-->
+
+        <!--11-13 octubre  <br />
+23-24 noviembre  <br />
+14-14 diciembre -->
+     <!--   <br />
+    
+        - Actividades gratuitas de los viernes, previa cita al tel. 649145057:<br />
+        <br />
+        + Enseñanza de las 18 posturas de Kriya Hatha Yoga.<br />
+        + Satsang: introducción al sendero del Kriya Yoga de Babaji.<br />
+        + Puja a Babaji y meditación - para devotos e iniciados.<br />
+        <br />
+        <br />
+		
+        <div id="citaInterna"> Clases semanales de Yoga: <br />
+        
+          Un espacio para tu práctica, en el que desconectar y reconectar contigo 
+          mism@. Trabajaremos asanas, respiración y meditación, enfatizando la 
+          liberación del estrés, sintonizando con tu espacio interno de paz y 
+          bienestar. Un Yoga para tod@s, tanto si tienes experiencia previa como 
+          si nunca has practicado. Plazas limitadas: <a href="mailto:info@kriyayogadebabaji.net">&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;</a> 
+          o llama al 649145057. </div>
+      
+		
+		  <!--
+        <br />
+        <br />
+        - <a href="seminarios2.htm">Segunda Iniciación</a>: 25-27 octubre 2019. 
+        Retiro vivencial: cómo integrar el Kriya Yoga en todos los aspectos de 
+        la vida. Celebración de un Mantra Yagna (fuego consagrado) e iniciación 
+        en mantras de Kriya. <br />
+        <br />
+        <br />
+      
+		- <a href="seminarios3.htm">Tercera Iniciación</a>: se impartirá en tres 
+        fines de semana: <br />
+        <br />
+        - 20 y 21 de abril <br />
+        - 15 y 16 de junio <br />
+        - 27 y 28 de julio <br /> 
+        <br />
+        Aprende la totalidad de las 144 kriyas del Kriya Yoga de Babaji, incluyendo 
+        técnicas para despertar los chakras, para desarrollar las facultades latentes 
+        o “siddhis” y para experimentar una relación personal con los 18 Siddhas 
+        y con Babaji. La formación culmina con la enseñanza de las kriyas avanzadas 
+        para lograr el <i>samadhi</i>, el estado sin aliento de unión con el Absoluto. 
+        <br />
+        <br />
+    
+		 - <a href="seminarios1.htm">Primera Iniciación</a>: 28-29 marzo 2020. 
+		 <br />
+        <br /><br />
+		 
+		     <br /> -->
+        - Seminario de repaso de la Tercera Iniciación: Para iniciados de la Tercera 
+        Iniciación. Revisaremos las kriyas avanzadas, para profundizar en su comprensión 
+        y en su práctica. <br />
+        <br />
+        <!-- <br />
+        <br />
+        * Satsang - Viernes a las 20:00 horas. Encuentro de Yoga para iniciados 
+        y no iniciados. Canto de bhajans, enseñanza de mantras, meditación o coloquio. 
+        Para todos y todas, <u>previa confirmación de asistencia</u> al tel. 649145057, 
+        email <a href="mailto:info@kriyayogadebabaji.net">info@kriyayogadebabaji.net</a>.  -->
+        <br />
+        * Encuentro de iniciados - el último domingo de cada mes. Contacta con 
+        Nityananada, <a href="mailto:info@kriyayogadebabaji.net">info@kriyayogadebabaji.net</a>. 
+        <!-- <br />
+        <br />
+        <br />
+        <br />
+        En Tarroja de Segarra (Lleida): <br />
+        <br />
+        - <a href="seminarios1.htm">Primera Iniciación</a>. En el <a href="http://lacabanasana.blogspot.com.es/">Centre 
+        d'Ensenyances, Ioga, i Creixement personal La Cabana</a>, A 100 kms. de 
+        Barcelona y 60 de Lleida. Buenas comunicaciones en tren, buses (Alsa e 
+        Hispano Igualadina) y en coche (por la A2, a 1h.10" de Barcelona). Hay 
+        posibilidad de alojamiento. Organiza Quim: 644503660, <a href="mailto:lacabanasana1@gmail">lacabanasana1@gmail</a>. -->
+        <!--
+		<br />
+        <br />
+        <br />
+        En Málaga: <br />
+        <br />
+        - <a href="seminarios2.htm">Segunda Iniciación</a> y <a href="seminarios3.htm">Tercera 
+        Iniciación</a>. Organiza Raquel. tel. 647437845, <a href="mailto:madrepoeta@gmail.com">&#109;&#097;&#100;&#114;&#101;&#112;&#111;&#101;&#116;&#097;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</a>.<br />
+       -->
+	    <br />
+		<br />
+        <br />
+        <br />
+    
+        <b><u>Próximas clases, conferencias e Iniciaciones con Mirabai:</u></b><br />
+        <a href="mailto:mirabai2009@hotmail.com">&#109;&#105;&#114;&#097;&#098;&#097;&#105;&#050;&#048;&#048;&#057;&#064;&#104;&#111;&#116;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</a>, 
+        tel. 651177355. <br />
+        <br />
+ 
+        En Barcelona:<br />
+        <br />
+        - <a href="seminarios1.htm">Primera Iniciación</a>: 
+		<br />
+        <br />
+
+3 a 4 Octubre 2020<br />
+		<br /><br />
+		
+		
+        - Charlas de introducción al Kriya Yoga y clase de Yoga: 
+		<br />
+        <br />
+
+2 Octubre 2020
+        <br />
+        <br />
+		Clase de yoga: a las 18h. y conferencia a las 19h 30min
+<br />
+<br />
+La conferencia introductoria y la meditación es gratis y abierta al público
+        <br />
+		<br />
+        <br />
+        <br />
+    
+        <b><u>Próximas clases, conferencias e Iniciaciones con Savitri:</u></b><br />
+        <a href="mailto:rosaritaines@yahoo.es">&#114;&#111;&#115;&#097;&#114;&#105;&#116;&#097;&#105;&#110;&#101;&#115;&#064;&#121;&#097;&#104;&#111;&#111;&#046;&#101;&#115;</a>, 
+        tel. 607880314. <br />
+        <br />
+
+        En Sant Feliu de Guixols / Girona: <br />
+          <br />
+        
+		 - <a href="seminarios1.htm">Primera Iniciación</a>: un lunes cada 15 días de 4 a 8 , duración dos meses. La próxima iniciación empezará el lunes 14 de octubre. 
+Más informacion Savitri, tel. 607 880 314.
+ <br />
+  
+          <br />
+		  
+		  
+		  <br />
+        <br />
+
+        En Can Camps - Tortella / Girona: <br />
+          <br />
+        
+		 - <a href="seminarios2.htm">Segunda Iniciación</a>: del 18 al 20 de diciembre. Más informacion Savitri, tel. 607 880 314.
+  <br /><br />
+        <img src="imagenes/can.jpg"  /> <br />
+        <br /><br />
+ 
+
+		  
+       
+		* Satsang el primer sábado de cada mes por la mañana en 
+        Girona o Sant Feliu de Guixols, por la tarde. <br />
+        <br />
+        * Clases de kriya hatha yoga todos los  jueves de 19.00 a 21.00 en Girona. <br />
+        <br />
+        <br />
+        <br />
+   
+        <b><u>Próximas clases, conferencias e Iniciaciones con Premananda:</u></b><br />
+        <a href='mailto&#58;&#107;&#121;pr%65m&#97;&#110;a%6&#69;d&#97;&#64;g%6&#68;&#37;61il&#46;c&#111;&#109;'>&#107;y&#112;&#114;eman&#97;&#110;da&#64;&#103;&#109;&#97;il&#46;c&#111;&#109;</a>, 
+        tel. 655702090. <br />
+        <br />
+    
+        En Getxo (Bilbao/Vizcaya): <br />
+        <br />
+        <br />
+        <br />
+
+        <b><u>Próximas clases, conferencias e Iniciaciones con Vaalmiki:</u></b><br />
+        <a href="mailto:vaalmiki@yahoo.fr">&#118;&#097;&#097;&#108;&#109;&#105;&#107;&#105;&#064;&#121;&#097;&#104;&#111;&#111;&#046;&#102;&#114;</a>, 
+        tel. 656 700 683. <br />
+        <br />
+  
+     En Bilbao: <br />
+        <br />
+        - <a href="seminarios1.htm">Primera Iniciación</a>: 4 y 5 de julio. En 
+        Loratze Yoga Studio, Mazarredo 17. Viernes conferencia de introducción, 
+        a las 19 horas. <a href="http://www.loratzeyoga.com">http://www.loratzeyoga.com</a>, 
+        <a href="mailto:studioloratze@gmail.com">studioloratze@gmail.com</a>, 
+        tel. 618 218 479 - 679 190 645. <br />
+        <br />
+        <br />
+        - Clases de introducción al Kriya Yoga y de enseñanza de las 18 asanas, 
+        cada miércoles en Gernika. <br />
+        <br />
+        <br />
+        - Satsang en Irún, una vez al mes. <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <u>Clases de introducción al Kriya Yoga y de enseñanza de las 18 asanas:</u> 
+        <br />
+        <br />
+        <br />
+        - En Cadavedo, Asturias:<br />
+        <br />
+        - En Cadavedo, Asturias, el segundo domingo de cada mes. Organiza Purna: 
+        <a href="mailto:Ondef_pdm@yahoo.es">Ondef_pdm@yahoo.es</a>. <br />
+        <br />
+        <br />
+        <img src="imagenes/a-barra2.gif" width="700" height="1" /><br />
+        <br />
+        *Para más información sobre los Acharyas (profesores) del Kriya Yoga de 
+        Babaji, consulta la web <a href="http://www.babajiskriyayoga.net/spanish/teachers.htm">http://www.babajiskriyayoga.net/spanish/teachers.htm</a>. 
+        <br />
+        <br />
+        Para más información sobre actividades fuera de España consulta la web 
+        <a href="http://www.babajiskriyayoga.net/spanish/events.htm">http://www.babajiskriyayoga.net/spanish/events.htm</a>. 
+        <br />
+        <br />
+      </h2>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <div id="citaInterna2"><u>Lista de correo:</u> <br />
+        <br />
+        <h3>Si deseas recibir emails con información actualizada sobre Iniciaciones, 
+          textos sobre Kriya Yoga, citas de libros sobre Kriya Yoga de Babaji 
+          y los Siddhas, etc., envía tu email a esta dirección: </ br> <a href="mailto:suscribir@kriyayogadebabaji.net">suscribir@kriyayogadebabaji.net</a>. 
+          <br />
+          <br />
+          El calendario de Iniciaciones se va actualizando constantemente;<br />
+          si quieres agregar esta página a favoritos para consultarla haz clic 
+          <a href="javascript:agregar()">aquí</a>.<br />
+        </h3>
+      </div>
+    </div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p></div>
+  </li> 
+  <!-- de noticias-->
+</ul>
+    <!-- de contenidos2-->
+  
+  	<p>&nbsp;</p> <p>&nbsp;</p>
+	<p>&nbsp;</p>
+    <p>&nbsp;</p>
+</div><!-- de todaPaginaB-->
+</div><!-- de todaPagina-->
+<div id="fin"><a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;">&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;</a> - Copyright 2019©.Se permite la libre reproducción <b><u>siempre que se cite la fuente</u></b>.</div>
+<p>&nbsp;</p>
+</div><!-- de contenedor-->
+
+</body>
+</html>
+

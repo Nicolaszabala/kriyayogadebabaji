@@ -1,0 +1,47 @@
+#######################################################################
+#     Diese .htaccess wurde vom STRATO-Webservermanager erstellt      #
+#######################################################################
+
+
+
+
+AuthUserFile /mnt/rid/38/59/53893859/htdocs/.htuser
+
+
+
+AuthName "Zona segura"
+AuthType Basic
+
+ 
+require user sadhana09 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+

@@ -1,0 +1,41 @@
+#cabeceraIndex{/*amarillo*/
+	background-color:#FFF;
+	height:100px;
+	width:100%;}
+
+#cabecera {
+float:left;
+display:inline;}
+
+#cblanco {
+width:480px;
+background-color:#FFF;
+height:100px;}
+
+#ctexto {
+height:100px;}
+
+
+#cabecera li{
+float:left;
+display:inline;}	
+	
+	
+	
+#columnaIndex{/*amarillo*/
+	background-color:#FFF;
+	height:200px;
+	width:100%;}
+
+#columna{
+float:left;
+display:inline;}
+
+
+
+
+#columna li{
+float:left;
+display:inline;}
+
+

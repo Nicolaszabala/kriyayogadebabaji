@@ -1,0 +1,44 @@
+#######################################################################
+#     Diese .htaccess wurde vom STRATO-Webservermanager erstellt      #
+#######################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ErrorDocument 404 http://www.kriyayogadebabaji.net/404.html
+
+
+
+ErrorDocument 500 http://www.kriyayogadebabaji.net/404.html
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+body{
+
+
+background-color:#9A9A9A;
+
+	}
+
+#contenedor {
+margin-top:0px;
+margin-left:auto;
+margin-right:auto;
+	width:953px;
+background-color:#FFF;
+padding:5px;
+
+
+
+
+}
+
+#todaPagina{ /*gris*/
+	width:922px;
+
+	border:1px solid;
+	border-color:#FFF;
+	background-color:#FFF;
+	padding:15px;}
+	
+
+#todaPaginaB{/*azul*/
+	width:100%;
+	background-color:#FFF;
+}

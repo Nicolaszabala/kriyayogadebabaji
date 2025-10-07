@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>Kriya Yoga de Babaji</title>
+<link>
+http://www.kriyayogadebabaji.net/index.htm
+</link>
+<description>Todos sobre el Kriya Yoga de Babaji: seminarios y conferencias</description>
+<item>
+<guid isPermaLink="true">http://www.kriyayogadebabaji.net/index.htm</guid>
+<title>Kriya Yoga de Babaji: noticias</title>
+<link>http://www.kriyayogadebabaji.net/index.htm</link>
+<description>Noticias de interés sobre el Kriya Yoga</description>
+</item>
+<item>
+<guid isPermaLink="true">http://www.kriyayogadebabaji.net/articulos.htm</guid>
+<title>Artículos sobre Kriya Yoga</title>
+<link>
+http://www.kriyayogadebabaji.net/articulos.htm
+</link>
+<description>
+Textos y artículos acerca del Kriya Yoga
+</description>
+</item>
+<item>
+<guid isPermaLink="true">http://www.kriyayogadebabaji.net/actividades.htm</guid>
+<title>Agenda de actividades</title>
+<link>
+http://www.kriyayogadebabaji.net/eventos.htm
+</link>
+<description>
+Próximos seminarios y actividades de Kriya Yoga en España y en el mundo
+</description>
+</item>
+<atom:link href="http://www.kriyayogadebabaji.net/rss/kriya.xml" rel="self" type="application/rss+xml" /></channel>
+</rss> 
