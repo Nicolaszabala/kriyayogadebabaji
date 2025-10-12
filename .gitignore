@@ -1,0 +1,28 @@
+# Archivos de desarrollo
+*.log
+*.tmp
+*~
+.DS_Store
+Thumbs.db
+
+# Archivos de backup local
+backup/local-*
+
+# Archivos de desarrollo temporal
+dev-*
+test-*
+
+# Node modules si se usan herramientas de build
+node_modules/
+package-lock.json
+
+# Archivos de IDE/Editor
+.vscode/settings.json
+*.sublime-*
+
+# Archivos de testing
+coverage/
+.nyc_output/
+
+# Cache del sistema
+*.cache

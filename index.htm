@@ -21,6 +21,7 @@
 <link rel="stylesheet" type="text/css" href="css/cuerpoIndex.css" />
 <link rel="stylesheet" type="text/css" href="css/fuentes.css" />
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="style.css">
 <style type="text/css">
 	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
 	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
@@ -781,7 +782,7 @@ function setup_functions()
 		foption = ftype.split('('); // ex: slide     /    left
 		// Check to see if the user put a real function in effect
 		if (eval('typeof('+foption[0]+')') == 'function')
-			pictures[i].effect = foption[0]+"(0, '"+foption[1]+"');";
+			pictures[i].effect = foption[0]+"(0, '"+foption[1]+"')"; // zoomin(0, 'left');
 		else 
 			pictures[i].effect = 'none(0)';  // else just put none effect
 		}

@@ -1,0 +1,60 @@
+{
+  "project": {
+    "name": "Kriya Yoga de Babaji - Responsive Design",
+    "version": "2.0.0-responsive",
+    "description": "Implementación de diseño responsive para el sitio web de Kriya Yoga de Babaji",
+    "repository": "https://github.com/Nicolaszabala/kriyayogadebabaji",
+    "branch": "responsive-design"
+  },
+  "development": {
+    "server": {
+      "port": 8000,
+      "host": "localhost"
+    },
+    "breakpoints": {
+      "mobile": "320px - 576px",
+      "tablet": "577px - 768px",
+      "desktop_small": "769px - 992px",
+      "desktop_large": "993px+"
+    },
+    "target_browsers": [
+      "Chrome >= 60",
+      "Firefox >= 60",
+      "Safari >= 12",
+      "Edge >= 79",
+      "iOS Safari >= 12",
+      "Android Chrome >= 60"
+    ]
+  },
+  "assets": {
+    "css": {
+      "original": "css/",
+      "responsive": "css-responsive/",
+      "output": "dist/css/"
+    },
+    "js": {
+      "source": "js/",
+      "output": "dist/js/"
+    },
+    "images": "imagenes/"
+  },
+  "features": {
+    "hamburger_menu": true,
+    "responsive_images": true,
+    "fluid_typography": true,
+    "css_grid": true,
+    "flexbox": true,
+    "progressive_enhancement": true
+  },
+  "testing": {
+    "viewport_sizes": [
+      "320x568",
+      "375x667",
+      "414x896", 
+      "768x1024",
+      "1024x768",
+      "1200x800",
+      "1920x1080"
+    ]
+  }
+}

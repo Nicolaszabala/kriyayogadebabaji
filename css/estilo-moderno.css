@@ -1,0 +1,324 @@
+/* Modern, Clean & Friendly Styles for Kriya Yoga de Babaji */
+/* This maintains the original color scheme and white aesthetic while modernizing the layout */
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Typography improvements */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+h2 {
+    font-size: 1.4rem;
+    color: #000;
+    margin-bottom: 0.8rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: #000;
+    text-align: center;
+}
+
+h4 {
+    font-size: 1rem;
+    color: #000;
+}
+
+h5, h6 {
+    font-size: 1rem;
+    color: #AC1429;
+    font-weight: 500;
+}
+
+/* Container and layout improvements */
+#contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#todaPagina {
+    background: #fff;
+    min-height: 100vh;
+}
+
+/* Header improvements */
+#cabeceraIndex {
+    background: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#cabeceraIndex img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Navigation improvements */
+#menu {
+    background: #fff;
+    padding: 15px 0;
+    margin-bottom: 30px;
+}
+
+#menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+#menu li {
+    margin: 0;
+}
+
+#menu a {
+    text-decoration: none;
+    color: #AC1429;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+#menu a:hover {
+    color: #FFB321;
+    background-color: rgba(172, 20, 41, 0.05);
+}
+
+/* Quote styling improvements */
+#cita {
+    background: #fff;
+    border: 2px solid #FFC621;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 900px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #AC1429;
+    font-style: italic;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Content sections improvements */
+.bienvenidos {
+    margin-bottom: 40px;
+}
+
+.bienvenidosUl {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 30px 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.textoBienvenidos {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* News/Content blocks improvements */
+.noticias1 {
+    background: #fff;
+    margin-bottom: 30px;
+}
+
+.noticias1Ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 180px 30px 1fr;
+    gap: 20px;
+    align-items: start;
+    margin-bottom: 25px;
+}
+
+#fotoNoticias1, #textoNoticias1 {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Quote internal styling */
+#citaInterna, #citaInterna2, #citaInterna3 {
+    background: #fff;
+    border: 1px solid #FADD86;
+    border-radius: 6px;
+    padding: 15px;
+    margin: 15px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: 'Lato', Helvetica, sans-serif;
+}
+
+#citaInterna {
+    text-align: justify;
+}
+
+#citaInterna2, #citaInterna3 {
+    text-align: center;
+}
+
+/* Links improvements */
+a {
+    color: #AC1429;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #FFB321;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #AC1429;
+}
+
+/* Footer improvements */
+#final {
+    background: #fff;
+    padding: 40px 0;
+    margin-top: 50px;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+#finalUl {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 80px 1fr;
+    gap: 30px;
+    align-items: start;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#texto1, #texto2 {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Newsletter form improvements */
+#mc_embed_signup {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 25px;
+    margin: 25px 0;
+    max-width: 500px;
+}
+
+#mc_embed_signup h2 {
+    color: #AC1429;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.mc-field-group {
+    margin-bottom: 15px;
+}
+
+.mc-field-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+}
+
+.mc-field-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#mc-embedded-subscribe {
+    background: #AC1429;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+#mc-embedded-subscribe:hover {
+    background: #8B1A21;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #contenedor {
+        padding: 0 15px;
+    }
+
+    #menu ul {
+        gap: 15px;
+        font-size: 0.9rem;
+    }
+
+    .bienvenidosUl,
+    .noticias1Ul,
+    #finalUl {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .bienvenidosUl li:not(:last-child),
+    .noticias1Ul li:not(:last-child),
+    #finalUl li:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    #cita {
+        margin: 20px;
+        padding: 15px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #cabeceraIndex img {
+        max-width: 280px;
+    }
+}
