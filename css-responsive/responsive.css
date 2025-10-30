@@ -263,51 +263,112 @@
   }
 
   /* === DENTRO DEL BLOQUE: Imagen cerca de su texto === */
+  /* FORZAR orden: imagen SIEMPRE antes de texto en mobile */
   .noticias1Ul,
   .noticias2Ul {
     margin: 0 !important;
     padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
   }
 
   .noticias1Ul li,
   .noticias2Ul li {
     margin: 0 !important;
     padding: 0 !important;
+    width: 100% !important;
   }
 
-  /* Contenedor de foto: centrado */
+  /* Orden forzado en mobile: imagen primero, texto después */
+  .noticias1Ul li:has(#fotoNoticias1),
+  .noticias1Ul li:has(#fotoNoticias2),
+  .noticias1Ul li:has(#fotoNoticias3),
+  .noticias1Ul li:has(#fotoNoticias4),
+  .noticias1Ul li:has(#fotoLibro),
+  .noticias2Ul li:has(#fotoNoticias1),
+  .noticias2Ul li:has(#fotoNoticias2),
+  .noticias2Ul li:has(#fotoNoticias3),
+  .noticias2Ul li:has(#fotoNoticias4),
+  .noticias2Ul li:has(#fotoLibro) {
+    order: 1 !important;  /* Imagen va primero */
+  }
+
+  .noticias1Ul li:has(#textoNoticias1),
+  .noticias1Ul li:has(#textoNoticias2),
+  .noticias1Ul li:has(#textoNoticias3),
+  .noticias1Ul li:has(#textoLibro),
+  .noticias2Ul li:has(#textoNoticias1),
+  .noticias2Ul li:has(#textoNoticias2),
+  .noticias2Ul li:has(#textoNoticias3),
+  .noticias2Ul li:has(#textoLibro) {
+    order: 2 !important;  /* Texto va segundo */
+  }
+
+  /* Espaciadores siempre ocultos */
+  .noticias1Ul li:has(#blancoNoticias1),
+  .noticias1Ul li:has(#blancoLibro),
+  .noticias2Ul li:has(#blancoNoticias1),
+  .noticias2Ul li:has(#blancoLibro) {
+    display: none !important;
+  }
+
+  /* Respaldo: ocultar espaciadores directamente */
+  #blancoNoticias1,
+  #blancoLibro {
+    display: none !important;
+  }
+
+  /* Contenedor de foto: centrado y sin dimensiones fijas */
   #fotoNoticias1,
   #fotoNoticias2,
   #fotoNoticias3,
-  #fotoNoticias4 {
+  #fotoNoticias4,
+  #fotoLibro {
     text-align: center !important;
     margin: 0 auto 12px auto !important;  /* 12px entre imagen y texto */
     padding: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+    overflow: visible !important;
   }
 
-  /* Imágenes centradas */
+  /* Imágenes centradas y sin restricciones que causen superposición */
   #fotoNoticias1 img,
   #fotoNoticias2 img,
   #fotoNoticias3 img,
-  #fotoNoticias4 img {
+  #fotoNoticias4 img,
+  #fotoLibro img {
     display: block !important;
     margin: 0 auto !important;
-    max-width: 90% !important;  /* Un poco de margen a los lados */
+    max-width: 85% !important;  /* Un poco de margen a los lados */
+    width: auto !important;
+    height: auto !important;
+    position: static !important;
+    float: none !important;
   }
 
-  /* Contenedor de texto: pegado a la imagen */
+  /* Contenedor de texto: pegado a la imagen, sin dimensiones fijas */
   #textoNoticias1,
   #textoNoticias2,
-  #textoNoticias3 {
+  #textoNoticias3,
+  #textoLibro {
     margin: 0 !important;
-    padding: 0 8px !important;
+    padding: 0 10px !important;
     text-align: left !important;
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+    position: static !important;
+    float: none !important;
   }
 
   /* === TIPOGRAFÍA === */
   #textoNoticias1 h2,
   #textoNoticias2 h2,
-  #textoNoticias3 h2 {
+  #textoNoticias3 h2,
+  #textoLibro h2 {
     margin-top: 0 !important;
     margin-bottom: 8px !important;
     line-height: 1.3 !important;
@@ -315,7 +376,8 @@
 
   #textoNoticias1 h4,
   #textoNoticias2 h4,
-  #textoNoticias3 h4 {
+  #textoNoticias3 h4,
+  #textoLibro h4 {
     margin: 8px 0 !important;
     color: #AC1429 !important;
     font-weight: bold !important;
@@ -324,7 +386,8 @@
   /* Párrafos dentro de textos */
   #textoNoticias1 p,
   #textoNoticias2 p,
-  #textoNoticias3 p {
+  #textoNoticias3 p,
+  #textoLibro p {
     margin: 6px 0 !important;
   }
 
