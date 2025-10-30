@@ -189,7 +189,7 @@
     width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
-    padding-top: 120px !important; /* Space for fixed navbar */
+    padding-top: 100px !important; /* Space for fixed navbar - reducido */
   }
 
   #contenedor,
@@ -227,7 +227,7 @@
     font-size: 14px !important;
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
-    margin: 15px 0 !important;
+    margin: 5px 0 20px 0 !important; /* Reducido top, aumentado bottom */
     text-align: center !important;
     font-style: italic !important;
     line-height: 1.5 !important;
@@ -436,7 +436,7 @@
   /* Asegurar que el slideshow esté centrado */
   .bienvenidos {
     text-align: center !important;
-    margin: 20px 0 !important;
+    margin: 0 0 20px 0 !important; /* Margin-top 0 para estar cerca de #cita */
     padding: 0 !important;
   }
 
@@ -473,6 +473,14 @@
   a img {
     display: block !important;
     margin: 0 auto !important;
+  }
+
+  /* === TEXTO "OM KRIYA BABAJI" === */
+  /* Misma distancia arriba (con slideshow) que la que hay entre slideshow y cita */
+  .textoBienvenidos {
+    margin-top: 20px !important; /* Igual al margin-bottom de .bienvenidos */
+    margin-bottom: 20px !important;
+    padding: 0 20px !important;
   }
 
 }
