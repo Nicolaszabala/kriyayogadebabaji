@@ -1,241 +1,426 @@
 /*!
- * Kriya Yoga de Babaji - Responsive CSS
- * Version: 2.0.0
- * Description: Sistema CSS responsive para modernizar el sitio web
+ * Kriya Yoga de Babaji - Mobile-Only Responsive CSS
+ * Version: 3.0.0 (Surgical approach)
+ * Description: ONLY affects mobile devices (<768px) - Desktop layout untouched
  * Author: Development Team
  */
 
 /* ========================================
-   VARIABLES CSS
-   ======================================== */
-:root {
-  /* Colores principales (mantenemos los originales) */
-  --color-primary: #AC1429;      /* Rojo principal */
-  --color-secondary: #FFB321;    /* Amarillo/dorado */
-  --color-text: #333333;         /* Texto principal */
-  --color-text-light: #666666;   /* Texto secundario */
-  --color-background: #ffffff;   /* Fondo principal */
-  --color-border: #e0e0e0;       /* Bordes */
-  
-  /* Tipografía */
-  --font-primary: 'Lato', Arial, sans-serif;
-  --font-size-base: 16px;
-  --line-height-base: 1.6;
-  
-  /* Espaciado */
-  --spacing-xs: 0.25rem;   /* 4px */
-  --spacing-sm: 0.5rem;    /* 8px */
-  --spacing-md: 1rem;      /* 16px */
-  --spacing-lg: 1.5rem;    /* 24px */
-  --spacing-xl: 2rem;      /* 32px */
-  --spacing-xxl: 3rem;     /* 48px */
-  
-  /* Contenedores */
-  --container-max-width: 1200px;
-  --container-padding: 1rem;
-  
-  /* Breakpoints */
-  --breakpoint-sm: 576px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
-  
-  /* Transiciones */
-  --transition-fast: 0.2s ease;
-  --transition-normal: 0.3s ease;
-  --transition-slow: 0.5s ease;
-}
-
-/* ========================================
-   RESET Y BASE
+   MOBILE-ONLY RESPONSIVE STYLES
+   CRITICAL: Only applies to screens <768px
    ======================================== */
 
-/* Box sizing moderno */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+/* Only apply changes on mobile devices */
+@media screen and (max-width: 767px) {
 
-/* Mejores defaults */
-html {
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-}
-
-body {
-  font-family: var(--font-primary);
-  color: var(--color-text);
-  background-color: var(--color-background);
-  margin: 0;
-  padding: 0;
-}
-
-/* ========================================
-   SISTEMA DE GRID RESPONSIVE
-   ======================================== */
-
-/* Container principal */
-.container {
-  max-width: var(--container-max-width);
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 var(--container-padding);
-}
-
-.container-fluid {
-  width: 100%;
-  padding: 0 var(--container-padding);
-}
-
-/* Sistema de filas y columnas */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 calc(var(--spacing-sm) * -1);
-}
-
-.col {
-  flex: 1;
-  padding: 0 var(--spacing-sm);
-  min-width: 0; /* Evita overflow en flexbox */
-}
-
-/* Columnas específicas */
-.col-1 { flex: 0 0 8.333333%; max-width: 8.333333%; }
-.col-2 { flex: 0 0 16.666667%; max-width: 16.666667%; }
-.col-3 { flex: 0 0 25%; max-width: 25%; }
-.col-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
-.col-5 { flex: 0 0 41.666667%; max-width: 41.666667%; }
-.col-6 { flex: 0 0 50%; max-width: 50%; }
-.col-7 { flex: 0 0 58.333333%; max-width: 58.333333%; }
-.col-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
-.col-9 { flex: 0 0 75%; max-width: 75%; }
-.col-10 { flex: 0 0 83.333333%; max-width: 83.333333%; }
-.col-11 { flex: 0 0 91.666667%; max-width: 91.666667%; }
-.col-12 { flex: 0 0 100%; max-width: 100%; }
-
-/* ========================================
-   TIPOGRAFÍA RESPONSIVE
-   ======================================== */
-
-/* Tipografía fluida */
-h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: var(--spacing-lg); }
-h2 { font-size: clamp(1.5rem, 3.5vw, 2rem); margin-bottom: var(--spacing-md); }
-h3 { font-size: clamp(1.3rem, 3vw, 1.7rem); margin-bottom: var(--spacing-md); }
-h4 { font-size: clamp(1.1rem, 2.5vw, 1.4rem); margin-bottom: var(--spacing-sm); }
-h5 { font-size: clamp(1rem, 2vw, 1.2rem); margin-bottom: var(--spacing-sm); }
-h6 { font-size: clamp(0.9rem, 1.8vw, 1.1rem); margin-bottom: var(--spacing-sm); }
-
-p {
-  font-size: clamp(1rem, 2vw, 1.1rem);
-  margin-bottom: var(--spacing-md);
-  line-height: var(--line-height-base);
-}
-
-/* ========================================
-   IMÁGENES RESPONSIVE
-   ======================================== */
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-.img-responsive {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-/* ========================================
-   UTILIDADES
-   ======================================== */
-
-/* Display utilities */
-.d-none { display: none !important; }
-.d-block { display: block !important; }
-.d-inline { display: inline !important; }
-.d-inline-block { display: inline-block !important; }
-.d-flex { display: flex !important; }
-.d-grid { display: grid !important; }
-
-/* Text alignment */
-.text-left { text-align: left !important; }
-.text-center { text-align: center !important; }
-.text-right { text-align: right !important; }
-
-/* Margin and padding utilities */
-.m-0 { margin: 0 !important; }
-.mt-1 { margin-top: var(--spacing-sm) !important; }
-.mb-1 { margin-bottom: var(--spacing-sm) !important; }
-.p-0 { padding: 0 !important; }
-.pt-1 { padding-top: var(--spacing-sm) !important; }
-.pb-1 { padding-bottom: var(--spacing-sm) !important; }
-
-/* Hide/show on specific breakpoints */
-@media (max-width: 575.98px) {
-  .d-none-mobile { display: none !important; }
-  .d-block-mobile { display: block !important; }
-}
-
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .d-none-tablet { display: none !important; }
-  .d-block-tablet { display: block !important; }
-}
-
-@media (min-width: 768px) {
-  .d-none-desktop { display: none !important; }
-  .d-block-desktop { display: block !important; }
-}
-
-/* ========================================
-   ACCESIBILIDAD
-   ======================================== */
-
-/* Focus states mejorados */
-*:focus {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
-}
-
-/* Skip links */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 6px;
-  background: var(--color-primary);
-  color: white;
-  padding: 8px;
-  text-decoration: none;
-  z-index: 999;
-  border-radius: 4px;
-}
-
-.skip-link:focus {
-  top: 6px;
-}
-
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+  /* Viewport adjustments for mobile */
+  html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
   }
+
+  /* Mobile container adjustments */
+  #contenedor {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 5px !important;
+    box-sizing: border-box;
+  }
+
+  #todaPagina {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 10px !important;
+    box-sizing: border-box;
+  }
+
+  #todaPaginaB {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  /* Make images responsive on mobile - FORZAR para evitar overflow */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    width: auto !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Forzar imágenes con atributos inline width/height */
+  img[width],
+  img[height] {
+    max-width: 100% !important;
+    height: auto !important;
+    width: auto !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Logo principal debe usar todo el ancho */
+  #cabeceraIndex img[width="922"] {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Mobile typography adjustments */
+  body {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  /* Tables responsive on mobile */
+  table {
+    width: 100% !important;
+    border-collapse: collapse;
+  }
+
+  table td, table th {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  /* Basic responsive utilities - mobile only */
+  .mobile-text-center {
+    text-align: center;
+  }
+
+  .mobile-full-width {
+    width: 100%;
+  }
+
+  .mobile-hidden {
+    display: none;
+  }
+
+  .mobile-block {
+    display: block;
+  }
+
+  /* ========================================
+     FASE 1: FIXES CRÍTICOS DE LAYOUT
+     Layout de 3 columnas a 1 columna en móvil
+     ======================================== */
+
+  /* FIX 1: Layout de 3 columnas (#lateral + #blanco2 + #noticias) a 1 columna */
+  #contenidos2,
+  #contenidos2 li {
+    float: none !important;
+    display: block !important;
+    width: 100% !important;
+  }
+
+  /* FIX 2: Ocultar sidebar en móvil (se integra en burger menu) */
+  #lateral {
+    display: none !important;
+  }
+
+  /* FIX 3: Ocultar espaciador (30px) en móvil - desperdicia espacio */
+  #blanco2 {
+    display: none !important;
+  }
+
+  /* FIX 4: Contenido principal al 100% con padding para buena distribución */
+  #noticias,
+  #noticiasA {
+    width: 100% !important;
+    padding: 15px !important;
+    box-sizing: border-box;
+  }
+
+  /* FIX 5: Barra divisoria responsive */
+  #barra,
+  #barra img {
+    width: 100% !important;
+  }
+
+  /* FIX 6: Sub-layouts de noticias (bloques flotantes internos) */
+  .noticias1,
+  .noticias2 {
+    width: 100% !important;
+  }
+
+  .noticias1Ul li,
+  .noticias2Ul li,
+  .bienvenidosUl li {
+    float: none !important;
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 15px;
+  }
+
+  /* FIX 7: Ocultar separadores "|" del menú en móvil */
+  #menu li:not(:has(a)) {
+    display: none !important;
+  }
+
+  /* Alternativa compatible (si :has no funciona en navegadores antiguos) */
+  #menu ul > li:nth-child(2),
+  #menu ul > li:nth-child(4),
+  #menu ul > li:nth-child(6),
+  #menu ul > li:nth-child(8),
+  #menu ul > li:nth-child(10),
+  #menu ul > li:nth-child(12) {
+    display: none !important;
+  }
+
+  /* FIX 8: Ocultar enlaces del cabecera en mobile (se integran en burger) */
+  #cabecera {
+    display: none !important;
+  }
+
+  /* FIX 9: Evitar overflow horizontal - AGRESIVO */
+  html {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+  }
+
+  * {
+    max-width: 100vw !important;
+  }
+
+  body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  #contenedor,
+  #todaPagina,
+  #todaPaginaB,
+  #cabeceraIndex,
+  #cita,
+  .bienvenidos {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Forzar todo el contenido dentro del viewport */
+  div, p, h1, h2, h3, h4, ul, li {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Header centrado */
+  #cabeceraIndex {
+    text-align: center !important;
+    padding: 10px 0 !important;
+  }
+
+  /* Ocultar logo original en mobile (lo pondremos en navbar) */
+  #cabeceraIndex img[name="logo"] {
+    display: none !important;
+  }
+
+  /* Cita del día responsive */
+  #cita {
+    width: 100% !important;
+    padding: 12px !important;
+    font-size: 14px !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    margin: 15px 0 !important;
+    text-align: center !important;
+    font-style: italic !important;
+    line-height: 1.5 !important;
+    background-color: #f9f9f9 !important;
+    border-left: 3px solid #AC1429 !important;
+  }
+
+  /* FIX 10: ESPACIADO JERÁRQUICO - Bloques separados, imagen+texto juntos */
+
+  /* Contenedores principales */
+  #todaPagina {
+    padding: 8px !important;
+  }
+
+  #noticias {
+    padding: 12px !important;
+  }
+
+  /* === JERARQUÍA DE BLOQUES === */
+  /* Cada bloque de noticias (imagen + texto) separado claramente */
+  .noticias1,
+  .noticias2 {
+    margin-top: 30px !important;    /* SEPARACIÓN GRANDE del bloque anterior */
+    margin-bottom: 0 !important;
+    padding: 15px 0 !important;
+    border-top: 2px solid #f0f0f0;  /* Línea sutil para separar bloques */
+  }
+
+  /* Primer bloque sin borde superior */
+  .noticias1:first-of-type,
+  .noticias2:first-of-type {
+    border-top: none !important;
+    margin-top: 10px !important;
+  }
+
+  /* === DENTRO DEL BLOQUE: Imagen cerca de su texto === */
+  .noticias1Ul,
+  .noticias2Ul {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .noticias1Ul li,
+  .noticias2Ul li {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Contenedor de foto: centrado */
+  #fotoNoticias1,
+  #fotoNoticias2,
+  #fotoNoticias3,
+  #fotoNoticias4 {
+    text-align: center !important;
+    margin: 0 auto 12px auto !important;  /* 12px entre imagen y texto */
+    padding: 0 !important;
+  }
+
+  /* Imágenes centradas */
+  #fotoNoticias1 img,
+  #fotoNoticias2 img,
+  #fotoNoticias3 img,
+  #fotoNoticias4 img {
+    display: block !important;
+    margin: 0 auto !important;
+    max-width: 90% !important;  /* Un poco de margen a los lados */
+  }
+
+  /* Contenedor de texto: pegado a la imagen */
+  #textoNoticias1,
+  #textoNoticias2,
+  #textoNoticias3 {
+    margin: 0 !important;
+    padding: 0 8px !important;
+    text-align: left !important;
+  }
+
+  /* === TIPOGRAFÍA === */
+  #textoNoticias1 h2,
+  #textoNoticias2 h2,
+  #textoNoticias3 h2 {
+    margin-top: 0 !important;
+    margin-bottom: 8px !important;
+    line-height: 1.3 !important;
+  }
+
+  #textoNoticias1 h4,
+  #textoNoticias2 h4,
+  #textoNoticias3 h4 {
+    margin: 8px 0 !important;
+    color: #AC1429 !important;
+    font-weight: bold !important;
+  }
+
+  /* Párrafos dentro de textos */
+  #textoNoticias1 p,
+  #textoNoticias2 p,
+  #textoNoticias3 p {
+    margin: 6px 0 !important;
+  }
+
+  /* === BARRAS DIVISORIAS === */
+  /* Las barras entre bloques deben ser visibles pero discretas */
+  img[src*="barraAtenuada"] {
+    display: block !important;
+    width: 100% !important;
+    height: 1px !important;
+    margin: 25px auto !important;
+    opacity: 0.3 !important;
+  }
+
+  /* === ELIMINAR ESPACIOS INNECESARIOS === */
+  /* Párrafos vacíos completamente ocultos */
+  p:empty,
+  p:blank {
+    display: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Párrafos con solo &nbsp; */
+  #noticias > p {
+    display: none !important;
+  }
+
+  /* BRs ocultos */
+  br {
+    display: none !important;
+  }
+
+  /* Barra divisoria principal (#barra) */
+  #barra {
+    margin: 20px 0 !important;
+    padding: 0 !important;
+  }
+
+  #barra img {
+    width: 100% !important;
+    opacity: 0.5 !important;
+  }
+
+  /* === SLIDESHOW Y OTRAS IMÁGENES === */
+  /* Asegurar que el slideshow esté centrado */
+  .bienvenidos {
+    text-align: center !important;
+    margin: 20px 0 !important;
+    padding: 0 !important;
+  }
+
+  .bienvenidosUl {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .bienvenidosUl li {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+
+  /* Contenedor del slideshow */
+  #pictureholder,
+  .pictureholder {
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+
+  /* Todas las imágenes del slideshow centradas */
+  #pictureholder img,
+  .pictureholder img,
+  .picture {
+    display: block !important;
+    margin: 0 auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* === LINKS EN IMÁGENES === */
+  /* Asegurar que los enlaces no descuadren las imágenes */
+  a img {
+    display: block !important;
+    margin: 0 auto !important;
+  }
+
 }
 
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-  :root {
-    --color-border: #000000;
-    --color-text-light: #000000;
+/* ========================================
+   TABLET MINOR ADJUSTMENTS (768px - 991px)
+   ======================================== */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  /* Only very minimal adjustments for tablets */
+  #contenedor {
+    width: 95%;
+    max-width: 953px;
   }
 }
 
@@ -243,15 +428,14 @@ img {
    PRINT STYLES
    ======================================== */
 @media print {
-  .d-print-none { display: none !important; }
-  .navbar-toggle { display: none !important; }
-  
-  body {
-    font-size: 12pt;
-    line-height: 1.4;
+  #contenedor {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
   
-  h1, h2, h3, h4, h5, h6 {
-    page-break-after: avoid;
+  #todaPagina {
+    border: none !important;
+    padding: 0 !important;
   }
 }

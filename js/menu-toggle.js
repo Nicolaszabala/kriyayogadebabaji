@@ -1,93 +1,171 @@
 /*!
- * Menu Toggle JavaScript
- * Hamburger menu functionality for Kriya Yoga de Babaji website
+ * Simple Menu Toggle for existing #menu structure
+ * Works with current HTML without changes
  */
 
 (function() {
     'use strict';
     
-    // Variables globales
-    let navbarToggle = null;
-    let navbarCollapse = null;
+    let menuToggle = null;
+    let menu = null;
     let menuIsOpen = false;
     
-    // Configuración
-    const CONFIG = {
-        toggleClass: 'active',
-        bodyClass: 'menu-open',
-        breakpoint: 768,
-        animationDuration: 300,
-        closeOnResize: true,
-        closeOnOutsideClick: true,
-        enableKeyboard: true
-    };
-    
-    /**
-     * Inicialización cuando el DOM está listo
-     */
     function init() {
-        // Buscar elementos del menú
-        navbarToggle = document.querySelector('.navbar-toggle');
-        navbarCollapse = document.querySelector('.navbar-collapse');
-        
-        // Verificar que los elementos existen
-        if (!navbarToggle || !navbarCollapse) {
-            console.warn('Menu elements not found. Hamburger menu disabled.');
+        // Only run on mobile devices
+        if (window.innerWidth > 767) {
             return;
         }
-        
-        // Configurar event listeners
+
+        // Find the existing menu
+        menu = document.getElementById('menu');
+        if (!menu) {
+            console.warn('Menu element #menu not found');
+            return;
+        }
+
+        // Create hamburger button if it doesn't exist
+        createHamburgerButton();
+
+        // Add logo to navbar
+        addLogoToNavbar();
+
+        // Integrate header links into burger menu (TOP - orden inverso)
+        integrateHeaderLinks();
+
+        // Integrate lateral menu into burger menu (BOTTOM)
+        integrateLateralMenu();
+
+        // Setup event listeners
         setupEventListeners();
-        
-        // Configurar estado inicial
-        setupInitialState();
-        
-        console.log('Hamburger menu initialized successfully.');
+
+        console.log('Mobile menu initialized');
     }
-    
-    /**
-     * Configurar todos los event listeners
-     */
-    function setupEventListeners() {
-        // Click en el botón hamburguesa
-        navbarToggle.addEventListener('click', handleToggleClick);
-        
-        // Click fuera del menú (si está habilitado)
-        if (CONFIG.closeOnOutsideClick) {
-            document.addEventListener('click', handleOutsideClick);
+
+    function addLogoToNavbar() {
+        // Find the original logo
+        const originalLogo = document.querySelector('#cabeceraIndex img[name="logo"]');
+        if (!originalLogo) return;
+
+        // Check if logo already added to navbar
+        if (menu.querySelector('.navbar-logo')) return;
+
+        // Create logo container
+        const logoContainer = document.createElement('div');
+        logoContainer.className = 'navbar-logo';
+        logoContainer.style.cssText = 'padding: 10px; text-align: center; background: white;';
+
+        // Clone the logo
+        const logo = document.createElement('img');
+        logo.src = originalLogo.src;
+        logo.alt = originalLogo.alt || 'Kriya Yoga de Babaji';
+        logo.style.cssText = 'max-width: 100%; height: auto; display: block; margin: 0 auto;';
+
+        logoContainer.appendChild(logo);
+
+        // Insert logo at the beginning of menu
+        menu.insertBefore(logoContainer, menu.firstChild);
+    }
+
+    function integrateHeaderLinks() {
+        // Find header links (#cabecera)
+        const cabecera = document.getElementById('cabecera');
+        if (!cabecera) return;
+
+        // Get the menu UL element
+        const menuUl = menu.querySelector('ul');
+        if (!menuUl) return;
+
+        // Check if header items already added
+        if (menuUl.querySelector('.header-menu-item')) return;
+
+        // Find all links in cabecera
+        const headerLinks = cabecera.querySelectorAll('a');
+        if (headerLinks.length === 0) return;
+
+        // Add header links at the TOP (orden inverso como pidió el usuario)
+        // Los agregamos en orden: Devotional music, Articles in English, Clases y sesiones
+        const linksArray = Array.from(headerLinks).reverse();
+
+        linksArray.forEach(function(link) {
+            const li = document.createElement('li');
+            li.className = 'header-menu-item';
+            const newLink = link.cloneNode(true);
+            li.appendChild(newLink);
+            // Insertar al principio del menú
+            menuUl.insertBefore(li, menuUl.firstChild);
+        });
+
+        // Add separator after header items
+        const separator = document.createElement('li');
+        separator.className = 'header-menu-separator';
+        separator.style.cssText = 'border-bottom: 1px solid #ddd; margin: 10px 0; padding: 0;';
+        // Insertar después de los header items
+        const firstNonHeaderItem = menuUl.querySelector('li:not(.header-menu-item)');
+        if (firstNonHeaderItem) {
+            menuUl.insertBefore(separator, firstNonHeaderItem);
         }
-        
-        // Redimensionar ventana (si está habilitado)
-        if (CONFIG.closeOnResize) {
-            window.addEventListener('resize', handleWindowResize);
-        }
-        
-        // Soporte para teclado (si está habilitado)
-        if (CONFIG.enableKeyboard) {
-            document.addEventListener('keydown', handleKeyDown);
-        }
-        
-        // Clicks en enlaces del menú
-        const menuLinks = navbarCollapse.querySelectorAll('a');
-        menuLinks.forEach(link => {
-            link.addEventListener('click', handleMenuLinkClick);
+    }
+
+    function integrateLateralMenu() {
+        // Find lateral sidebar menu
+        const lateral2 = document.getElementById('lateral2');
+
+        if (!lateral2) return;
+
+        // Get the menu UL element
+        const menuUl = menu.querySelector('ul');
+        if (!menuUl) return;
+
+        // Check if lateral items already added
+        if (menuUl.querySelector('.lateral-menu-item')) return;
+
+        // Add a separator before lateral items
+        const separator = document.createElement('li');
+        separator.className = 'lateral-menu-separator';
+        separator.style.cssText = 'border-top: 1px solid #ddd; margin: 10px 0; padding: 0;';
+        menuUl.appendChild(separator);
+
+        // Clone and add lateral menu items at the BOTTOM
+        const lateralItems = lateral2.querySelectorAll('li > a');
+        lateralItems.forEach(function(link) {
+            const li = document.createElement('li');
+            li.className = 'lateral-menu-item';
+            const newLink = link.cloneNode(true);
+            li.appendChild(newLink);
+            menuUl.appendChild(li);
         });
     }
     
-    /**
-     * Configurar estado inicial
-     */
-    function setupInitialState() {
-        // Asegurar que el menú esté cerrado al cargar
-        closeMenu();
+    function createHamburgerButton() {
+        // Check if button already exists
+        if (document.querySelector('.menu-toggle')) {
+            menuToggle = document.querySelector('.menu-toggle');
+            return;
+        }
         
-        // Marcar el enlace activo basado en la URL actual
-        markActiveLink();
+        // Create hamburger button
+        menuToggle = document.createElement('button');
+        menuToggle.className = 'menu-toggle';
+        menuToggle.setAttribute('aria-label', 'Toggle menu');
+        menuToggle.innerHTML = '<span></span><span></span><span></span>';
+        
+        // Insert the button into the menu
+        menu.insertBefore(menuToggle, menu.firstChild);
     }
     
-    /**
-     * Manejar click en el botón toggle
-     */
+    function setupEventListeners() {
+        // Toggle button click
+        if (menuToggle) {
+            menuToggle.addEventListener('click', handleToggleClick);
+        }
+        
+        // Close on window resize
+        window.addEventListener('resize', handleResize);
+        
+        // Close when clicking outside
+        document.addEventListener('click', handleOutsideClick);
+    }
+    
     function handleToggleClick(event) {
         event.preventDefault();
         event.stopPropagation();
@@ -99,187 +177,51 @@
         }
     }
     
-    /**
-     * Manejar click fuera del menú
-     */
+    function handleResize() {
+        if (window.innerWidth > 767 && menuIsOpen) {
+            closeMenu();
+        } else if (window.innerWidth <= 767) {
+            // Reinitialize if needed
+            if (!menuToggle) {
+                init();
+            }
+        }
+    }
+    
     function handleOutsideClick(event) {
         if (!menuIsOpen) return;
         
-        // Si el click fue en el toggle o dentro del menú, no hacer nada
-        if (navbarToggle.contains(event.target) || 
-            navbarCollapse.contains(event.target)) {
-            return;
-        }
-        
-        closeMenu();
-    }
-    
-    /**
-     * Manejar redimensionado de ventana
-     */
-    function handleWindowResize() {
-        // Si la ventana es más ancha que el breakpoint, cerrar menú
-        if (window.innerWidth > CONFIG.breakpoint && menuIsOpen) {
+        if (menu && !menu.contains(event.target)) {
             closeMenu();
         }
     }
     
-    /**
-     * Manejar teclas (Escape para cerrar)
-     */
-    function handleKeyDown(event) {
-        if (event.key === 'Escape' && menuIsOpen) {
-            closeMenu();
-            navbarToggle.focus(); // Devolver focus al botón
-        }
-    }
-    
-    /**
-     * Manejar click en enlaces del menú
-     */
-    function handleMenuLinkClick(event) {
-        // En móvil, cerrar el menú después de hacer click
-        if (window.innerWidth <= CONFIG.breakpoint && menuIsOpen) {
-            // Pequeño delay para que se vea la selección
-            setTimeout(() => {
-                closeMenu();
-            }, 150);
-        }
-    }
-    
-    /**
-     * Abrir el menú
-     */
     function openMenu() {
-        if (menuIsOpen) return;
+        if (menuIsOpen || !menu) return;
         
-        navbarToggle.classList.add(CONFIG.toggleClass);
-        navbarCollapse.classList.add(CONFIG.toggleClass);
-        document.body.classList.add(CONFIG.bodyClass);
-        
-        // Accesibilidad
-        navbarToggle.setAttribute('aria-expanded', 'true');
-        navbarCollapse.setAttribute('aria-hidden', 'false');
-        
+        menu.classList.add('menu-active');
+        menuToggle.classList.add('active');
         menuIsOpen = true;
-        
-        // Focus management
-        focusFirstMenuItem();
-        
-        // Dispatch custom event
-        dispatchMenuEvent('menuOpen');
     }
     
-    /**
-     * Cerrar el menú
-     */
     function closeMenu() {
-        if (!menuIsOpen) return;
+        if (!menuIsOpen || !menu) return;
         
-        navbarToggle.classList.remove(CONFIG.toggleClass);
-        navbarCollapse.classList.remove(CONFIG.toggleClass);
-        document.body.classList.remove(CONFIG.bodyClass);
-        
-        // Accesibilidad
-        navbarToggle.setAttribute('aria-expanded', 'false');
-        navbarCollapse.setAttribute('aria-hidden', 'true');
-        
+        menu.classList.remove('menu-active');
+        menuToggle.classList.remove('active');
         menuIsOpen = false;
-        
-        // Dispatch custom event
-        dispatchMenuEvent('menuClose');
     }
     
-    /**
-     * Enfocar el primer elemento del menú
-     */
-    function focusFirstMenuItem() {
-        const firstLink = navbarCollapse.querySelector('a');
-        if (firstLink && window.innerWidth <= CONFIG.breakpoint) {
-            setTimeout(() => {
-                firstLink.focus();
-            }, CONFIG.animationDuration);
-        }
-    }
-    
-    /**
-     * Marcar enlace activo basado en la URL
-     */
-    function markActiveLink() {
-        const currentPath = window.location.pathname;
-        const menuLinks = navbarCollapse.querySelectorAll('a');
-        
-        menuLinks.forEach(link => {
-            link.classList.remove('active');
-            
-            const linkPath = link.getAttribute('href');
-            if (linkPath && (currentPath === linkPath || 
-                (currentPath === '/' && linkPath === 'index.htm') ||
-                (currentPath.endsWith(linkPath)))) {
-                link.classList.add('active');
-            }
-        });
-    }
-    
-    /**
-     * Dispatch custom menu events
-     */
-    function dispatchMenuEvent(eventType) {
-        const event = new CustomEvent(eventType, {
-            detail: {
-                toggle: navbarToggle,
-                menu: navbarCollapse,
-                isOpen: menuIsOpen
-            }
-        });
-        document.dispatchEvent(event);
-    }
-    
-    /**
-     * API público para control externo
-     */
-    window.HamburgerMenu = {
-        open: openMenu,
-        close: closeMenu,
-        toggle: function() {
-            if (menuIsOpen) {
-                closeMenu();
-            } else {
-                openMenu();
-            }
-        },
-        isOpen: function() {
-            return menuIsOpen;
-        },
-        destroy: function() {
-            if (navbarToggle) {
-                navbarToggle.removeEventListener('click', handleToggleClick);
-            }
-            document.removeEventListener('click', handleOutsideClick);
-            window.removeEventListener('resize', handleWindowResize);
-            document.removeEventListener('keydown', handleKeyDown);
-            
-            closeMenu();
-        }
-    };
-    
-    /**
-     * Inicialización automática
-     */
+    // Initialize when DOM is ready
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
         init();
     }
     
-    // Debugging en modo desarrollo
-    if (window.location.hostname === 'localhost' || 
-        window.location.hostname === '127.0.0.1') {
-        window.menuDebug = {
-            config: CONFIG,
-            elements: { navbarToggle, navbarCollapse },
-            state: { menuIsOpen }
-        };
-    }
+    // Re-initialize on resize for responsive behavior
+    window.addEventListener('resize', function() {
+        setTimeout(init, 100);
+    });
     
 })();
