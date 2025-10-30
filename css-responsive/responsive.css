@@ -189,6 +189,7 @@
     width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
+    padding-top: 120px !important; /* Space for fixed navbar */
   }
 
   #contenedor,
@@ -238,11 +239,11 @@
 
   /* Contenedores principales */
   #todaPagina {
-    padding: 8px !important;
+    padding: 10px 15px !important; /* Aumentado padding lateral */
   }
 
   #noticias {
-    padding: 12px !important;
+    padding: 15px 20px !important; /* Aumentado padding lateral */
   }
 
   /* === JERARQUÍA DE BLOQUES === */
@@ -354,7 +355,7 @@
   #textoNoticias3,
   #textoLibro {
     margin: 0 !important;
-    padding: 0 10px !important;
+    padding: 0 20px !important; /* Aumentado de 10px a 20px */
     text-align: left !important;
     width: 100% !important;
     height: auto !important;
