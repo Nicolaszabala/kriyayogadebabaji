@@ -24,14 +24,14 @@
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 !important;
-    padding: 5px !important;
+    padding: 0 !important;
     box-sizing: border-box;
   }
 
   #todaPagina {
     width: 100% !important;
     max-width: 100% !important;
-    padding: 10px !important;
+    padding: 0 !important;
     box-sizing: border-box;
   }
 
@@ -173,6 +173,18 @@
     display: none !important;
   }
 
+  /* FIX: Ocultar items originales del menú desktop en mobile */
+  #menu .desktop-only-menu-item {
+    display: none !important;
+  }
+
+  /* Mostrar solo los items personalizados del menú mobile */
+  #menu .mobile-menu-item {
+    display: block !important;
+    width: 100% !important;
+    float: none !important;
+  }
+
   /* FIX 9: Evitar overflow horizontal - AGRESIVO */
   html {
     overflow-x: hidden !important;
@@ -189,7 +201,6 @@
     width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
-    padding-top: 100px !important; /* Space for fixed navbar - reducido */
   }
 
   #contenedor,
@@ -212,7 +223,8 @@
   /* Header centrado */
   #cabeceraIndex {
     text-align: center !important;
-    padding: 10px 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
 
   /* Ocultar logo original en mobile (lo pondremos en navbar) */
@@ -220,19 +232,9 @@
     display: none !important;
   }
 
-  /* Cita del día responsive */
+  /* Cita del día - OCULTAR en mobile */
   #cita {
-    width: 100% !important;
-    padding: 12px !important;
-    font-size: 14px !important;
-    word-wrap: break-word !important;
-    overflow-wrap: break-word !important;
-    margin: 5px 0 20px 0 !important; /* Reducido top, aumentado bottom */
-    text-align: center !important;
-    font-style: italic !important;
-    line-height: 1.5 !important;
-    background-color: #f9f9f9 !important;
-    border-left: 3px solid #AC1429 !important;
+    display: none !important;
   }
 
   /* FIX 10: ESPACIADO JERÁRQUICO - Bloques separados, imagen+texto juntos */
@@ -433,11 +435,9 @@
   }
 
   /* === SLIDESHOW Y OTRAS IMÁGENES === */
-  /* Asegurar que el slideshow esté centrado */
+  /* OCULTAR slideshow en mobile */
   .bienvenidos {
-    text-align: center !important;
-    margin: 0 0 20px 0 !important; /* Margin-top 0 para estar cerca de #cita */
-    padding: 0 !important;
+    display: none !important;
   }
 
   .bienvenidosUl {
@@ -476,11 +476,197 @@
   }
 
   /* === TEXTO "OM KRIYA BABAJI" === */
-  /* Misma distancia arriba (con slideshow) que la que hay entre slideshow y cita */
+  /* OCULTAR en mobile */
   .textoBienvenidos {
-    margin-top: 20px !important; /* Igual al margin-bottom de .bienvenidos */
-    margin-bottom: 20px !important;
-    padding: 0 20px !important;
+    display: none !important;
+  }
+
+  /* ========================================
+     MOBILE CUSTOM CONTENT STYLES
+     Estilos para el contenido personalizado de mobile
+     ======================================== */
+
+  .mobile-content-wrapper {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Portada mobile */
+  .mobile-portada {
+    width: 100% !important;
+    margin: -130px 0 0 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+
+  .mobile-portada img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .mobile-section {
+    width: 100% !important;
+    padding: 20px !important;
+    margin-bottom: 30px !important;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+
+  .mobile-section h2 {
+    color: #AC1429 !important;
+    font-size: 20px !important;
+    margin-bottom: 15px !important;
+    margin-top: 0 !important;
+    font-weight: bold !important;
+    border-bottom: 2px solid #AC1429;
+    padding-bottom: 8px !important;
+  }
+
+  .mobile-section p {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 12px !important;
+    color: #333 !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    max-width: 100% !important;
+  }
+
+  .mobile-section ul {
+    margin: 15px 0 !important;
+    padding-left: 20px !important;
+  }
+
+  .mobile-section ul li {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 10px !important;
+    color: #333 !important;
+  }
+
+  .mobile-section a {
+    color: #AC1429 !important;
+    text-decoration: underline !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+    hyphens: auto !important;
+    max-width: 100% !important;
+    display: inline-block !important;
+  }
+
+  .mobile-section a:hover {
+    color: #8B1021 !important;
+  }
+
+  .mobile-section strong {
+    font-weight: bold !important;
+    color: #AC1429 !important;
+  }
+
+  /* Imagen de terapias (Chakras) */
+  .mobile-terapia-image {
+    width: 100% !important;
+    margin: 15px 0 !important;
+    text-align: center !important;
+  }
+
+  .mobile-terapia-image img {
+    max-width: 100% !important;
+    width: auto !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  /* Estilos para libros en mobile */
+  .mobile-book {
+    margin: 20px 0 !important;
+    padding: 15px !important;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center !important;
+  }
+
+  .mobile-book img {
+    max-width: 200px !important;
+    width: auto !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto 12px auto !important;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+
+  .mobile-book p {
+    text-align: left !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+  }
+
+  /* Estilos para álbumes musicales en mobile */
+  .mobile-album {
+    margin: 15px 0 !important;
+    text-align: center !important;
+  }
+
+  .mobile-album img {
+    max-width: 250px !important;
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  .mobile-album a {
+    display: block !important;
+    text-decoration: none !important;
+  }
+
+  /* Enlaces de música */
+  .mobile-music-links {
+    margin: 15px 0 !important;
+    background-color: white;
+    padding: 15px !important;
+    border-radius: 6px;
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+  }
+
+  .mobile-music-links p {
+    margin: 10px 0 !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    max-width: 100% !important;
+  }
+
+  .mobile-music-links a {
+    display: block !important;
+    padding: 10px !important;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    font-weight: bold !important;
+    text-decoration: none !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    word-break: break-all !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .mobile-music-links a:hover {
+    background-color: #e0e0e0;
   }
 
 }

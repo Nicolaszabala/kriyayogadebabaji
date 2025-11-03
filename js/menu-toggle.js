@@ -29,11 +29,8 @@
         // Add logo to navbar
         addLogoToNavbar();
 
-        // Integrate header links into burger menu (TOP - orden inverso)
-        integrateHeaderLinks();
-
-        // Integrate lateral menu into burger menu (BOTTOM)
-        integrateLateralMenu();
+        // Build custom mobile menu with only the 7 specified links
+        buildCustomMobileMenu();
 
         // Setup event listeners
         setupEventListeners();
@@ -42,10 +39,6 @@
     }
 
     function addLogoToNavbar() {
-        // Find the original logo
-        const originalLogo = document.querySelector('#cabeceraIndex img[name="logo"]');
-        if (!originalLogo) return;
-
         // Check if logo already added to navbar
         if (menu.querySelector('.navbar-logo')) return;
 
@@ -54,10 +47,10 @@
         logoContainer.className = 'navbar-logo';
         logoContainer.style.cssText = 'padding: 10px; text-align: center; background: white;';
 
-        // Clone the logo
+        // Create logo element with custom image
         const logo = document.createElement('img');
-        logo.src = originalLogo.src;
-        logo.alt = originalLogo.alt || 'Kriya Yoga de Babaji';
+        logo.src = 'imagenes/KriyaYogaLogo.jpg';
+        logo.alt = 'Kriya Yoga de Babaji';
         logo.style.cssText = 'max-width: 100%; height: auto; display: block; margin: 0 auto;';
 
         logoContainer.appendChild(logo);
@@ -66,72 +59,43 @@
         menu.insertBefore(logoContainer, menu.firstChild);
     }
 
-    function integrateHeaderLinks() {
-        // Find header links (#cabecera)
-        const cabecera = document.getElementById('cabecera');
-        if (!cabecera) return;
-
+    function buildCustomMobileMenu() {
         // Get the menu UL element
         const menuUl = menu.querySelector('ul');
         if (!menuUl) return;
 
-        // Check if header items already added
-        if (menuUl.querySelector('.header-menu-item')) return;
+        // Check if custom menu already built
+        if (menuUl.querySelector('.mobile-menu-item')) return;
 
-        // Find all links in cabecera
-        const headerLinks = cabecera.querySelectorAll('a');
-        if (headerLinks.length === 0) return;
-
-        // Add header links at the TOP (orden inverso como pidió el usuario)
-        // Los agregamos en orden: Devotional music, Articles in English, Clases y sesiones
-        const linksArray = Array.from(headerLinks).reverse();
-
-        linksArray.forEach(function(link) {
-            const li = document.createElement('li');
-            li.className = 'header-menu-item';
-            const newLink = link.cloneNode(true);
-            li.appendChild(newLink);
-            // Insertar al principio del menú
-            menuUl.insertBefore(li, menuUl.firstChild);
+        // Clear existing menu items (keep only what we need for mobile)
+        // We'll hide the original items and add our custom ones
+        const originalItems = menuUl.querySelectorAll('li');
+        originalItems.forEach(function(item) {
+            item.classList.add('desktop-only-menu-item');
         });
 
-        // Add separator after header items
-        const separator = document.createElement('li');
-        separator.className = 'header-menu-separator';
-        separator.style.cssText = 'border-bottom: 1px solid #ddd; margin: 10px 0; padding: 0;';
-        // Insertar después de los header items
-        const firstNonHeaderItem = menuUl.querySelector('li:not(.header-menu-item)');
-        if (firstNonHeaderItem) {
-            menuUl.insertBefore(separator, firstNonHeaderItem);
-        }
-    }
+        // Define the 7 custom menu items for mobile
+        const mobileMenuItems = [
+            { text: 'Kriya Yoga', href: 'kriya.htm', title: 'Kriya Yoga' },
+            { text: 'Próximos seminarios', href: 'seminarios.htm', title: 'Seminarios' },
+            { text: 'Terapias', href: 'clases.htm', title: 'Terapias' },
+            { text: 'Libros y artículos', href: 'articulos.htm', title: 'Libros y artículos' },
+            { text: 'Música', href: 'descargas.htm', title: 'Música' },
+            { text: 'Linaje de Kriya Yoga', href: '18siddhas.htm', title: 'La tradición de los 18 Siddhas' },
+            { text: 'Nityananda - Contacto', href: 'contacto.htm', title: 'Contacto' }
+        ];
 
-    function integrateLateralMenu() {
-        // Find lateral sidebar menu
-        const lateral2 = document.getElementById('lateral2');
-
-        if (!lateral2) return;
-
-        // Get the menu UL element
-        const menuUl = menu.querySelector('ul');
-        if (!menuUl) return;
-
-        // Check if lateral items already added
-        if (menuUl.querySelector('.lateral-menu-item')) return;
-
-        // Add a separator before lateral items
-        const separator = document.createElement('li');
-        separator.className = 'lateral-menu-separator';
-        separator.style.cssText = 'border-top: 1px solid #ddd; margin: 10px 0; padding: 0;';
-        menuUl.appendChild(separator);
-
-        // Clone and add lateral menu items at the BOTTOM
-        const lateralItems = lateral2.querySelectorAll('li > a');
-        lateralItems.forEach(function(link) {
+        // Add custom mobile menu items
+        mobileMenuItems.forEach(function(item) {
             const li = document.createElement('li');
-            li.className = 'lateral-menu-item';
-            const newLink = link.cloneNode(true);
-            li.appendChild(newLink);
+            li.className = 'mobile-menu-item';
+
+            const link = document.createElement('a');
+            link.href = item.href;
+            link.title = item.title;
+            link.textContent = item.text;
+
+            li.appendChild(link);
             menuUl.appendChild(li);
         });
     }
