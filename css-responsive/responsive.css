@@ -5,6 +5,10 @@
  * Author: Development Team
  */
 
+#mobile-noticias {
+  display: none;
+}
+
 /* ========================================
    MOBILE-ONLY RESPONSIVE STYLES
    CRITICAL: Only applies to screens <768px
@@ -12,6 +16,14 @@
 
 /* Only apply changes on mobile devices */
 @media screen and (max-width: 767px) {
+
+  #desktop-noticias {
+    display: none !important;
+  }
+
+  #mobile-noticias {
+    display: block !important;
+  }
 
   /* Viewport adjustments for mobile */
   html {
@@ -669,6 +681,72 @@
     background-color: #e0e0e0;
   }
 
+  /* Ocultar el footer y los botones de compartir en mobile */
+  #final,
+  #botones {
+    display: none !important;
+  }
+
+  /* Estilos para el formulario de Mailchimp en mobile */
+  #mc_embed_signup {
+    background-color: #f9f9f9 !important;
+    padding: 20px !important;
+    border-radius: 8px !important;
+  }
+
+  #mc_embed_signup h2 {
+    color: #AC1429 !important;
+    font-size: 20px !important;
+    margin-bottom: 15px !important;
+    margin-top: 0 !important;
+    font-weight: bold !important;
+    border-bottom: 2px solid #AC1429 !important;
+    padding-bottom: 8px !important;
+  }
+
+  #mc_embed_signup .mc-field-group {
+    margin-bottom: 15px !important;
+  }
+
+  #mc_embed_signup .mc-field-group label {
+    display: block !important;
+    margin-bottom: 5px !important;
+    font-weight: bold !important;
+    color: #333 !important;
+    font-size: 15px !important;
+  }
+
+  #mc_embed_signup input[type="email"],
+  #mc_embed_signup input[type="text"] {
+    width: 100% !important;
+    padding: 10px !important;
+    border: 1px solid #ccc !important;
+    border-radius: 4px !important;
+    font-size: 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  #mc_embed_signup .button {
+    width: 100% !important;
+    padding: 12px !important;
+    background-color: #AC1429 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 4px !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    box-sizing: border-box !important;
+  }
+
+  #mc_embed_signup .button:hover {
+    background-color: #8B1021 !important;
+  }
+
+  #mc_embed_signup .indicates-required {
+    font-size: 15px !important;
+  }
+
 }
 
 /* ========================================
@@ -695,5 +773,16 @@
   #todaPagina {
     border: none !important;
     padding: 0 !important;
+  }
+}
+
+.mobile-only-image {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .mobile-only-image {
+    display: block;
+    margin: 0 auto; /* Center the image */
   }
 }

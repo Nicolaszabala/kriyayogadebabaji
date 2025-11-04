@@ -187,14 +187,47 @@
         contacto: {
             title: 'Nityananda - Contacto',
             content: `
-                <div class="mobile-section" id="mobile-contacto">
+                <div class="mobile-section" id="mobile-contacto">  
                     <h2>Nityananda - Contacto</h2>
+                    <img src="imagenes/Nityananda.jpg" alt="Nityananda" />
                     <p>Me llamo Nacho Albalat, mi nombre de profesor de Kriya Yoga es Nityananda. Soy licenciado en Ciencias de la Información, y he publicado 9 libros y traducido casi todos los libros de Kriya Yoga de Babaji disponibles. Ésta es mi página de Kriya Yoga.</p>
                     <p>Tras practicar Kriya Yoga de Babaji durante años, mi profesor, Govindan Satchidananda, me sugirió que lo enseñara a los demás. Mi trabajo como profesor de Kriya Yoga tiene que ver bastante con el periodismo, en la medida en que intento transmitir, de la mejor manera posible e impecable, una información y un conocimiento que no son míos.</p>
                     <p>Disfruto compartiendo este conocimiento en los seminarios y en las conferencias. Si estás interesado en el Kriya Yoga de Babaji y quieres saber más, estaré encantado de atenderte. Mi email es <a href="mailto:info@kriyayogadebabaji.net">info@kriyayogadebabaji.net</a>.</p>
                     <p>Mi móvil es el <strong>649145057</strong>.</p>
                     <p><em>Om Kriya Babaji Nama Aum,</em><br><strong>Nityananda</strong></p>
                 </div>
+<div class="mobile-section" id="mc_embed_signup">
+<form action="https://kriyayogadebabaji.us12.list-manage.com/subscribe/post?u=55bacb022f217b1910d18333c&amp;id=afecdc6ca1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<h2>Suscríbete a nuestra lista de correo</h2>
+<p>+ Puedes leer más textos en el blog <a href="http://kriyayogayvida.blogspot.com/">Kriya Yoga y Vida.</a> </p>
+<p>+ Síguenos en <a href="https://www.facebook.com/nityananda.kriyayoga/"><img src="imagenes/facebook.jpg" alt="Facebook" style="width: 24px; height: 24px; vertical-align: middle;"/></a></p>
+<p>+ Lista de correo: Suscríbete si deseas recibir emails con citas de Babaji y los Siddhas, información actualizada sobre seminarios, textos sobre Kriya Yoga, etc. (<a href="https://www.kriyayogadebabaji.net/docs/PoliticaPrivacidad.pdf">Lee aquí nuestra política de privacidad de datos</a>). ¿Un ejemplo? Haz clic <a href="https://www.kriyayogadebabaji.net/lista0.htm">>aquí</a>.</p>
+<p>Esta web es mantenida por Nacho Albalat, Nityananda: info@kriyayogadebabaji.net.</p>
+<p>Copyright 2025©. Se permite la libre reproducción siempre que se cite la fuente</p>
+<div class="indicates-required"><span class="asterisk">*</span> requerido</div>
+<div class="mc-field-group">
+	<label for="mce-EMAIL">Email  <span class="asterisk">*</span>
+</label>
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+<div class="mc-field-group">
+	<label for="mce-FNAME">Nombre </label>
+	<input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+</div>
+<div class="mc-field-group">
+	<label for="mce-LNAME">Apellido </label>
+	<input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+</div>
+	<div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_55bacb022f217b1910d18333c_afecdc6ca1" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Suscribir" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
             `
         }
     };
@@ -204,15 +237,10 @@
             return; // No hacer nada en desktop
         }
 
-        const noticiasDiv = document.getElementById('noticias');
-        if (!noticiasDiv) {
-            console.warn('Content div #noticias not found');
+        const mobileNoticiasDiv = document.getElementById('mobile-noticias');
+        if (!mobileNoticiasDiv) {
+            console.warn('Content div #mobile-noticias not found');
             return;
-        }
-
-        // Guardar contenido original en data attribute (por si se necesita restaurar)
-        if (!noticiasDiv.dataset.originalContent) {
-            noticiasDiv.dataset.originalContent = 'saved';
         }
 
         // Construir nuevo contenido mobile
@@ -231,7 +259,7 @@
         newContent += '</div>';
 
         // Reemplazar contenido
-        noticiasDiv.innerHTML = newContent;
+        mobileNoticiasDiv.innerHTML = newContent;
 
         console.log('Mobile content loaded successfully');
     }
@@ -255,7 +283,7 @@
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(function() {
             // Si cambia de desktop a mobile o viceversa, recargar la página
-            const wasMobile = document.getElementById('noticias').querySelector('.mobile-content-wrapper') !== null;
+            const wasMobile = document.getElementById('mobile-noticias').querySelector('.mobile-content-wrapper') !== null;
             const nowMobile = isMobile();
 
             if (wasMobile !== nowMobile) {
