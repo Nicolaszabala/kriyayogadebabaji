@@ -533,32 +533,34 @@
   .mobile-section h2 {
     color: #AC1429 !important;
     font-size: 20px !important;
-    margin-bottom: 15px !important;
+    margin-bottom: 20px !important;
     margin-top: 0 !important;
     font-weight: bold !important;
     border-bottom: 2px solid #AC1429;
     padding-bottom: 8px !important;
+    text-align: center !important;
   }
 
   .mobile-section p {
     font-size: 15px !important;
     line-height: 1.6 !important;
-    margin-bottom: 12px !important;
+    margin-bottom: 15px !important;
     color: #333 !important;
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
     max-width: 100% !important;
+    text-align: justify !important;
   }
 
   .mobile-section ul {
-    margin: 15px 0 !important;
+    margin: 20px 0 !important;
     padding-left: 20px !important;
   }
 
   .mobile-section ul li {
     font-size: 15px !important;
     line-height: 1.6 !important;
-    margin-bottom: 10px !important;
+    margin-bottom: 15px !important;
     color: #333 !important;
   }
 
@@ -585,11 +587,45 @@
   /* Imagen de terapias (Chakras) */
   .mobile-terapia-image {
     width: 100% !important;
-    margin: 15px 0 !important;
+    margin: 20px 0 !important;
     text-align: center !important;
   }
 
   .mobile-terapia-image img {
+    max-width: 100% !important;
+    width: auto !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  /* Imágenes de linaje */
+  .mobile-linaje-image {
+    width: 100% !important;
+    margin: 20px 0 !important;
+    text-align: center !important;
+  }
+
+  .mobile-linaje-image img {
+    max-width: 100% !important;
+    width: auto !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  /* Imagen de contacto (Nityananda) */
+  .mobile-contacto-image {
+    width: 100% !important;
+    margin: 20px 0 !important;
+    text-align: center !important;
+  }
+
+  .mobile-contacto-image img {
     max-width: 100% !important;
     width: auto !important;
     height: auto !important;
@@ -614,7 +650,7 @@
     width: auto !important;
     height: auto !important;
     display: block !important;
-    margin: 0 auto 12px auto !important;
+    margin: 0 auto 15px auto !important;
     border-radius: 4px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   }
@@ -627,7 +663,7 @@
 
   /* Estilos para álbumes musicales en mobile */
   .mobile-album {
-    margin: 15px 0 !important;
+    margin: 20px 0 !important;
     text-align: center !important;
   }
 
@@ -648,7 +684,7 @@
 
   /* Enlaces de música */
   .mobile-music-links {
-    margin: 15px 0 !important;
+    margin: 20px 0 !important;
     background-color: white;
     padding: 15px !important;
     border-radius: 6px;
@@ -657,7 +693,7 @@
   }
 
   .mobile-music-links p {
-    margin: 10px 0 !important;
+    margin: 15px 0 !important;
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
     max-width: 100% !important;
@@ -690,22 +726,37 @@
   /* Estilos para el formulario de Mailchimp en mobile */
   #mc_embed_signup {
     background-color: #f9f9f9 !important;
-    padding: 20px !important;
+    padding: 20px 20px 40px 20px !important;
+    margin-bottom: 40px !important;
     border-radius: 8px !important;
+    overflow: visible !important;
+  }
+
+  #mc_embed_signup_scroll {
+    padding-bottom: 30px !important;
+    overflow: visible !important;
   }
 
   #mc_embed_signup h2 {
     color: #AC1429 !important;
     font-size: 20px !important;
-    margin-bottom: 15px !important;
+    margin-bottom: 20px !important;
     margin-top: 0 !important;
     font-weight: bold !important;
     border-bottom: 2px solid #AC1429 !important;
     padding-bottom: 8px !important;
+    text-align: center !important;
+  }
+
+  #mc_embed_signup p {
+    text-align: justify !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 15px !important;
   }
 
   #mc_embed_signup .mc-field-group {
-    margin-bottom: 15px !important;
+    margin-bottom: 20px !important;
   }
 
   #mc_embed_signup .mc-field-group label {
@@ -728,7 +779,10 @@
 
   #mc_embed_signup .button {
     width: 100% !important;
+    height: auto !important;
+    line-height: normal !important;
     padding: 12px !important;
+    margin: 15px 0 0 0 !important;
     background-color: #AC1429 !important;
     color: white !important;
     border: none !important;
@@ -741,6 +795,12 @@
 
   #mc_embed_signup .button:hover {
     background-color: #8B1021 !important;
+  }
+
+  #mc_embed_signup .clear {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    overflow: visible !important;
   }
 
   #mc_embed_signup .indicates-required {

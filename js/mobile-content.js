@@ -187,9 +187,13 @@
         contacto: {
             title: 'Nityananda - Contacto',
             content: `
-                <div class="mobile-section" id="mobile-contacto">  
+                <div class="mobile-section" id="mobile-contacto">
                     <h2>Nityananda - Contacto</h2>
-                    <img src="imagenes/Nityananda.jpg" alt="Nityananda" />
+
+                    <div class="mobile-contacto-image">
+                        <img src="imagenes/Nityananda.jpg" alt="Nityananda" />
+                    </div>
+
                     <p>Me llamo Nacho Albalat, mi nombre de profesor de Kriya Yoga es Nityananda. Soy licenciado en Ciencias de la Información, y he publicado 9 libros y traducido casi todos los libros de Kriya Yoga de Babaji disponibles. Ésta es mi página de Kriya Yoga.</p>
                     <p>Tras practicar Kriya Yoga de Babaji durante años, mi profesor, Govindan Satchidananda, me sugirió que lo enseñara a los demás. Mi trabajo como profesor de Kriya Yoga tiene que ver bastante con el periodismo, en la medida en que intento transmitir, de la mejor manera posible e impecable, una información y un conocimiento que no son míos.</p>
                     <p>Disfruto compartiendo este conocimiento en los seminarios y en las conferencias. Si estás interesado en el Kriya Yoga de Babaji y quieres saber más, estaré encantado de atenderte. Mi email es <a href="mailto:info@kriyayogadebabaji.net">info@kriyayogadebabaji.net</a>.</p>
