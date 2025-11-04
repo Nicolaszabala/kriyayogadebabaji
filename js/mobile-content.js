@@ -134,28 +134,35 @@
                     <h2>Música</h2>
                     <p>Con la ayuda de la IA he puesto música a los poemas de los Siddhas (maestros inmortales del sur de la India), traducidos por primera vez al castellano/español. También hay musicados mantras y textos de Kriya Yoga y versos de la Mística universal, que puedes oír para tu inspiración diaria:</p>
 
-                    <div class="mobile-album">
-                        <a href="https://music.youtube.com/playlist?list=OLAK5uy_lnCCnorkLPnuIx496ZOEzW9p7SQeaU4Yk&si=nHM1fst6D_5msMM8" target="_blank">
-                            <img src="imagenes/Voces2.jpg" alt="Voces 2 - Música de Kriya Yoga" />
-                        </a>
-                    </div>
-
-                    <div class="mobile-album">
-                        <a href="https://music.youtube.com/playlist?list=OLAK5uy_kXUbcQOZy_b8fpKQU9KZISkZoUaNquUkk&si=EagObieo4uJcyXF_" target="_blank">
-                            <img src="imagenes/Voces1.jpg" alt="Voces 1 - Música de Kriya Yoga" />
-                        </a>
-                    </div>
-
-                    <div class="mobile-album">
-                        <a href="https://music.youtube.com/playlist?list=OLAK5uy_mDEmmgbpW8RjOoWMawIC6yocIvF-QorAg&si=WF8q8Jhe7wwPNT2B" target="_blank">
-                            <img src="imagenes/GuruMantra.jpg" alt="Guru Mantra - Música de Kriya Yoga" />
-                        </a>
-                    </div>
-
-                    <div class="mobile-album">
-                        <a href="https://music.youtube.com/playlist?list=OLAK5uy_kgEEdnx_4iQJa7KkV6qDRZN-eTNPlpzVA&si=h5gI8Mirl92KDsfD" target="_blank">
-                            <img src="imagenes/CancionesSiddhas.jpg" alt="Canciones de los Siddhas - Música de Kriya Yoga" />
-                        </a>
+                    <div class="music-slider-container">
+                        <div class="music-slider">
+                            <div class="music-slide">
+                                <a href="https://music.youtube.com/playlist?list=OLAK5uy_lnCCnorkLPnuIx496ZOEzW9p7SQeaU4Yk&si=nHM1fst6D_5msMM8" target="_blank">
+                                    <img src="imagenes/Voces2.jpg" alt="Voces 2 - Música de Kriya Yoga" />
+                                </a>
+                            </div>
+                            <div class="music-slide">
+                                <a href="https://music.youtube.com/playlist?list=OLAK5uy_kXUbcQOZy_b8fpKQU9KZISkZoUaNquUkk&si=EagObieo4uJcyXF_" target="_blank">
+                                    <img src="imagenes/Voces1.jpg" alt="Voces 1 - Música de Kriya Yoga" />
+                                </a>
+                            </div>
+                            <div class="music-slide">
+                                <a href="https://music.youtube.com/playlist?list=OLAK5uy_mDEmmgbpW8RjOoWMawIC6yocIvF-QorAg&si=WF8q8Jhe7wwPNT2B" target="_blank">
+                                    <img src="imagenes/GuruMantra.jpg" alt="Guru Mantra - Música de Kriya Yoga" />
+                                </a>
+                            </div>
+                            <div class="music-slide">
+                                <a href="https://music.youtube.com/playlist?list=OLAK5uy_kgEEdnx_4iQJa7KkV6qDRZN-eTNPlpzVA&si=h5gI8Mirl92KDsfD" target="_blank">
+                                    <img src="imagenes/CancionesSiddhas.jpg" alt="Canciones de los Siddhas - Música de Kriya Yoga" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slider-dots">
+                            <button class="slider-dot active" data-slide="0" aria-label="Slide 1"></button>
+                            <button class="slider-dot" data-slide="1" aria-label="Slide 2"></button>
+                            <button class="slider-dot" data-slide="2" aria-label="Slide 3"></button>
+                            <button class="slider-dot" data-slide="3" aria-label="Slide 4"></button>
+                        </div>
                     </div>
 
                     <p>Disponibles en Spotify y de más aplicaciones de música.</p>
@@ -265,7 +272,89 @@
         // Reemplazar contenido
         mobileNoticiasDiv.innerHTML = newContent;
 
+        // Inicializar slider de música
+        initMusicSlider();
+
         console.log('Mobile content loaded successfully');
+    }
+
+    function initMusicSlider() {
+        const slider = document.querySelector('.music-slider');
+        const dots = document.querySelectorAll('.slider-dot');
+
+        if (!slider || dots.length === 0) {
+            return;
+        }
+
+        let currentSlide = 0;
+        const totalSlides = dots.length;
+        let autoplayInterval;
+
+        function goToSlide(index) {
+            currentSlide = index;
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+            // Actualizar dots
+            dots.forEach((dot, i) => {
+                if (i === currentSlide) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            goToSlide(currentSlide);
+        }
+
+        // Click en dots
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                goToSlide(index);
+                resetAutoplay();
+            });
+        });
+
+        // Autoplay cada 4 segundos
+        function startAutoplay() {
+            autoplayInterval = setInterval(nextSlide, 4000);
+        }
+
+        function resetAutoplay() {
+            clearInterval(autoplayInterval);
+            startAutoplay();
+        }
+
+        // Swipe touch support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        slider.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        slider.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchStartX - touchEndX > 50) {
+                // Swipe left
+                nextSlide();
+                resetAutoplay();
+            }
+            if (touchEndX - touchStartX > 50) {
+                // Swipe right
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                goToSlide(currentSlide);
+                resetAutoplay();
+            }
+        }
+
+        startAutoplay();
     }
 
     function init() {

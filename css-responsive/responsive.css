@@ -31,6 +31,11 @@
     -ms-text-size-adjust: 100%;
   }
 
+  body {
+    background-color: #FAFAFA !important;
+    background-image: linear-gradient(to bottom, #FFFFFF 0%, #FAFAFA 100px, #FAFAFA 100%) !important;
+  }
+
   /* Mobile container adjustments */
   #contenedor {
     width: 100% !important;
@@ -523,11 +528,13 @@
 
   .mobile-section {
     width: 100% !important;
-    padding: 20px !important;
-    margin-bottom: 30px !important;
-    background-color: #f9f9f9;
-    border-radius: 8px;
+    padding: 28px !important;
+    margin-bottom: 40px !important;
+    background-color: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 12px;
     box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   }
 
   .mobile-section h2 {
@@ -536,9 +543,21 @@
     margin-bottom: 20px !important;
     margin-top: 0 !important;
     font-weight: bold !important;
-    border-bottom: 2px solid #AC1429;
-    padding-bottom: 8px !important;
+    padding-bottom: 12px !important;
     text-align: center !important;
+    position: relative;
+  }
+
+  .mobile-section h2::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #AC1429 20%, #D4526E 50%, #AC1429 80%, transparent);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 2px;
   }
 
   .mobile-section p {
@@ -573,10 +592,12 @@
     hyphens: auto !important;
     max-width: 100% !important;
     display: inline-block !important;
+    transition: all 0.3s ease;
   }
 
   .mobile-section a:hover {
-    color: #8B1021 !important;
+    color: #B8860B !important;
+    text-decoration-color: #B8860B !important;
   }
 
   .mobile-section strong {
@@ -638,10 +659,11 @@
   /* Estilos para libros en mobile */
   .mobile-book {
     margin: 20px 0 !important;
-    padding: 15px !important;
-    background-color: white;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px !important;
+    background-color: #FAFAFA;
+    border: 1px solid #E5E5E5;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     text-align: center !important;
   }
 
@@ -653,6 +675,12 @@
     margin: 0 auto 15px auto !important;
     border-radius: 4px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+  }
+
+  .mobile-book a:hover img {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
   }
 
   .mobile-book p {
@@ -661,33 +689,82 @@
     margin: 0 !important;
   }
 
-  /* Estilos para álbumes musicales en mobile */
-  .mobile-album {
+  /* Slider de álbumes musicales */
+  .music-slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
     margin: 20px 0 !important;
-    text-align: center !important;
   }
 
-  .mobile-album img {
-    max-width: 250px !important;
+  .music-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+  }
+
+  .music-slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .music-slide img {
+    max-width: 280px !important;
     width: 100% !important;
     height: auto !important;
     display: block !important;
     margin: 0 auto !important;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
   }
 
-  .mobile-album a {
-    display: block !important;
-    text-decoration: none !important;
+  .music-slide a:hover img {
+    transform: scale(1.03);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  }
+
+  /* Controles del slider */
+  .slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .slider-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #E5E5E5;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+  }
+
+  .slider-dot.active {
+    background: linear-gradient(135deg, #AC1429, #C23750);
+    width: 28px;
+    border-radius: 5px;
+  }
+
+  .slider-dot:hover {
+    background: #B8860B;
   }
 
   /* Enlaces de música */
   .mobile-music-links {
     margin: 20px 0 !important;
-    background-color: white;
-    padding: 15px !important;
-    border-radius: 6px;
+    background-color: #FAFAFA;
+    padding: 20px !important;
+    border: 1px solid #E5E5E5;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     overflow-x: hidden !important;
     max-width: 100% !important;
   }
@@ -723,12 +800,46 @@
     display: none !important;
   }
 
+  /* Botón Scroll to Top */
+  #scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #AC1429, #C23750);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(172, 20, 41, 0.3);
+    z-index: 9998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  #scroll-to-top:hover {
+    background: linear-gradient(135deg, #C23750, #D4526E);
+    box-shadow: 0 6px 16px rgba(172, 20, 41, 0.4);
+    transform: translateY(-3px) scale(1.05);
+  }
+
+  #scroll-to-top:active {
+    transform: translateY(-1px) scale(1.02);
+  }
+
   /* Estilos para el formulario de Mailchimp en mobile */
   #mc_embed_signup {
-    background-color: #f9f9f9 !important;
-    padding: 20px 20px 40px 20px !important;
+    background-color: #FFFFFF !important;
+    padding: 28px 28px 40px 28px !important;
     margin-bottom: 40px !important;
-    border-radius: 8px !important;
+    border: 1px solid #E5E5E5 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
     overflow: visible !important;
   }
 
@@ -743,9 +854,21 @@
     margin-bottom: 20px !important;
     margin-top: 0 !important;
     font-weight: bold !important;
-    border-bottom: 2px solid #AC1429 !important;
-    padding-bottom: 8px !important;
+    padding-bottom: 12px !important;
     text-align: center !important;
+    position: relative;
+  }
+
+  #mc_embed_signup h2::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #AC1429 20%, #D4526E 50%, #AC1429 80%, transparent);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 2px;
   }
 
   #mc_embed_signup p {

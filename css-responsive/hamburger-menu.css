@@ -20,16 +20,18 @@
     right: 0;
     padding: 10px;
     box-sizing: border-box;
-    background: #FFF;
+    background: linear-gradient(to bottom, #FFFFFF, #FAFAFA);
     border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     z-index: 9999;
   }
 
   /* Logo in navbar */
   #menu .navbar-logo {
     display: block;
-    max-width: 100% !important;
+    max-width: 70% !important;
     overflow: hidden;
+    transition: transform 0.3s ease;
   }
 
   #menu .navbar-logo img {
@@ -82,11 +84,14 @@
     font-size: 16px;
     border-left: 4px solid transparent;
     transition: all 0.3s ease;
+    color: #333;
   }
 
   #menu li a:hover {
     background-color: rgba(172, 20, 41, 0.05);
     border-left-color: #AC1429;
+    color: #AC1429;
+    padding-left: 25px;
   }
 
   /* Hamburger button */
@@ -94,26 +99,32 @@
     display: block;
     width: 40px;
     height: 40px;
-    background: none;
+    background: transparent;
     border: none;
     cursor: pointer;
-    padding: 5px;
+    padding: 0;
     position: absolute;
     right: 15px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1001;
+    transition: all 0.3s ease;
+  }
+
+  .menu-toggle:hover {
+    transform: translateY(-50%) scale(1.1);
   }
 
   /* Hamburger lines */
   .menu-toggle span {
     display: block;
-    width: 25px;
+    width: 28px;
     height: 3px;
-    background: #AC1429;
+    background: linear-gradient(135deg, #AC1429, #C23750);
     margin: 5px 0;
     transition: all 0.3s ease;
     border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(172, 20, 41, 0.3);
   }
 
   /* Active hamburger animation */
