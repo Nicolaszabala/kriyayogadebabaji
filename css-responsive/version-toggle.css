@@ -64,6 +64,31 @@
     display: none !important;
   }
 
+  /* Evitar overflow horizontal en versión web desde mobile */
+  body.prefer-web-version {
+    overflow-x: hidden !important;
+  }
+
+  /* Ocultar navbar mobile cuando se ve versión web */
+  body.prefer-web-version #menu {
+    display: none !important;
+  }
+
+  /* Ajustar escala del contenido desktop para que encaje en mobile */
+  body.prefer-web-version #contenedor {
+    transform: scale(0.38) !important;
+    transform-origin: top left !important;
+    width: 263% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  body.prefer-web-version #todaPagina {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
   /* Botón flotante visible solo cuando prefer-web-version está activo */
   body.prefer-web-version #floating-version-toggle {
     display: block !important;

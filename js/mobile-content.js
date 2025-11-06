@@ -428,6 +428,22 @@
             return;
         }
 
+        // Ajustar altura del body para eliminar espacio blanco
+        setTimeout(function() {
+            const contenedor = document.getElementById('contenedor');
+            if (contenedor) {
+                const realHeight = contenedor.scrollHeight;
+                const scale = 0.38;
+                const extraMargin = 50; // Margen extra para incluir todo el contenido
+                const scaledHeight = (realHeight * scale) + extraMargin;
+
+                document.body.style.height = scaledHeight + 'px';
+                document.body.style.overflow = 'hidden';
+                document.documentElement.style.height = scaledHeight + 'px';
+                document.documentElement.style.overflow = 'auto';
+            }
+        }, 500);
+
         // Crear botón flotante (los estilos están en version-toggle.css que NO se desactiva)
         const toggleButton = document.createElement('div');
         toggleButton.id = 'floating-version-toggle';
@@ -438,6 +454,13 @@
             document.body.classList.remove('prefer-web-version');
             localStorage.removeItem('preferWebVersion');
             enableResponsiveCss();
+
+            // Restaurar altura del body
+            document.body.style.height = '';
+            document.body.style.overflow = '';
+            document.documentElement.style.height = '';
+            document.documentElement.style.overflow = '';
+
             toggleButton.remove();
             location.reload();
         });

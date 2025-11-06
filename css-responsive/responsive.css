@@ -696,7 +696,7 @@
     cursor: pointer !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
     font-family: 'Lato', Helvetica, Arial, sans-serif !important;
-    font-size: 25px !important;
+    font-size: 20px !important;
     font-weight: bold !important;
     color: white !important;
   }
@@ -1270,8 +1270,8 @@
   /* Copyright centrado sin tarjeta */
   .mobile-copyright {
     text-align: center !important;
-    padding: 20px 28px 40px 28px !important;
-    margin: 0 !important;
+    padding: 20px 28px 0px 28px !important;
+    margin: 0 0 -30px 0 !important;
     background: none !important;
     border: none !important;
     box-shadow: none !important;
