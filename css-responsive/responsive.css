@@ -3,33 +3,20 @@
  * Version: 3.0.0 (Surgical approach)
  * Description: ONLY affects mobile devices (<768px) - Desktop layout untouched
  * Author: Development Team
+ *
+ * NOTA: Cuando el usuario elige "Ver Versión Web" desde mobile, se activa la clase
+ *       'prefer-web-version' en body, que muestra el diseño desktop con botón flotante
  */
-
-#mobile-noticias {
-  display: none;
-}
 
 /* ========================================
    MOBILE-ONLY RESPONSIVE STYLES
    CRITICAL: Only applies to screens <768px
+   NOTA: Las reglas de visibilidad de #desktop-noticias, #mobile-noticias
+         y .mobile-only-image están en version-toggle.css
    ======================================== */
 
-/* Only apply changes on mobile devices */
+/* Only apply changes on mobile devices (unless user prefers web version) */
 @media screen and (max-width: 767px) {
-
-  #desktop-noticias {
-    display: none !important;
-  }
-
-  #mobile-noticias {
-    display: block !important;
-  }
-
-  /* Viewport adjustments for mobile */
-  html {
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-  }
 
   body {
     background-color: #FAFAFA !important;
@@ -145,7 +132,7 @@
   #noticias,
   #noticiasA {
     width: 100% !important;
-    padding: 15px !important;
+    padding: 0 !important;
     box-sizing: border-box;
   }
 
@@ -262,7 +249,7 @@
   }
 
   #noticias {
-    padding: 15px 20px !important; /* Aumentado padding lateral */
+    padding: 0 !important; /* Sin padding para mobile custom content */
   }
 
   /* === JERARQUÍA DE BLOQUES === */
@@ -509,12 +496,60 @@
     margin: 0 !important;
   }
 
-  /* Portada mobile */
+  /* Cita del día - elegante y minimalista (va primero, debajo del navbar) */
+  .mobile-cita-container {
+    width: 100% !important;
+    padding: 15px 15px 15px 15px !important;
+    margin: -130px 0 15px 0 !important;
+    box-sizing: border-box;
+  }
+
+  /* Título Kriya Yoga - parte superior de la tarjeta unificada */
+  .mobile-titulo-kriya {
+    width: 100% !important;
+    text-align: center !important;
+    padding: 28px 28px 20px 28px !important;
+    margin: 0 !important;
+    background-color: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 12px 12px 0 0;
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border-bottom: none;
+  }
+
+  .mobile-titulo-kriya h1 {
+    color: #AC1429 !important;
+    font-size: 28px !important;
+    font-weight: bold !important;
+    margin: 0 0 20px 0 !important;
+    padding-bottom: 12px !important;
+    text-align: center !important;
+    position: relative;
+  }
+
+  .mobile-titulo-kriya h1::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #AC1429 20%, #D4526E 50%, #AC1429 80%, transparent);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 2px;
+  }
+
+  /* Portada mobile - parte media de la tarjeta unificada */
   .mobile-portada {
     width: 100% !important;
-    margin: -130px 0 0 0 !important;
+    margin: 0 !important;
     padding: 0 !important;
     text-align: center !important;
+    background-color: #FFFFFF;
+    border-left: 1px solid #E5E5E5;
+    border-right: 1px solid #E5E5E5;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   }
 
   .mobile-portada img {
@@ -526,6 +561,57 @@
     padding: 0 !important;
   }
 
+  .mobile-cita {
+    background: linear-gradient(135deg, #FFFFFF, #FAFAFA);
+    border-left: 4px solid #B8860B;
+    border-radius: 8px;
+    padding: 20px 25px !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mobile-cita::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, transparent, rgba(184, 134, 11, 0.05));
+    border-radius: 0 8px 0 100%;
+  }
+
+  .cita-titulo {
+    color: #AC1429;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cita-icon {
+    color: #B8860B;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 12px;
+    opacity: 0.6;
+  }
+
+  .cita-texto {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    color: #444 !important;
+    font-style: italic;
+    text-align: center !important;
+    position: relative;
+    z-index: 1;
+  }
+
   .mobile-section {
     width: 100% !important;
     padding: 28px !important;
@@ -535,6 +621,14 @@
     border-radius: 12px;
     box-sizing: border-box;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  /* Sección Kriya Yoga - parte inferior de la tarjeta unificada */
+  #mobile-kriya-yoga {
+    border-radius: 0 0 12px 12px !important;
+    border-top: none !important;
+    margin-top: 0 !important;
+    margin-bottom: 40px !important;
   }
 
   .mobile-section h2 {
@@ -561,7 +655,7 @@
   }
 
   .mobile-section p {
-    font-size: 15px !important;
+    font-size: 20px !important;
     line-height: 1.6 !important;
     margin-bottom: 15px !important;
     color: #333 !important;
@@ -571,13 +665,82 @@
     text-align: justify !important;
   }
 
+  /* Mantra centrado - debe tener mayor especificidad para sobrescribir justify */
+  .mobile-section p.mantra-centrado {
+    text-align: center !important;
+    font-style: italic !important;
+    color: #AC1429 !important;
+    font-weight: 500 !important;
+    font-size: 18px !important;
+  }
+
+  /* Botones de contacto (Llamar y WhatsApp) */
+  .mobile-contact-buttons {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
+    margin: 25px 0 10px 0 !important;
+  }
+
+  .mobile-section .contact-button,
+  .mobile-section a.contact-button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 70% !important;
+    padding: 8px 16px !important;
+    border-radius: 30px !important;
+    text-decoration: none !important;
+    transition: transform 0.15s ease-out, box-shadow 0.15s ease-out !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    font-family: 'Lato', Helvetica, Arial, sans-serif !important;
+    font-size: 25px !important;
+    font-weight: bold !important;
+    color: white !important;
+  }
+
+  .mobile-section .contact-button:hover,
+  .mobile-section a.contact-button:hover {
+    transform: scale(0.97) !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2) !important;
+    color: white !important;
+  }
+
+  .mobile-section .contact-button:active,
+  .mobile-section a.contact-button:active {
+    transform: scale(0.92) !important;
+    transition: transform 0.1s ease-in !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  /* Botón de llamada - Rojo a Naranja */
+  .mobile-section .contact-button.phone-button,
+  .mobile-section a.contact-button.phone-button {
+    background: linear-gradient(135deg, #fa460a 0%, #ffa83d 100%) !important;
+  }
+
+  /* Botón de WhatsApp - Verde */
+  .mobile-section .contact-button.whatsapp-button,
+  .mobile-section a.contact-button.whatsapp-button {
+    background: linear-gradient(135deg, #4e9c5d 0%, #6be883 100%) !important;
+  }
+
+  /* Texto de los botones */
+  .mobile-section .contact-button span,
+  .mobile-section a.contact-button span {
+    text-decoration: none !important;
+    color: white !important;
+  }
+
   .mobile-section ul {
     margin: 20px 0 !important;
     padding-left: 20px !important;
   }
 
   .mobile-section ul li {
-    font-size: 15px !important;
+    font-size: 17px !important;
     line-height: 1.6 !important;
     margin-bottom: 15px !important;
     color: #333 !important;
@@ -713,9 +876,9 @@
   }
 
   .music-slide img {
-    max-width: 280px !important;
-    width: 100% !important;
-    height: auto !important;
+    width: 220px !important;
+    height: 220px !important;
+    object-fit: cover !important;
     display: block !important;
     margin: 0 auto !important;
     border-radius: 12px;
@@ -755,6 +918,147 @@
 
   .slider-dot:hover {
     background: #B8860B;
+  }
+
+  /* Slider de Terapias */
+  .terapias-slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 20px 0 !important;
+  }
+
+  .terapias-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+  }
+
+  .terapias-slide {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .terapias-slide img {
+    width: 220px !important;
+    height: 300px !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto 15px auto !important;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+  }
+
+  .terapia-description {
+    text-align: center !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    color: #333 !important;
+    padding: 0 20px !important;
+    margin: 0 !important;
+  }
+
+  .terapia-description strong {
+    color: #AC1429 !important;
+  }
+
+  /* Slider de Libros */
+  .libros-slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 20px 0 !important;
+  }
+
+  .libros-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+  }
+
+  .libros-slide {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .libros-slide img {
+    width: 220px !important;
+    height: 300px !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto 15px auto !important;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+  }
+
+  .libro-description {
+    text-align: center !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    color: #333 !important;
+    padding: 0 20px !important;
+    margin: 0 !important;
+  }
+
+  .libro-description strong {
+    color: #AC1429 !important;
+  }
+
+  /* Slider de Linaje */
+  .linaje-slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 20px 0 !important;
+  }
+
+  .linaje-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+  }
+
+  .linaje-slide {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .linaje-slide img {
+    width: 220px !important;
+    height: 300px !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto 15px auto !important;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+  }
+
+  .linaje-description {
+    text-align: center !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    color: #333 !important;
+    padding: 0 20px !important;
+    margin: 0 !important;
+    font-weight: 600 !important;
   }
 
   /* Enlaces de música */
@@ -873,7 +1177,7 @@
 
   #mc_embed_signup p {
     text-align: justify !important;
-    font-size: 15px !important;
+    font-size: 17px !important;
     line-height: 1.6 !important;
     margin-bottom: 15px !important;
   }
@@ -930,6 +1234,90 @@
     font-size: 15px !important;
   }
 
+  /* Privacy link con fuente más pequeña */
+  #mc_embed_signup .privacy-link {
+    font-size: 13px !important;
+    display: inline-block !important;
+    white-space: nowrap !important;
+  }
+
+  /* Redes sociales centradas sin tarjeta */
+  .mobile-social-links {
+    text-align: center !important;
+    padding: 20px 28px !important;
+    margin: 20px 0 !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .mobile-social-links p {
+    font-size: 16px !important;
+    margin-bottom: 15px !important;
+    line-height: 1.6 !important;
+  }
+
+  .mobile-social-links a {
+    color: #AC1429 !important;
+    text-decoration: underline !important;
+  }
+
+  .mobile-social-links a:hover {
+    color: #B8860B !important;
+    text-decoration-color: #B8860B !important;
+  }
+
+  /* Copyright centrado sin tarjeta */
+  .mobile-copyright {
+    text-align: center !important;
+    padding: 20px 28px 40px 28px !important;
+    margin: 0 !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .mobile-copyright p {
+    font-size: 14px !important;
+    color: #666 !important;
+    margin: 0 !important;
+  }
+
+  /* Botón Versión Web - disponible en ambos modos */
+  .mobile-version-toggle {
+    text-align: center !important;
+    padding: 20px 28px !important;
+    margin: 0 0 20px 0 !important;
+    background: none !important;
+  }
+
+  .version-web-button {
+    display: inline-block !important;
+    padding: 12px 40px !important;
+    background: linear-gradient(135deg, #AC1429 0%, #D4526E 100%) !important;
+    color: white !important;
+    text-decoration: none !important;
+    border-radius: 25px !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    box-shadow: 0 4px 12px rgba(172, 20, 41, 0.3) !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+    border: none !important;
+  }
+
+  .version-web-button:hover {
+    background: linear-gradient(135deg, #8B1021 0%, #C23750 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(172, 20, 41, 0.4) !important;
+    color: white !important;
+  }
+
+  .version-web-button:active {
+    transform: translateY(0) !important;
+    box-shadow: 0 2px 6px rgba(172, 20, 41, 0.3) !important;
+  }
+
 }
 
 /* ========================================
@@ -956,16 +1344,5 @@
   #todaPagina {
     border: none !important;
     padding: 0 !important;
-  }
-}
-
-.mobile-only-image {
-  display: none;
-}
-
-@media screen and (max-width: 767px) {
-  .mobile-only-image {
-    display: block;
-    margin: 0 auto; /* Center the image */
   }
 }
