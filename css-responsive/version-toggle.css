@@ -96,7 +96,7 @@
     bottom: 20px !important;
     right: 20px !important;
     z-index: 2147483647 !important;
-    background: linear-gradient(135deg, #AC1429 0%, #D4526E 100%) !important;
+    background: linear-gradient(to bottom, #AC1429 0%, #D4526E 100%) !important;
     padding: 12px 30px !important;
     border-radius: 25px !important;
     box-shadow: 0 4px 20px rgba(172, 20, 41, 0.6) !important;
@@ -108,7 +108,7 @@
   }
 
   body.prefer-web-version #floating-version-toggle:hover {
-    background: linear-gradient(135deg, #8B1021 0%, #C23750 100%) !important;
+    background: linear-gradient(to bottom, #8B1021 0%, #C23750 100%) !important;
     transform: translateY(-2px) !important;
     box-shadow: 0 6px 20px rgba(172, 20, 41, 0.5) !important;
   }

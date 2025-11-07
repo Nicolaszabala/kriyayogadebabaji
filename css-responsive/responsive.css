@@ -533,7 +533,7 @@
     display: block;
     width: 100%;
     height: 3px;
-    background: linear-gradient(to right, transparent, #AC1429 20%, #D4526E 50%, #AC1429 80%, transparent);
+    background: linear-gradient(to bottom, transparent, #AC1429 20%, #D4526E 50%, #AC1429 80%, transparent);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -561,8 +561,25 @@
     padding: 0 !important;
   }
 
+  /* Contenedor de imágenes en otras páginas */
+  .mobile-image-container {
+    width: 100% !important;
+    margin: 20px 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+
+  .mobile-image-container img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+    border-radius: 8px !important;
+  }
+
   .mobile-cita {
-    background: linear-gradient(135deg, #FFFFFF, #FAFAFA);
+    background: linear-gradient(to bottom, #FFFFFF, #FAFAFA);
     border-left: 4px solid #B8860B;
     border-radius: 8px;
     padding: 20px 25px !important;
@@ -578,7 +595,7 @@
     right: 0;
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, transparent, rgba(184, 134, 11, 0.05));
+    background: linear-gradient(to bottom, transparent, rgba(184, 134, 11, 0.05));
     border-radius: 0 8px 0 100%;
   }
 
@@ -631,6 +648,28 @@
     margin-bottom: 40px !important;
   }
 
+   .mobile-section h1 {
+    color: #AC1429 !important;
+    font-size: 20px !important;
+    margin-bottom: 20px !important;
+    margin-top: 0 !important;
+    font-weight: bold !important;
+    padding-bottom: 12px !important;
+    text-align: center !important;
+    position: relative;
+  }
+
+  .mobile-section h1::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #AC1429 20%, #D4526E 50%, #AC1429 80%, transparent);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 2px;
+  }
   .mobile-section h2 {
     color: #AC1429 !important;
     font-size: 20px !important;
@@ -651,6 +690,29 @@
     position: absolute;
     bottom: 0;
     left: 0;
+    border-radius: 2px;
+  }
+
+  .mobile-section h3 {
+    color: #AC1429 !important;
+    font-size: 18px !important;
+    margin-bottom: 15px !important;
+    margin-top: 0 !important;
+    font-weight: bold !important;
+    padding-bottom: 10px !important;
+    text-align: center !important;
+    position: relative;
+  }
+
+  .mobile-section h3::after {
+    content: '';
+    display: block;
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #AC1429 20%, #D4526E 50%, #AC1429 80%, transparent);
+    position: absolute;
+    bottom: 0;
+    left: 10%;
     border-radius: 2px;
   }
 
@@ -718,13 +780,13 @@
   /* Botón de llamada - Rojo a Naranja */
   .mobile-section .contact-button.phone-button,
   .mobile-section a.contact-button.phone-button {
-    background: linear-gradient(135deg, #fa460a 0%, #ffa83d 100%) !important;
+    background: linear-gradient(to bottom, #fa460a 0%, #ffa83d 100%) !important;
   }
 
   /* Botón de WhatsApp - Verde */
   .mobile-section .contact-button.whatsapp-button,
   .mobile-section a.contact-button.whatsapp-button {
-    background: linear-gradient(135deg, #4e9c5d 0%, #6be883 100%) !important;
+    background: linear-gradient(to bottom, #4e9c5d 0%, #6be883 100%) !important;
   }
 
   /* Texto de los botones */
@@ -911,7 +973,7 @@
   }
 
   .slider-dot.active {
-    background: linear-gradient(135deg, #AC1429, #C23750);
+    background: linear-gradient(to bottom, #AC1429, #C23750);
     width: 28px;
     border-radius: 5px;
   }
@@ -1111,7 +1173,7 @@
     right: 20px;
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, #AC1429, #C23750);
+    background: linear-gradient(to bottom, #AC1429, #C23750);
     color: white;
     border: none;
     border-radius: 50%;
@@ -1127,7 +1189,7 @@
   }
 
   #scroll-to-top:hover {
-    background: linear-gradient(135deg, #C23750, #D4526E);
+    background: linear-gradient(to bottom, #C23750, #D4526E);
     box-shadow: 0 6px 16px rgba(172, 20, 41, 0.4);
     transform: translateY(-3px) scale(1.05);
   }
@@ -1210,18 +1272,21 @@
     line-height: normal !important;
     padding: 12px !important;
     margin: 15px 0 0 0 !important;
-    background-color: #AC1429 !important;
+    background: linear-gradient(to bottom, #AC1429 0%, #D4526E 100%) !important;
     color: white !important;
     border: none !important;
-    border-radius: 4px !important;
+    border-radius: 25px !important;
     font-size: 18px !important;
     font-weight: bold !important;
     cursor: pointer !important;
     box-sizing: border-box !important;
+    transition: all 0.3s ease !important;
   }
 
   #mc_embed_signup .button:hover {
-    background-color: #8B1021 !important;
+    background: linear-gradient(to bottom, #8B1021 0%, #C23750 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(172, 20, 41, 0.4) !important;
   }
 
   #mc_embed_signup .clear {
@@ -1294,7 +1359,7 @@
   .version-web-button {
     display: inline-block !important;
     padding: 12px 40px !important;
-    background: linear-gradient(135deg, #AC1429 0%, #D4526E 100%) !important;
+    background: linear-gradient(to bottom, #AC1429 0%, #D4526E 100%) !important;
     color: white !important;
     text-decoration: none !important;
     border-radius: 25px !important;
@@ -1307,7 +1372,7 @@
   }
 
   .version-web-button:hover {
-    background: linear-gradient(135deg, #8B1021 0%, #C23750 100%) !important;
+    background: linear-gradient(to bottom, #8B1021 0%, #C23750 100%) !important;
     transform: translateY(-2px) !important;
     box-shadow: 0 6px 16px rgba(172, 20, 41, 0.4) !important;
     color: white !important;

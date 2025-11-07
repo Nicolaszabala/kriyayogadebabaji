@@ -17,7 +17,10 @@
 <link rel="stylesheet" type="text/css" href="css/textos.css" />
 <link rel="stylesheet" type="text/css" href="css/menus.css" />
 <link rel="stylesheet" type="text/css" href="css/cuerpoIndex.css" />
-<link rel="stylesheet" type="text/css" href="css/fuentes.css" /></head>
+<link rel="stylesheet" type="text/css" href="css/fuentes.css" /><link rel="stylesheet" type="text/css" href="css-responsive/responsive.css" />
+<link rel="stylesheet" type="text/css" href="css-responsive/version-toggle.css" />
+<link rel="stylesheet" type="text/css" href="css-responsive/hamburger-menu.css" />
+</head>
 
 <body >
 <div id="contenedor">
@@ -63,9 +66,23 @@
             
             
 			
-            <li><div id="blanco2">&nbsp;</div></li>
-		
-        	<li><div id="noticias">
+            <li><div id="blanco2">&nbsp;</div></li>        	<li>
+
+<!-- CONTENIDO MOBILE -->
+<div id="mobile-noticias" style="display: none;">
+  <div class="mobile-content-wrapper">
+    <div class="mobile-section">
+      <h2>Manejando la mente</h2>
+
+
+      <p><a href="docs/mente.pdf">Descargar versión en PDF</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- CONTENIDO DESKTOP -->
+<div id="desktop-noticias">
+<div id="noticias">
 
 
 
@@ -113,17 +130,29 @@ Tenemos que dominar a la mente inferior con la mente superior. Conquistar a la m
 	
 	
 	</h2></div></div><!-- de noticias-->
+</div>
+<!-- FIN CONTENIDO DESKTOP -->
     </li><!-- de noticias-->   
  
   </ul><!-- de contenidos2-->
   
   	<p>&nbsp;</p> <p>&nbsp;</p>
 
-  <div id="fin"><a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;">&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;</a> - Copyright 2019©.Se permite la libre reproducción <b><u>siempre que se cite la fuente</u></b>.</div>  
+  <div id="fin"><a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;">&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;</a> - Copyright 2025©.Se permite la libre reproducción <b><u>siempre que se cite la fuente</u></b>.</div>  
 </div><!-- de todaPaginaB-->
 </div><!-- de todaPagina-->
 
 </div><!-- de contenedor-->
+
+
+<!-- JavaScript para menú responsive -->
+<script src="js/menu-toggle.js"></script>
+
+<!-- JavaScript para contenido mobile personalizado -->
+<script src="js/mobile-content.js"></script>
+
+<!-- JavaScript para botón scroll to top -->
+<script src="js/scroll-to-top.js"></script>
 
 </body>
 </html>

@@ -14,7 +14,10 @@
 <link rel="stylesheet" type="text/css" href="css/textos.css" />
 <link rel="stylesheet" type="text/css" href="css/menus.css" />
 <link rel="stylesheet" type="text/css" href="css/cuerpoIndex.css" />
-<link rel="stylesheet" type="text/css" href="css/fuentes.css" /></head>
+<link rel="stylesheet" type="text/css" href="css/fuentes.css" />
+<link rel="stylesheet" type="text/css" href="css-responsive/responsive.css" />
+<link rel="stylesheet" type="text/css" href="css-responsive/version-toggle.css" />
+<link rel="stylesheet" type="text/css" href="css-responsive/hamburger-menu.css" /></head>
 
 <body >
 <div id="contenedor">
@@ -80,11 +83,55 @@
       </li>
 
       <li>
-        <div id="noticias"> 
-          <p>&nbsp;</p>
-         
 
-    
+    <!-- CONTENIDO MOBILE -->
+    <div id="mobile-noticias" style="display: none;">
+      <div class="mobile-content-wrapper">
+
+        <!-- Foto de Nityananda -->
+        <div class="mobile-section">
+          <div class="mobile-image-container">
+            <img src="imagenes/yantra.png" alt="Yantra de Kriya Babaji" />
+            <p class="linaje-description" style="text-align: center;">Yantra de Kriya Babaji</p>
+          </div>
+        </div>
+
+        <!-- Presentación -->
+        <div class="mobile-section">
+          <h2>Contacto</h2>
+
+          <p>Me llamo Nacho Albalat, mi nombre de profesor de Kriya Yoga es Nityananda. Soy licenciado en Ciencias de la Información, y he publicado los libros "El Yoga de Jesús", "Recobrando el Ser", "Avanzando en el Yoga: el sendero de Kundalini, los chakras y los Siddhas", "La luz de los Siddhas", "Enseñanzas de Sri Aurobindo y la Madre" y "Enseñanzas de la Madre"; y traducido al castellano otros tantos sobre espiritualidad. Ésta es mi página de Kriya Yoga.</p>
+
+          <p>Tras practicar Kriya Yoga de Babaji durante años, mi profesor, Govindan Satchidananda, me sugirió que lo enseñara a los demás. Mi trabajo como profesor de Kriya Yoga tiene que ver bastante con el periodismo, en la medida en que intento transmitir, de la mejor manera posible e impecable, una información y un conocimiento que no son míos.</p>
+
+          <p>Disfruto compartiendo este conocimiento en los seminarios y en las conferencias. Si estás interesado en el Kriya Yoga de Babaji y quieres saber más, estaré encantado de atenderte.</p>
+
+          <p><strong>Email:</strong> <a href="mailto:info@kriyayogadebabaji.net">info@kriyayogadebabaji.net</a><br />
+          <strong>Móvil:</strong> 649145057</p>
+
+          <div class="mobile-contact-buttons">
+            <a href="tel:+34649145057" class="contact-button phone-button">
+              <span>Llamar</span>
+            </a>
+            <a href="https://wa.me/34649145057" class="contact-button whatsapp-button" target="_blank">
+              <span>Enviar Whatsapp</span>
+            </a>
+          </div>
+
+          <p style="margin-top: 20px;"><em>Om Kriya Babaji Nama Aum,</em><br />
+          Nityananda</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CONTENIDO DESKTOP -->
+    <div id="desktop-noticias">
+        <div id="noticias">
+          <p>&nbsp;</p>
+
+
+
           <!--coge aqui texto-->
 <div class="noticias2">
 		
@@ -126,7 +173,12 @@ Nityananda</h2></div>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p>&nbsp;</p></li>
+<p>&nbsp;</p>
+        </div>
+    </div>
+    <!-- FIN CONTENIDO DESKTOP -->
+
+</li>
    
       <!-- de noticias-->
     </ul>
@@ -137,10 +189,18 @@ Nityananda</h2></div>
     <p>&nbsp;</p>
 </div><!-- de todaPaginaB-->
 </div><!-- de todaPagina-->
-<div id="fin"><a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;">&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;</a> - Copyright 2019©.Se permite la libre reproducción <b><u>siempre que se cite la fuente</u></b>.</div>
+<div id="fin"><a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;">&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;</a> - Copyright 2025©. Se permite la libre reproducción <b><u>siempre que se cite la fuente</u></b>.</div>
 <p>&nbsp;</p>
 </div><!-- de contenedor-->
 
+<!-- JavaScript para menú responsive -->
+<script src="js/menu-toggle.js"></script>
+
+<!-- JavaScript para contenido mobile personalizado -->
+<script src="js/mobile-content.js"></script>
+
+<!-- JavaScript para botón scroll to top -->
+<script src="js/scroll-to-top.js"></script>
 </body>
 </html>
 

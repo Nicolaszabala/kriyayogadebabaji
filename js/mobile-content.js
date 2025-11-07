@@ -60,30 +60,26 @@
         tituloKriyaYoga: {
             title: 'Título Kriya Yoga',
             content: `
-                <div class="mobile-titulo-kriya">
+                <div class="mobile-section" id="mobile-kriya-yoga-titulo">
                     <h1>Kriya Yoga</h1>
+                    <div class="mobile-portada">
+                        <img src="imagenes/PortadaMobile.jpg" alt="Kriya Yoga de Babaji" />
+                    </div>
+                    <p class="mantra-centrado">Om Kriya Babaji Nama Aum</p>
+                    <p>El Kriya Yoga de Babaji es un sistema completo de Yoga que incluye posturas, respiraciones, meditaciones, mantras y devoción. Un programa diario de práctica para mejorar tu vida y la vida de los que te rodean.</p>
+                    <p>El Kriya Yoga se enseña en tres seminarios, siendo el primer seminario el más importante de todos y la base de este camino.</p>
                 </div>
             `
         },
 
         portada: {
             title: 'Portada',
-            content: `
-                <div class="mobile-portada">
-                    <img src="imagenes/PortadaMobile.jpg" alt="Kriya Yoga de Babaji" />
-                </div>
-            `
+            content: ``
         },
 
         kriyaYoga: {
             title: 'Contenido Kriya Yoga',
-            content: `
-                <div class="mobile-section" id="mobile-kriya-yoga">
-                    <p class="mantra-centrado">Om Kriya Babaji Nama Aum</p>
-                    <p>El Kriya Yoga de Babaji es un sistema completo de Yoga que incluye posturas, respiraciones, meditaciones, mantras y devoción. Un programa diario de práctica para mejorar tu vida y la vida de los que te rodean.</p>
-                    <p>El Kriya Yoga se enseña en tres seminarios, siendo el primer seminario el más importante de todos y la base de este camino.</p>
-                </div>
-            `
+            content: ``
         },
 
         seminarios: {
@@ -371,7 +367,24 @@
             return;
         }
 
-        // Construir nuevo contenido mobile
+        // Solo inyectar contenido si estamos en index.htm
+        // Para otras páginas, el contenido mobile ya está en el HTML
+        const currentPage = window.location.pathname;
+        const isIndexPage = currentPage === '/' || currentPage === '/index.htm' || currentPage.endsWith('/');
+
+        if (!isIndexPage) {
+            // Para páginas que no son index, solo mostrar el contenido mobile que ya existe
+            const desktopDiv = document.getElementById('desktop-noticias');
+            if (desktopDiv) {
+                desktopDiv.style.display = 'none';
+            }
+            if (mobileNoticiasDiv) {
+                mobileNoticiasDiv.style.display = 'block';
+            }
+            return;
+        }
+
+        // Construir nuevo contenido mobile SOLO para index.htm
         let newContent = '<div class="mobile-content-wrapper">';
 
         // Agregar todas las secciones en orden (cita del día, título, portada, contenido)
@@ -833,7 +846,8 @@
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(function() {
             // Si cambia de desktop a mobile o viceversa, recargar la página
-            const wasMobile = document.getElementById('mobile-noticias').querySelector('.mobile-content-wrapper') !== null;
+            const mobileDiv = document.getElementById('mobile-noticias');
+            const wasMobile = mobileDiv && (mobileDiv.style.display !== 'none' || mobileDiv.querySelector('.mobile-content-wrapper') !== null);
             const nowMobile = isMobile();
 
             if (wasMobile !== nowMobile) {

@@ -42,10 +42,11 @@
         // Check if logo already added to navbar
         if (menu.querySelector('.navbar-logo')) return;
 
-        // Create logo container
-        const logoContainer = document.createElement('div');
-        logoContainer.className = 'navbar-logo';
-        logoContainer.style.cssText = 'padding: 10px; text-align: center; background: white;';
+        // Create logo container (as link)
+        const logoLink = document.createElement('a');
+        logoLink.href = 'index.htm';
+        logoLink.className = 'navbar-logo';
+        logoLink.style.cssText = 'padding: 10px; text-align: center; background: white; display: block; text-decoration: none;';
 
         // Create logo element with custom image
         const logo = document.createElement('img');
@@ -53,10 +54,10 @@
         logo.alt = 'Kriya Yoga de Babaji';
         logo.style.cssText = 'max-width: 100%; height: auto; display: block; margin: 0 auto;';
 
-        logoContainer.appendChild(logo);
+        logoLink.appendChild(logo);
 
         // Insert logo at the beginning of menu
-        menu.insertBefore(logoContainer, menu.firstChild);
+        menu.insertBefore(logoLink, menu.firstChild);
     }
 
     function buildCustomMobileMenu() {

@@ -14,7 +14,10 @@
 <link rel="stylesheet" type="text/css" href="css/textos.css" />
 <link rel="stylesheet" type="text/css" href="css/menus.css" />
 <link rel="stylesheet" type="text/css" href="css/cuerpoIndex.css" />
-<link rel="stylesheet" type="text/css" href="css/fuentes.css" /></head>
+<link rel="stylesheet" type="text/css" href="css/fuentes.css" />
+<link rel="stylesheet" type="text/css" href="css-responsive/responsive.css" />
+<link rel="stylesheet" type="text/css" href="css-responsive/version-toggle.css" />
+<link rel="stylesheet" type="text/css" href="css-responsive/hamburger-menu.css" /></head>
 
 <body >
 <div id="contenedor">
@@ -77,8 +80,83 @@
   <li> 
     <div id="blanco2">&nbsp;</div>
   </li>
-  <li> 
-    <div id="noticias"> 
+  <li>
+
+    <!-- CONTENIDO MOBILE -->
+    <div id="mobile-noticias" style="display: none;">
+      <div class="mobile-content-wrapper">
+
+        <!-- Introducción -->
+        <div class="mobile-section">
+          <h2>Terapias y Clases</h2>
+          <p style="text-align: left !important;">Además de <a href="seminarios.htm">seminarios de Kriya Yoga</a>, en Valencia imparto:</p>
+        </div>
+
+        <!-- Sesiones de Chakras -->
+        <div class="mobile-section">
+          <h3>Sesiones personales de activación de chakras</h3>
+
+          <div class="mobile-image-container">
+            <a href="chakras.htm">
+              <img src="imagenes/Chakras2.jpg" alt="Activación de Chakras" />
+            </a>
+          </div>
+
+          <p>⸰ Sesiones presenciales para activar y equilibrar los centros de energía.</p>
+          <p>⸰ Descubre tu potencial, alinéate con tu Ser.</p>
+          <p>+ La sesión suele durar hora y media. <a href="chakras.htm">Más información.</a></p>
+        </div>
+
+        <!-- Clases Semanales -->
+        <div class="mobile-section">
+          <h3>Clases semanales de Yoga</h3>
+
+          <div class="mobile-image-container">
+            <img src="imagenes/Face2.jpg" alt="Clases de Yoga" />
+          </div>
+
+          <p>⸰ Todas las personas pueden practicarlo, no importa su estado físico ni experiencia previa.</p>
+          <p>⸰ Kriya Yoga y Energy Medicine para mover la energía y llegar a experimentar del gozo del Ser.</p>
+          <p>+ Hora y media de clase.</p>
+          <p>Si el tiempo lo permite practicamos al aire libre en un parque, para sentir y aprovechar al máximo la energía <em>(prana)</em>.</p>
+        </div>
+
+        <!-- Sesiones de Respiración -->
+        <div class="mobile-section">
+          <h3>Sesiones de respiración para emociones conflictivas</h3>
+
+          <div class="mobile-image-container">
+            <img src="imagenes/breathing.gif" alt="Respiración Emocional" />
+          </div>
+
+          <p>Las emociones del pasado que se guardan se pueden somatizar y crear afecciones físicas.</p>
+          <p>Una sesión de respiración emocional guiada permite liberarlas gracias al acompañamiento en el proceso.</p>
+          <p>+ La sesión suele durar una hora.</p>
+        </div>
+
+        <!-- Contacto -->
+        <div class="mobile-section">
+          <h3>Contacto</h3>
+          <p><strong>Contacta sin compromiso si quieres saber más:</strong></p>
+          <p>Nityananda<br>
+          <a href="mailto:info@kriyayogadebabaji.net">info@kriyayogadebabaji.net</a></p>
+
+          <div class="mobile-contact-buttons">
+            <a href="tel:+34649145057" class="contact-button phone-button">
+              <span>Llamar</span>
+            </a>
+            <a href="https://wa.me/34649145057" class="contact-button whatsapp-button" target="_blank">
+              <span>Enviar Whatsapp</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CONTENIDO DESKTOP -->
+    <div id="desktop-noticias">
+    <div id="noticias">
       <p>&nbsp;</p>
       <!--coge aqui texto-->
       <p>&nbsp;</p>
@@ -163,7 +241,10 @@ El taller se ofrece presencial y por online. Para apuntarte a un taller escribe 
 
     <p>&nbsp;</p>
     <p>&nbsp;</p></div>
-  </li> 
+    </div>
+    <!-- FIN CONTENIDO DESKTOP -->
+
+  </li>
   <!-- de noticias-->
 </ul>
     <!-- de contenidos2-->
@@ -171,10 +252,18 @@ El taller se ofrece presencial y por online. Para apuntarte a un taller escribe 
  
 </div><!-- de todaPaginaB-->
 </div><!-- de todaPagina-->
-<div id="fin"><a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;">&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;</a> - Copyright 2019©.Se permite la libre reproducción <b><u>siempre que se cite la fuente</u></b>.</div>
+<div id="fin"><a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;">&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;</a> - Copyright 2025©. Se permite la libre reproducción <b><u>siempre que se cite la fuente</u></b>.</div>
 <p>&nbsp;</p>
 </div><!-- de contenedor-->
 
+<!-- JavaScript para menú responsive -->
+<script src="js/menu-toggle.js"></script>
+
+<!-- JavaScript para contenido mobile personalizado -->
+<script src="js/mobile-content.js"></script>
+
+<!-- JavaScript para botón scroll to top -->
+<script src="js/scroll-to-top.js"></script>
 </body>
 </html>
 
