@@ -17,9 +17,354 @@
 <link rel="stylesheet" type="text/css" href="css/textos.css" />
 <link rel="stylesheet" type="text/css" href="css/menus.css" />
 <link rel="stylesheet" type="text/css" href="css/cuerpoIndex.css" />
-<link rel="stylesheet" type="text/css" href="css/fuentes.css" /></head>
+<link rel="stylesheet" type="text/css" href="css/fuentes.css" />
+
+<style>
+/* Estilos responsive para mobile */
+@media screen and (max-width: 768px) {
+    body { margin: 0; padding: 0; }
+    #contenedor, #todaPagina, #todaPaginaB { width: 100% !important; margin: 0; padding: 0; }
+    .desktop-only { display: none !important; }
+    .mobile-only { display: block !important; }
+
+    /* Header mobile */
+    .mobile-header {
+        background: linear-gradient(135deg, #8B0000 0%, #DC143C 100%);
+        padding: 15px;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .mobile-header h1 {
+        color: white;
+        font-size: 22px;
+        margin: 0;
+        font-weight: 600;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        line-height: 1.3;
+    }
+
+    /* Navegación mobile */
+    .mobile-nav {
+        background: #f8f8f8;
+        padding: 10px;
+        border-bottom: 3px solid #8B0000;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .mobile-nav a {
+        display: inline-block;
+        color: #8B0000;
+        text-decoration: none;
+        padding: 8px 15px;
+        margin: 0 5px;
+        border-radius: 20px;
+        background: white;
+        font-size: 13px;
+        font-weight: 500;
+        border: 1px solid #ddd;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-nav a:hover, .mobile-nav a:active {
+        background: #8B0000;
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    /* Contenido mobile */
+    .mobile-content {
+        padding: 20px 15px;
+        background: white;
+        line-height: 1.8;
+    }
+
+    .mobile-content h2 {
+        color: #8B0000;
+        font-size: 24px;
+        margin: 25px 0 15px 0;
+        font-weight: 600;
+        border-bottom: 2px solid #8B0000;
+        padding-bottom: 10px;
+    }
+
+    .mobile-content h3 {
+        color: #DC143C;
+        font-size: 20px;
+        margin: 20px 0 12px 0;
+        font-weight: 600;
+    }
+
+    .mobile-content p {
+        margin: 15px 0;
+        text-align: justify;
+        font-size: 16px;
+        line-height: 1.8;
+        color: #333;
+    }
+
+    .mobile-content .quote {
+        background: #fff8f0;
+        border-left: 4px solid #8B0000;
+        padding: 15px;
+        margin: 20px 0;
+        font-style: italic;
+        border-radius: 0 8px 8px 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .mobile-content .highlight {
+        background: #fff8f0;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 20px 0;
+        border: 1px solid #ffe4cc;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .mobile-content .note {
+        background: #f0f8ff;
+        padding: 15px;
+        border-radius: 8px;
+        margin: 20px 0;
+        font-size: 15px;
+        border-left: 4px solid #4169E1;
+    }
+
+    .mobile-content img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 20px auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .mobile-content .pdf-link {
+        display: inline-block;
+        background: #8B0000;
+        color: white;
+        padding: 12px 25px;
+        text-decoration: none;
+        border-radius: 25px;
+        margin: 20px 0;
+        font-weight: 600;
+        box-shadow: 0 4px 10px rgba(139,0,0,0.3);
+        transition: all 0.3s ease;
+    }
+
+    .mobile-content .pdf-link:hover {
+        background: #DC143C;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(139,0,0,0.4);
+    }
+
+    .mobile-content .related-links {
+        background: #f8f8f8;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 30px 0 20px 0;
+    }
+
+    .mobile-content .related-links h3 {
+        color: #8B0000;
+        margin-top: 0;
+    }
+
+    .mobile-content .related-links a {
+        display: block;
+        color: #8B0000;
+        text-decoration: none;
+        padding: 10px 0;
+        border-bottom: 1px solid #e0e0e0;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-content .related-links a:last-child {
+        border-bottom: none;
+    }
+
+    .mobile-content .related-links a:hover {
+        color: #DC143C;
+        padding-left: 10px;
+    }
+
+    /* Footer mobile */
+    .mobile-footer {
+        background: #2c2c2c;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .mobile-footer a {
+        color: #DC143C;
+        text-decoration: none;
+        font-weight: 600;
+    }
+}
+
+/* Ocultar mobile en desktop */
+@media screen and (min-width: 769px) {
+    .mobile-only { display: none !important; }
+    .desktop-only { display: block !important; }
+}
+
+/* Botón toggle versión */
+.version-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #8B0000;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 9999;
+    transition: all 0.3s ease;
+}
+
+.version-toggle:hover {
+    background: #DC143C;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+</style>
+</head>
 
 <body >
+
+<!-- VERSIÓN MOBILE -->
+<div class="mobile-only">
+    <!-- Header -->
+    <div class="mobile-header">
+        <h1>Kudambay<br>Llevando el gozo a nuestra vida</h1>
+    </div>
+
+    <!-- Navegación -->
+    <div class="mobile-nav">
+        <a href="index.htm">Inicio</a>
+        <a href="kriya.htm">Kriya Yoga</a>
+        <a href="seminarios.htm">Seminarios</a>
+        <a href="clases.htm">Clases</a>
+        <a href="articulos.htm">Artículos</a>
+        <a href="libros.htm">Libros</a>
+        <a href="contacto.htm">Contacto</a>
+    </div>
+
+    <!-- Contenido -->
+    <div class="mobile-content">
+        <a href="docs/kudambay.pdf" class="pdf-link">📄 Descargar versión PDF</a>
+
+        <img src="imagenes/kudambay.png" alt="Kudambay" />
+
+        <p><em>Por Nityananda</em></p>
+
+        <div class="quote">
+            <p><strong>Para aquellos que han escalado a lo alto de la montaña<br>
+            y bebido el zumo fresco de mango<br>
+            ¿Qué interés tiene el zumo de coco? ¡Kudambay!<br>
+            ¿Qué interés tiene el zumo de coco?</strong></p>
+            <p><em>Siddha Kudambay</em></p>
+        </div>
+
+        <p>La aspiración es el anhelo de nuestro corazón por unirnos, incondicionalmente, con el Divino. Sri Aurobindo señala que Dios responde siempre a la aspiración sincera del devoto, y que por tanto, ésta es el requisito principal para avanzar en la realización divina.</p>
+
+        <p>Dice Jesús: <em>"Amarás al Señor tu Dios con todo tu corazón, con toda tu alma, con todas tus fuerzas y con toda tu mente"</em> (Lucas 10.27).</p>
+
+        <p>En el Kriya Yoga la aspiración se manifiesta y toma forma concentrando toda la energía vital, ("todas tus fuerzas") a los pies de la Divinidad.</p>
+
+        <p>El esfuerzo del yogui, en el camino de los Siddhas, es elevar y concentrar su energía vital en un punto, el chakra de la corona, en lo alto de la cabeza, a través de asanas, <em>bandahs</em> (cierres musculares), meditaciones, y sobre todo, pranayamas – la técnica que más enfatizan los Siddhas.</p>
+
+        <p>Incluso la devoción intensa hacia el divino tiene el efecto de elevar la energía vital hacia arriba, hacia el chakra de la corona – lo podemos ver hasta en las representaciones de los santos cristianos, con la mirada elevada hacia arriba y la corola pintada alrededor de sus cabezas.</p>
+
+        <p>Sahasrara, el chakra de la corona, es un lugar fundamental de la anatomía sutil del ser humano, ampliamente citado por los Siddhas en sus poemas. A veces lo aluden como la residencia de Shiva, el monte Meru, o lo alto de la montaña, o los pies del Divino. Esta última imagen es muy utilizada, dado que el chakra Sahasrara es el lugar de donde mana la gracia de Dios, y en India los devotos tocan los pies del maestro para recibir su gracia. El chakra de la corona es también el lugar de encuentro y fusión entre el devoto y el Divino, el punto donde "el jiva se convierte en Shiva" – el individuo se vuelve uno con el Divino: <em>"El Padre y yo somos uno"</em>, (Juan 10.30).</p>
+
+        <p>El concepto de "gracia" abunda también en la literatura de los Siddhas, y supone la respuesta del Divino, merecida o no, al anhelo del devoto por alcanzarlo. La sadhana o disciplina espiritual son todos los esfuerzos yóguicos que hacemos por acercarnos al Divino, lo que incluye también el desarrollo de nuestra receptividad hacia el descenso de Su gracia - Su respuesta ante nuestros esfuerzos. La sadhana yóguica es así también una preparación para convertirnos en un recipiente sin fisuras que pueda recibir esa gracia, reconocerla y contenerla, sin desperdiciarla en los hábitos del ego, que habitualmente está interesado en el reconocimiento, el placer o el poder: <em>"Tampoco se le ocurre a nadie poner vino nuevo en odres viejos, porque el vino nuevo revienta los odres, y se pierden al propio tiempo los odres y el vino"</em> (Lucas 5.37).</p>
+
+        <h3>Descenso</h3>
+
+        <p>La aspiración devocional, la acumulación de energía vital y la concentración y meditación en los pies del Divino, el chakra de la corona, permiten experimentar la respuesta de la Divinidad, el descenso de su gracia:</p>
+
+        <div class="quote">
+            <p><em>"La concentración de la mente hacia arriba envía una ráfaga de esta fuerza hacia lo alto de la cabeza, y la respuesta viene en una fina lluvia de suave magnetismo. El sentimiento que surge del poder descendente envía un maravilloso brillo por todo el cuerpo, y uno se siente como si fuera bañado en un tipo de suave electricidad"</em> (La voz de Babaji, pag. 526).</p>
+        </div>
+
+        <p>Esta experiencia será más intensa cuanto más profundos sean el estado de silencio mental, el anhelo devocional y la intensidad de nuestra meditación. El sadhaka puede percibir diferentes impresiones como luz, una paz profunda, inspiraciones, contentamiento del corazón. De todas ellas, la más importante y deseable – puesto que lo fenoménico (visiones, etc.) es sólo una experiencia pasajera más, aunque sea de carácter sutil – es recibir el gozo del Ser. En India definen al divino como Sat-Chit-Ananda, es decir, Existencia-Consciencia-Gozo absolutos. El gozo, la alegría incondicional que colma el corazón, es la Presencia del Divino. Esto es lo que todos buscamos, en vano, a través de los sentidos.</p>
+
+        <p>De ahí el significado del poema de Kudambay:</p>
+
+        <p style="text-align: center;"><em>¿Qué interés tiene el zumo de coco?</em></p>
+
+        <p>El coco es un símbolo de nuestro ego, nuestro pequeño "yo", resultado de nuestra identificación con nuestro cuerpo, nuestras emociones y nuestra mente. La dura cáscara de esta fruta está formada por miles de fibras, unidas por una pasta dura. Las fibras son como nuestros pensamientos y las experiencias de los sentidos, y la pasta dura es nuestro hábito de identificarnos con ellos. El "zumo de coco" son los placeres limitados del ego. En India es tradición romper cocos en los templos u ofrecerlos en los fuegos sagrados, como señal de entrega de nuestro ego al Divino.</p>
+
+        <p>El mango representa la dulzura del Ser, manifestada desde el chakra de la corona ("lo alto de la montaña"). Una dulzura o gozo que colma el anhelo del devoto de experimentar al Divino, haciéndole olvidar por siempre los placeres limitados y transitorios que persigue el ego en este mundo. Yogananda definió a Dios como "gozo siempre renovado"; un gozo del que uno nunca llega a cansarse, a diferencia de los placeres sensoriales, emocionales y mentales, que, siendo duales, acaban produciendo hastío.</p>
+
+        <h3>Para la sadhana diaria:</h3>
+
+        <p>Como practicantes de Yoga, debemos "llevar el samadhi a la vida cotidiana, y no la vida cotidiana al samadhi". Esto quiere decir que debemos prolongar la paz y el gozo obtenidos por la meditación y la práctica yóguica a nuestra vida cotidiana, para transformarla, y no permitir que los problemas de la vida cotidiana perturben nuestra meditación. Recurre una y otra vez al gozo del Ser que mana del chakra de la corona, en la meditación y a lo largo del día.</p>
+
+        <p>Los Siddhas animan a practicar la Presencia divina en nuestra vida, bebiendo del gozo del Sahasrara, los pies del Divino. La sadhana, antes y después de comenzar nuestra jornada diaria, nos ayuda a ello, junto con el recuerdo, a lo largo del día, de la Presencia y del gozo obtenido. Eso convierte nuestra vida en una vida de alegría profunda, de la que todos los seres se benefician también de un modo u otro. Una vida digna de ser vivida.</p>
+
+        <div class="note">
+            <p><strong>*</strong> Para los practicantes avanzados de Kriya Yoga de Babaji este poema aludiría a la kriya 141 y a las otras relacionadas con el chakra de la corona (incluyendo hasta la Postura de Saludo).</p>
+        </div>
+
+        <div class="highlight">
+            <p><strong>*</strong> Los que no estén iniciados pueden experimentar la siguiente técnica, extraída del libro <a href="https://www.kriyayogadebabaji.net/libros.htm#jesus" style="color: #8B0000;">"El Yoga de Jesús"</a>:</p>
+
+            <p>"Para empezar, siéntate de forma cómoda, manteniendo la espalda recta. Tras unos minutos, cuando ya te sientas relajado, concéntrate en el chakra de la corona, en un punto por encima de lo alto de tu cabeza. Deja que tu consciencia descanse ahí.</p>
+
+            <p>Crea dentro de ti mismo un espacio de entrega, volviéndote completamente receptivo hacia ese punto de la coronilla, sin esperar absolutamente nada de él, pero aceptando absolutamente cualquier cosa que provenga de él, incluyendo el silencio. Sin prisa, sin buscar nada, deja que todo tu ser descanse en ese punto. Concéntrate en la sensación de bienestar que va brotando desde ese punto.</p>
+
+            <p>(Unos momentos en este estado)</p>
+
+            <p>Del centro de la corona descienden la gracia y la luz, hasta nuestro cuerpo físico. Sin abandonar tu atención en la fuente, los pies del gurú, siente ahora esta luz que impregna ahora todo tu cuerpo.</p>
+
+            <p>Permítete disfrutar de la sutil sensación de dulzura y bienestar que desciende, y llévala contigo luego a lo largo de las actividades del día."</p>
+        </div>
+
+        <div class="related-links">
+            <h3>Artículos relacionados:</h3>
+            <a href="t-siddhas.htm">El camino a la inmortalidad de los Siddhas</a>
+            <a href="t-templo2.htm">Construyendo el templo perfecto del gozo</a>
+            <a href="t-sutras.htm">Samadhi, la meta del Yoga Real</a>
+            <a href="t-tantra2.htm">El Tantra de los 18 Siddhas</a>
+            <a href="t-tantra.htm">Tantra, el tejido de la consciencia</a>
+            <a href="t-gurupurnima.htm">Gurupurnimá: celebrando al Gurú eterno</a>
+            <a href="t-nidra.htm">Yoga Nidra, el descanso yóguico</a>
+            <a href="t-entrega.htm">Entrega, auto-ofrenda y consagración</a>
+            <a href="t-guru.htm">La gracia del gurú</a>
+            <a href="t-silencio.htm">El poder del silencio</a>
+            <a href="t-babaji.htm">Cómo Babaji salvó mi vida</a>
+            <a href="t-nombre.htm">El poder del Nombre</a>
+            <a href="t-guia.htm">Buscando guía en nuestra práctica espiritual</a>
+            <a href="t-mente.htm">Manejando la mente</a>
+            <a href="t-progreso.htm">¿Cómo sabemos si estamos progresando espiritualmente?</a>
+            <a href="t-gracia.htm">¿Cómo ganar la gracia de Babaji?</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="mobile-footer">
+        <p><a href="mailto:info@kriyayogadebabaji.net">info@kriyayogadebabaji.net</a></p>
+        <p>Copyright 2025©</p>
+        <p>Se permite la libre reproducción <strong>siempre que se cite la fuente</strong>.</p>
+    </div>
+</div>
+
+<!-- VERSIÓN DESKTOP -->
+<div class="desktop-only">
 <div id="contenedor">
   <div id="todaPagina"> <div id="todaPaginaB"> 
 <div id="cabeceraIndex"> 
@@ -204,11 +549,48 @@ Permítete disfrutar de la sutil sensación de dulzura y bienestar que desciende
   
   	<p>&nbsp;</p> <p>&nbsp;</p>
 
-  <div id="fin"><a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;">&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;</a> - Copyright 2019©.Se permite la libre reproducción <b><u>siempre que se cite la fuente</u></b>.</div>  
+  <div id="fin"><a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;">&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;</a> - Copyright 2025©.Se permite la libre reproducción <b><u>siempre que se cite la fuente</u></b>.</div>
 </div><!-- de todaPaginaB-->
 </div><!-- de todaPagina-->
 
 </div><!-- de contenedor-->
+</div><!-- FIN VERSIÓN DESKTOP -->
+
+<!-- Botón toggle versión -->
+<button class="version-toggle" id="versionToggle" onclick="toggleVersion()">
+    <span id="toggleText">Ver versión Desktop</span>
+</button>
+
+<script>
+// Script para toggle entre versiones
+function toggleVersion() {
+    const mobileDiv = document.querySelector('.mobile-only');
+    const desktopDiv = document.querySelector('.desktop-only');
+    const toggleBtn = document.getElementById('toggleText');
+
+    if (mobileDiv.style.display === 'none') {
+        // Mostrar mobile, ocultar desktop
+        mobileDiv.style.display = 'block';
+        desktopDiv.style.display = 'none';
+        toggleBtn.textContent = 'Ver versión Desktop';
+    } else {
+        // Mostrar desktop, ocultar mobile
+        mobileDiv.style.display = 'none';
+        desktopDiv.style.display = 'block';
+        toggleBtn.textContent = 'Ver versión Mobile';
+    }
+}
+
+// Detectar tamaño de pantalla al cargar
+window.addEventListener('load', function() {
+    const toggleBtn = document.getElementById('versionToggle');
+    if (window.innerWidth <= 768) {
+        document.getElementById('toggleText').textContent = 'Ver versión Desktop';
+    } else {
+        document.getElementById('toggleText').textContent = 'Ver versión Mobile';
+    }
+});
+</script>
 
 </body>
 </html>

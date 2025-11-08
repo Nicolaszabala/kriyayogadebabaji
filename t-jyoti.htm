@@ -17,9 +17,254 @@
 <link rel="stylesheet" type="text/css" href="css/textos.css" />
 <link rel="stylesheet" type="text/css" href="css/menus.css" />
 <link rel="stylesheet" type="text/css" href="css/cuerpoIndex.css" />
-<link rel="stylesheet" type="text/css" href="css/fuentes.css" /></head>
+<link rel="stylesheet" type="text/css" href="css/fuentes.css" />
+
+<style>
+/* Estilos base mobile-first */
+.mobile-content { display: none; }
+.desktop-content { display: block; }
+
+/* Botón toggle flotante */
+.version-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #AC1429;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.version-toggle:hover { background: #8B0E1F; }
+
+/* Media query para móviles */
+@media (max-width: 768px) {
+    .mobile-content { display: block; }
+    .desktop-content { display: none; }
+
+    /* Estilos para versión mobile */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Lato', Arial, sans-serif;
+        background: #f5f5f5;
+    }
+
+    .mobile-header {
+        background: linear-gradient(135deg, #8B0E1F 0%, #AC1429 100%);
+        color: white;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .mobile-header h1 {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+
+    .mobile-nav {
+        background: white;
+        padding: 15px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        margin-bottom: 20px;
+    }
+
+    .mobile-nav a {
+        display: block;
+        padding: 12px;
+        color: #333;
+        text-decoration: none;
+        border-bottom: 1px solid #eee;
+        transition: background 0.3s;
+    }
+
+    .mobile-nav a:hover { background: #f5f5f5; }
+
+    .mobile-article {
+        background: white;
+        margin: 0 10px 20px 10px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .mobile-article img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
+        margin: 15px 0;
+    }
+
+    .mobile-article h2 {
+        color: #AC1429;
+        font-size: 24px;
+        margin: 0 0 10px 0;
+        font-weight: 300;
+    }
+
+    .mobile-article .subtitle {
+        color: #666;
+        font-size: 14px;
+        margin-bottom: 20px;
+        font-style: italic;
+    }
+
+    .mobile-article .intro {
+        background: #f9f9f9;
+        padding: 15px;
+        border-left: 4px solid #AC1429;
+        margin: 20px 0;
+        font-style: italic;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .mobile-article p {
+        line-height: 1.8;
+        margin-bottom: 15px;
+        color: #333;
+        text-align: justify;
+        font-size: 16px;
+    }
+
+    .mobile-article .section-title {
+        color: #AC1429;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 25px 0 15px 0;
+    }
+
+    .mobile-article .quote {
+        background: #f0f0f0;
+        padding: 15px;
+        border-left: 3px solid #AC1429;
+        margin: 20px 0;
+        font-style: italic;
+        color: #555;
+    }
+
+    .mobile-footer {
+        background: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .mobile-footer a {
+        color: #AC1429;
+        text-decoration: none;
+    }
+
+    .pdf-link {
+        display: inline-block;
+        background: #AC1429;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 4px;
+        text-decoration: none;
+        margin: 15px 0;
+    }
+}
+</style>
+</head>
 
 <body >
+
+<!-- Botón toggle versión desktop/mobile -->
+<button class="version-toggle" onclick="toggleVersion()" title="Cambiar versión">⇄</button>
+
+<!-- VERSIÓN MOBILE -->
+<div class="mobile-content">
+    <div class="mobile-header">
+        <h1>KRIYA YOGA DE BABAJI</h1>
+    </div>
+
+    <nav class="mobile-nav">
+        <a href="index.htm">Inicio</a>
+        <a href="kriya.htm">Kriya Yoga</a>
+        <a href="seminarios.htm">Seminarios</a>
+        <a href="clases.htm">Clases y Sesiones</a>
+        <a href="articulos.htm">Artículos</a>
+        <a href="libros.htm">Libros</a>
+        <a href="contacto.htm">Contacto</a>
+    </nav>
+
+    <article class="mobile-article">
+        <a href="docs/jyoti.pdf" class="pdf-link">Descargar versión PDF</a>
+
+        <img src="imagenes/jyoti.jpg" alt="Jyoti" />
+
+        <h2>Jyoti, la hermana de Skanda</h2>
+        <div class="subtitle">por el dr. Alagappa Alagappana</div>
+
+        <div class="intro">
+            Muruga o Skanda es el aspecto divino preferido por los Siddhas del sur de India. Su imagen es la de un adolescente, acompañado siempre por una lanza, llamada Veli, y rige los misterios de Kundalini. La luz divina (Jyoti) cobra un papel fundamental en los poemas de los Siddhas. Este texto del dr. Alagappa Alagappana describe el significado espiritual de Jyoti, la lanza Veli de Muruga. Traducido (con permiso de copyright) de la página <a href="http://murugan.org/jyoti.htm">http://murugan.org/jyoti.htm</a>.
+        </div>
+
+        <p>Jyoti (luz) es un miembro de la familia de Shiva. Ella es parte de la Divinidad eterna. Cuando Shiva (la consciencia estática) se unió con Shakti (la energía cinética), nacieron Ganesa (sonido) y Skanda o Muruga (luz). Jyoti (luz) nació también de esta unión. Ella representa el principio femenino de la luz desde que ella es activa en esta creación, mientras que Skanda representa el principio masculino de la luz. Ella está hecha predominante mente de luz como Skanda, y es su hermana.</p>
+
+        <p>El cuerpo humano es un templo. La respiración a través de los agujeros izquierdos y derecho de la nariz constituyen Shiva y Shakti. El señor Ganesa reside en la base de la columna desde la que Jyoti o la fuerza Kundalini surge a través de los cinco chakras (<i>Muladhara, Swadhistana, Manipuraka, Anahata, Visudhi, y Ajnacakra</i>), o las seis casas de batalla del Señor Skanda. Cuando la Shakti Kundalini viaja arriba por la columna y alcanza el chakra Ajna en la frente, la fusión con Shakti ahí representa la confluencia del poder de la Madre, entregada al hijo y volviéndose parte de él. La batalla entre el ser superior y el ser inferior ruge en los seis chakras, las casas de batalla del Señor Skanda.Tras ganar las batallas, Jyoti alcanza a su madre en la sexta casa de batalla de Skanda, conocida como chakra Ajna.</p>
+
+        <p>La escritura del Skanda Purana nos dice que Skanda nació tras un intenso tapas (penitencia yóguica), desde la frente de Shiva. Es por ello que Skanda es considerado por muchos no sólo como la quintaesencia de Shiva, sino una versión mejorada de él. Por otra parte, Jyoti nació de una chispa de la frente de la madre, de su cara llamada Adho. Cuando al niño divino Skanda se le confió la misión de someter a Surapadman, que encarnó a las fuerzas demoníacas de la época, la Madre fabricó de sí misma a Vel (la lanza), y la presentó a su niño Skanda como un arma invisible. La revelación ahora es que no es solo un instrumento, sino una deidad por su propio derecho.</p>
+
+        <p>Vel es Jyoti, la hermana pequeña del Señor Skanda. Ella es <i>Shakti Vel</i> no sólo porque Shakti la dio a Skanda, sino también por es un arma energetizada. Vel tiene toda la energía y el dinamismo de Shakti. Ha sido alabada también como Ratna Vel, ya que brilla como la piedra preciosa Ratna. Es llamada Jnana Vel ya que elimina la oscuridad y la ignorancia y ofrece Jnana o la verdadera sabiduría. Ella es el blasón del sendero de jnana recorrido por sabios, siddhas y aquellos que están avanzados espiritualmente. Como jnana siempre gana, ella es llamada vetri o la Vel victoriosa. Jyoti ayuda al Señor Skanda ayudando a los devotos a ganar sus batallas internas y a lograr el progreso espiritual que conduce a la liberación de sus almas y a la fusión con la Divinidad. Vel es arupa o sin forma. Como está hecha de fuego no puede ser rota o derrotada.</p>
+
+        <p>Jyoti ha sido siempre inseparable del Señor Skanda. No hay ningún templo de Skanda sin la adoración de Jyoti en la forma de Vel. Jyoti se conoce también como Saravanabavaya para indicar que ella está siempre entrelazada con Saravana o Skanda y actúa para él. En su forma sin forma (arupa) de Vel, ella tiene una cabeza que es inteligencia y consciencia y una vara o tallo que le permite moverse con velocidad. Jyoti se asemeja a su madre en la forma de Durga para castigar las fuerzas malvadas al igual que para construir y proteger un orden mundial donde se desarrollan el amor y la hermandad.</p>
+
+        <p>La misma Jyoti preside una de las seis casas del señor Skanda llamada Palamutircolai que se corresponde con el chakra Ajna. Esta casa está situada cerca de Madurai. Aquí Jyoti es también adorada como Rakkayi, particularmente en los días de luna llena. La forma de Rakkayi en las zonas rurales es principalmente una cabeza con una cara de fuego, confirmando de nuevo la forma de un Vel con una cabeza y una forma esbelta.</p>
+
+        <p>La cercana asociación de Vel con su madre es el sujeto de Shodasam, una principal composición devocional del sabio Agastya. Para cada día de la luna creciente y decreciente él descubre y describe el rol de la madre Manonmani (puede ser vista junto con Shiva en la forma de Cokkanatar en uno de los principales sancta sanctórum del templo de Meenakshi en Madurai), consorte de Shiva en la forma de Sadasiva, y su hija Jyoti, que están juntos en el chakra Ajna en nuestras frentes. El sabio también cuenta cómo nació Jyoti del pilar Pranava de "Om". Él la llama la joven damisela que vive en el centro del entrecejo. Toda la vida es Jyoti. Ella impregna todas las galaxias, y es una llama creciente. Ella es la totalidad y Parabrahmán, y está en su plenitud en los días de luna llena o <i>paurnami</i>.</p>
+
+        <p>Un gran centro de Jyoti es Tiruvannamalai, un pueblo que ejemplifica el elemento fuego de Shiva. En este gran centro de Shiva Jyoti es adorada, ya que está hecha de fuego, y hay un festival de Jyoti cada año durante el mes de Kartikai en el calendario tamil. Jyoti es llamada aquí Arul Perum Jyoti, o la gran y graciosa Jyoti.</p>
+
+        <p>Shiva como Nataraja lleva a Jyoti en su danza cósmica, en su mano derecha, como fuego. Jyoti vive con Nataraja en la edad dorada, o lo que se llama Ponnabalm. Toda la creación es desde Jyoti o fuego. Jyoti se vuelve activa a partir de entonces.</p>
+
+        <p>Jyoti es también una representación o encarnación de la luz y del amor divinos, accesibles a nosotros en el plano terrenal. Jyoti gobierna nuestras palabras. Jyoti es la luz ardiente en las lámparas de todos los templos. Invitamos a estas lámparas a que vengan a nuestros corazones. Se dice que Jyoti está cubierta por siete pantallas. Sólo despúes de que hayan sido removidas aparece ella con todo su resplandor. Un gran exponente de Jyoti, que se fundió con ella en tiempos recientes, fue Ramalinga Swamigal.</p>
+
+        <p>Además, Jyoti, en su asociación con su madre en la forma de Kanya Kumari ha sido la protectora, custiodiadora y maestras de los grandes santos y siddhas. Ha sido adorada como <i>Jwalai Kumari</i>, y en el norte de India, como <i>Jwalamukhi</i>. También se la llama <i>Jnanambal</i> o <i>Balambika</i>, que significa "diosa del conocimiento" o "diosa niña". La literatura de los Siddhas está llena de poemas alabando a la vibrante Jyoti.</p>
+
+        <p>Jyoti es el principio femenino de Shanmukha, y es conocida como <i>Shanmukhi</i>. También es llamada <i>Karttikeyi</i> y Kumari.</p>
+
+        <div class="section-title">La adoración de Jyoti</div>
+
+        <p>La adoración de Jyoti puede ser realizada internamente a través de la práctica de Kundalini Yoga.</p>
+
+        <p>Como dijo el gran sabio Tirumular:</p>
+
+        <div class="quote">
+            "Los hombres del norte, del sur, vagan buscándolo<br />
+            los seres celestiales el este y del oeste rondan por ahí buscándolo<br />
+            pero fija el mantra divino (Om) al <i>muladhara</i> y eleva<br />
+            el fuego (<i>kundalini</i>) hacia arriba para que brote. Ahí serás como luz radiante".
+        </div>
+
+        <p>Jyoti debe ser adorada en el día de la luna llena, especialmente por la tarde y por la noche.</p>
+
+        <p>Jyoti en su forma de "Saravanabhavayai" o "Vel" debe ser adorada junto con su hermano en todos los días en los que se honre a Él. Así, los días Kartikai son especiales. El día más importante para adorar a Jyoti o a Saravanabhavayai es el día de su nacimiento, cuando la Madre Universal transformó la chispa nacida de su frente en "Vel" y se la dio a su hijo menor en la víspera de la batalla con Surapadman. Éste es el día de Visahka Nakshatra en el mes de mayo.</p>
+    </article>
+
+    <footer class="mobile-footer">
+        <a href="mailto:info@kriyayogadebabaji.net">info@kriyayogadebabaji.net</a><br />
+        Copyright 2025©. Se permite la libre reproducción <strong>siempre que se cite la fuente</strong>.
+    </footer>
+</div>
+
+<!-- VERSIÓN DESKTOP -->
+<div class="desktop-content">
 <div id="contenedor">
   <div id="todaPagina"> <div id="todaPaginaB"> 
 <div id="cabeceraIndex"> 
@@ -148,11 +393,45 @@ Jyoti en su forma de “Saravanabhavayai" o "Vel" debe ser adorada junto con su 
   
   	<p>&nbsp;</p> <p>&nbsp;</p>
 
-  <div id="fin"><a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;">&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;</a> - Copyright 2019©.Se permite la libre reproducción <b><u>siempre que se cite la fuente</u></b>.</div>  
+  <div id="fin"><a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;">&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;</a> - Copyright 2025©.Se permite la libre reproducción <b><u>siempre que se cite la fuente</u></b>.</div>
 </div><!-- de todaPaginaB-->
 </div><!-- de todaPagina-->
 
 </div><!-- de contenedor-->
+</div><!-- Fin versión DESKTOP -->
+
+<script>
+function toggleVersion() {
+    const mobileContent = document.querySelector('.mobile-content');
+    const desktopContent = document.querySelector('.desktop-content');
+
+    if (mobileContent.style.display === 'block') {
+        mobileContent.style.display = 'none';
+        desktopContent.style.display = 'block';
+        localStorage.setItem('version', 'desktop');
+    } else {
+        mobileContent.style.display = 'block';
+        desktopContent.style.display = 'none';
+        localStorage.setItem('version', 'mobile');
+    }
+}
+
+// Recordar preferencia del usuario
+window.addEventListener('DOMContentLoaded', function() {
+    const savedVersion = localStorage.getItem('version');
+    const mobileContent = document.querySelector('.mobile-content');
+    const desktopContent = document.querySelector('.desktop-content');
+
+    if (savedVersion === 'mobile') {
+        mobileContent.style.display = 'block';
+        desktopContent.style.display = 'none';
+    } else if (savedVersion === 'desktop') {
+        mobileContent.style.display = 'none';
+        desktopContent.style.display = 'block';
+    }
+    // Si no hay preferencia guardada, usar las reglas CSS por defecto
+});
+</script>
 
 </body>
 </html>

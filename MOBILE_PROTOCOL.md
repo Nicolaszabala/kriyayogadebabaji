@@ -14,9 +14,9 @@ Las siguientes páginas YA tienen el protocolo mobile completo aplicado:
 - 18siddhas.htm
 
 ### Artículos Procesados ✅
-**¡TODOS COMPLETADOS! 40 de 41 artículos (t-*.htm) tienen contenido completo en mobile:**
+**¡TODOS COMPLETADOS! 50+ archivos con contenido mobile completo:**
 
-**Grupo 1 - Completados previamente (25):**
+**Grupo 1 - Completados previamente (25 artículos):**
 - t-linaje.htm, t-circuito.htm, t-biografia.htm, t-kundalini.htm
 - t-aum.htm, t-gracia.htm, t-samadhi2.htm, t-disociacion.htm
 - t-inconsciente3.htm, t-desapego2.htm, t-guia.htm, t-samskaras.htm
@@ -25,7 +25,7 @@ Las siguientes páginas YA tienen el protocolo mobile completo aplicado:
 - t-jesus.htm, t-aurobindo.htm, t-india1.htm, t-hijoprodigo.htm
 - t-supramental.htm
 
-**Grupo 2 - Completados en esta sesión (15):**
+**Grupo 2 - Sesión 1: Artículos con estructura existente (15):**
 1. ✅ t-templo2.htm (21 párrafos)
 2. ✅ t-charla.htm (35 párrafos)
 3. ✅ t-aforismos.htm (30 párrafos)
@@ -41,6 +41,20 @@ Las siguientes páginas YA tienen el protocolo mobile completo aplicado:
 13. ✅ t-guru.htm (19 párrafos)
 14. ✅ t-gurupurnima.htm (18 párrafos)
 15. ✅ t-resurreccion.htm (13 párrafos)
+
+**Grupo 3 - Sesión 2: Archivos sin estructura previa (10):**
+1. ✅ t-mataji.htm (18 párrafos) - Mataji y su meditación nocturna
+2. ✅ t-sundaranandar.htm (24 párrafos) - Caminar por el filo de la cuchilla
+3. ✅ t-bogar.htm (15 párrafos) - Bogar y la tapa dorada
+4. ✅ t-kudambay.htm (16 párrafos) - Ascenso y Descenso
+5. ✅ t-ramalinga2.htm (16 párrafos) - La Luz de Gracia
+6. ✅ Ubadecam.htm (35 párrafos) - Versos del Tirumandiram 113-142
+7. ✅ t-siddhas.htm (19 párrafos) - Los Siddhas
+8. ✅ t-jyoti.htm (17 párrafos) - Jyoti, la hermana de Skanda
+9. ✅ t-ramalinga.htm (30 párrafos) - 28 poemas de Ramalinga
+10. ✅ kriyababaji.htm (10 artículos) - Historias de Kriya Babaji
+
+**Total: 50 archivos con estructura mobile completa**
 
 ### Tareas Pendientes ❌
 

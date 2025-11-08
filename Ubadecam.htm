@@ -17,7 +17,109 @@
 <link rel="stylesheet" type="text/css" href="css/textos.css" />
 <link rel="stylesheet" type="text/css" href="css/menus.css" />
 <link rel="stylesheet" type="text/css" href="css/cuerpoIndex.css" />
-<link rel="stylesheet" type="text/css" href="css/fuentes.css" /></head>
+<link rel="stylesheet" type="text/css" href="css/fuentes.css" />
+
+<style>
+/* Estilos responsive */
+.mobile-noticias { display: none; }
+.desktop-noticias { display: block; }
+
+/* Botón de toggle flotante */
+.view-toggle-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #AC1429;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    z-index: 10000;
+    font-family: 'Lato', sans-serif;
+}
+
+.view-toggle-btn:hover {
+    background: #8B1022;
+}
+
+@media (max-width: 768px) {
+    .mobile-noticias { display: block; }
+    .desktop-noticias { display: none; }
+    .view-toggle-btn { display: block; }
+
+    .mobile-noticias {
+        padding: 15px;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .mobile-noticias h1 {
+        font-size: 24px;
+        color: #AC1429;
+        margin: 20px 0;
+        line-height: 1.3;
+    }
+
+    .mobile-noticias h2 {
+        font-size: 18px;
+        color: #333;
+        margin: 15px 0;
+        line-height: 1.4;
+    }
+
+    .mobile-noticias .author {
+        font-size: 16px;
+        color: #666;
+        font-style: italic;
+        margin: 10px 0;
+    }
+
+    .mobile-noticias p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 12px 0;
+        text-align: justify;
+        color: #333;
+    }
+
+    .mobile-noticias .pdf {
+        margin: 15px 0;
+    }
+
+    .mobile-noticias .pdf a {
+        color: #AC1429;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .mobile-noticias img {
+        max-width: 100%;
+        height: auto;
+        margin: 15px 0;
+    }
+
+    .mobile-noticias .footnotes {
+        font-size: 14px;
+        color: #666;
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #ccc;
+    }
+
+    .mobile-noticias sup {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 769px) {
+    .view-toggle-btn { display: inline-block; }
+}
+</style>
+</head>
 
 <body >
 <div id="contenedor">
@@ -65,7 +167,7 @@
 			
             <li><div id="blanco2">&nbsp;</div></li>
 		
-        	<li><div id="noticias">
+        	<li><div id="noticias" class="desktop-noticias">
 
 
 
@@ -264,18 +366,246 @@ Como los Vedas cantas su alabanza, la paz suprema ellos alcanzaron.
                 <br /><br /><br /> <br /> <br />
 
               </h2>
-            </div></div><!-- de noticias-->
+            </div></div><!-- de noticias desktop-->
+
+    <!-- Versión Mobile -->
+    <div class="mobile-noticias">
+        <div class="pdf"><a href="docs/Ubadecam.pdf">versión en pdf</a></div>
+
+        <img src="imagenes/Ubadecam.jpg" alt="Cursos" />
+
+        <h1>La esencia del Tirumandiram</h1>
+        <div class="author">Tirumular</div>
+
+        <p>El Tirumandiram, libro escrito por el Siddha Tirumular, es probablemente el texto más importante de la tradición de los 18 Siddhas del sur de la India. La obra consta de 3.000 estrofas de versos con todo el conocimiento de Yoga y Tantra de la época, una obra fundamental del Yoga.</p>
+
+        <p>La sección de 30 versos del Tirumandiram que van del 113 al 142, incluidos, se titula "Ubadecam", que significa "Instrucción en la esencia". Como se explica en el libro <i>English translation of the Tirumandiram</i><sup>1</sup> del que se han traducido estos versos:</p>
+
+        <p>"Los treinta versos del Ubadecam nos dan la esencia de los tres mil versos del Tirumandiram. Tirumular presenta aquí los conceptos de <i>Pati</i> (Dios), <i>pasu</i> (alma) y <i>pasa</i> (atadura), las tres entidades básicas del Saiva Siddhanta, y hablan de la gracia de Dios, la liberación, el gurú y el estado de los que están liberados.</p>
+
+        <p>Las instrucciones incluyen aquellas de tipo esotérico, y demandan que el discípulo entienda su significado en profundidad, y lo que es más importante, que las adopte como guía en su experiencia personal. Estas instrucciones tienen un gran contenido experiencial. La experiencia es de tipo espiritual – el alma encuentra la intercesión de la gracia del Señor. Arunai Vadivel Mudaliyar dice que los versos de esta sección son producidos por la gracia que Tirumular ha experimentado dentro de sí, produciendo las verdades que afirma, y por tanto estos versos son de un inmenso valor para el discípulo y para todo aspirante espiritual."</p>
+
+        <p>El Señor, descendiendo, toma las formas apropiadas para las acciones;<br />
+Su gracia ha puesto para mi protección al poco tiempo;<br />
+Él derrite mi corazón al quedarse; Él hace el gran Gozo;<br />
+Con su gracia, me hace experimentar; Él ha eliminado la pátina.</p>
+
+        <p>La mancha Él la cortó en pedazos, nuestro Nandi<sup>2</sup> con el tercer ojo;<br />
+El ojo de la gracia se abrió internamente; Él eliminó el óxido;<br />
+La luz resplandeciente que Él mostró, la impureza no se acerca;<br />
+Mi Señor es eso, el coral que Él incrustó en el cristal.</p>
+
+        <p>Dios, el alma y la atadura, los tres de los que hablan;<br />
+Como Dios, el alma y la atadura son también sin principio;<br />
+El alma y la atadura no se acercan a Dios;<br />
+Deja que Dios se acerque, la atadura no permanece.</p>
+
+        <p>Como el fuego vivo dentro que surge del bambú,<br />
+En el templo de este cuerpo, está sentado nuestro Señor Nandi;<br />
+Las tres impurezas Él deja a un lado con compasión mayor que la de la madre<br />
+Que inunda como el sol naciente.</p>
+
+        <p>La piedra de sol y el algodón que la envuelve son diferentes;<br />
+La piedra de sol no quema al algodón envuelto;<br />
+La piedra de sol quema el algodón en presencia del sol<br />
+Cuando el gurú aparece, las tres impurezas son destruidas.</p>
+
+        <p>Las cinco manchas Él destruyó, otorgó Su gracia;<br />
+Él es Sadasiva, de los cinco estados sagrados;<br />
+Los cinco sentidos Él menospreció, Nandi, el danzarín;<br />
+Como las cinco letras sagradas<sup>3</sup>, Su gracia vino a morar en mí.</p>
+
+        <p>El alma atada por los sentidos,<br />
+Ahogada en aguas profundas, no conociendo el camino;<br />
+Cuando el camino es enseñado por el maestro Supremo,<br />
+Sumergida es la consciencia del alma en la gran Consciencia.</p>
+
+        <p>Como el cisne que separa la leche de vaca del agua,<br />
+La danza completa de gracia del Señor sobre el escenario singular<br />
+Separa el karma de los instrumentos malvados<br />
+Y quema la semilla que causa el nacimiento.</p>
+
+        <p>Ellos destruyen la semilla; su nivel de consciencia<br />
+Es <i>suddha-turiya</i>, libre de apego,<br />
+Armoniosos son sus sentidos y su experiencia;<br />
+Mientras viven, muertos en el cuerpo, son los Siva-yoguis.</p>
+
+        <p>El Siva-Yoga distingue la consciencia (<i>chit</i>) de la inconsciencia (<i>acit</i>);<br />
+La mortificación del Yoga profundo, el resplandor de Siva en el propio ser,<br />
+Abandonando senderos erróneos; el gran gozo de deleites de amor;<br />
+¡Éste es un nuevo Yoga! Nandi nos lo dio.</p>
+
+        <p>Él reveló la verdad de Su inmanencia;<br />
+Su mundo, que no conocen los seres celestiales, Él mostró;<br />
+Los pies sagrados de la danza santa Él puso en mí;<br />
+Él otorgó el gran gozo del espacio de gracia.</p>
+
+        <p>La omnipresencia encuentra su lugar en la omnisciencia;<br />
+El amor se establece en la gracia;<br />
+La luz interior, entremezclada con el resplandor divino;<br />
+Serenos son los Siva-Siddhas en su claridad.</p>
+
+        <p>Los Siddhas perciben aquí el plano de Siva;<br />
+Ellos experimentan dentro <i>Nada</i><sup>4</sup> y <i>Nadanta</i><sup>5</sup>.<br />
+Ellos son eternos, puros y sin mancha;<br />
+Ellos están liberados de los treinta y seis <i>tattvas</i><sup>6</sup>.</p>
+
+        <p>Ellos ascienden los treinta y seis pasos de la escalera de la liberación;<br />
+El gozo incomparable de la luz interna de gracia es suyo;<br />
+Ellos vieron con claridad al indescriptible Siva<br />
+Y moraron en el estado de Siva.</p>
+
+        <p>Morando en el estado de Siva, ellos estaban aquí y en todas partes;<br />
+Entendiendo, ellos podían, toda la actividad de Siva;<br />
+Ellos sabían mirar dentro de los tres aspectos del tiempo;<br />
+Suya es la pérdida; ellos ganan serenidad en la inacción.</p>
+
+        <p>En el espacio puro están los serenos;<br />
+En el espacio puro moran los serenos;<br />
+Más allá de los Vedas se extiende la consciencia de los serenos;<br />
+Los serenos experimentan al supremo, indiferentes a los Vedas.</p>
+
+        <p>Dormidos, ellos perciben el mundo de Siva dentro de sí mismos;<br />
+Dormidos, ellos perciben el Siva-Yoga dentro de sí mismos;<br />
+Dormidos, ellos experimentan el gozo de Siva dentro de sí mismos;<br />
+La grandeza de tales seres serenos, ¿puede ser descrita?</p>
+
+        <p>Conforme Él ve el alcance del propio progreso,<br />
+Así Él otorgará Su gracia, el Siva primordial;<br />
+Conforme disfruta Uma<sup>7</sup>, Él danza en la congregación<br />
+Como el sabio sol en el cielo claro, flameando como rubí.</p>
+
+        <p>Como la brillante esmeralda incrustada dentro del rubí,<br />
+Como la mansión esmeradla establecida en el rubí,<br />
+En la danza divina en la asamblea del oro más puro,<br />
+¡Adorándolo así, qué don reciben ellos!</p>
+
+        <p>Recipientes son ellos, en este mundo, del gran camino,<br />
+Recipientes son ellos, en este mundo, de la recompensa de la ausencia de nacimiento;<br />
+Recipientes son ellos del don de la eterna cercanía;<br />
+Recipientes son ellos del poder del silencio en el mundo.</p>
+
+        <p>Como nuestro Señor conoce la grandeza y la pequeñez,<br />
+Y ser inaccesible o ser fácil, a quienquiera que sepa<br />
+Igualmente, como la tortuga, retirando sus miembros hacia sí misma,<br />
+Ellos permanecen, sin mancha, despreocupados por este mundo o el siguiente.</p>
+
+        <p>Como la mantequilla clarificada que está latente en la leche pura,<br />
+Cuando la palabra del maestro se establece en la mente clara<br />
+Y se convierte en una experiencia, incluso aunque el alma parta,<br />
+Se une con el resplandor íntimo y permanece distinguida.</p>
+
+        <p>Los cinco sentidos volverán con los suyos;<br />
+¿Dónde descansará el alma, sino en la inteligencia suprema?<br />
+En el espacio puro la pequeña llama se fundirá con la más grande;<br />
+Conoce que esto es la gracia del maestro.</p>
+
+        <p>Los afilados rayos del sol calientan el agua;<br />
+El nombre y la forma de la sal crean así;<br />
+Ponla de nuevo en el agua, la sal se vuelve una con el agua;<br />
+Así es como el alma llega a disolverse en Siva.</p>
+
+        <p>El átomo se establece en el universo;<br />
+No va a un universo diferente; ¿hay otro lugar?<br />
+Si el alma encarnada decide alcanzar su orilla,<br />
+Ésta son los pies sagrados del que permanece con certeza.</p>
+
+        <p>Los pies sagrados son Siva, cuando indagas;<br />
+Los pies sagrados son <i>Siva-loka</i><sup>8</sup>, cuando reflexionas;<br />
+Los pies sagrados son el camino para tomar, si lo dices;<br />
+Los pies sagrados son el refugio para aquellos que son claros.</p>
+
+        <p>Iluminador es percibir la persona sagrada del gurú;<br />
+Iluminador es cantar el nombre sagrado del gurú;<br />
+Iluminador es escuchar la palabra sagrada del gurú;<br />
+Iluminador es reflexionar en la persona sagrada del gurú.</p>
+
+        <p>Los cinco sentidos se ponen a cargo de uno;<br />
+Los cinco sentidos perderán su poder;<br />
+Los cinco sentidos cambiarán su curso,<br />
+Cuando uno se ha puesto a sí mismo ante el Señor de uno.</p>
+
+        <p>Con los pies sagrados de Nandi, yo estoy unido;<br />
+Sobre la persona sagrada de Nandi, reflexiono;<br />
+El nombre sagrado de Nandi, yo canto;<br />
+La enseñanza dorada de Nandi permanece en mi mente.</p>
+
+        <p>Sagrados se volvieron, quienes en su mente<br />
+Mantienen al sagrado Nandi, el dador de sabiduría;<br />
+Percibiendo Su danza, ojos llenos de éxtasis,<br />
+Como los Vedas cantas su alabanza, la paz suprema ellos alcanzaron.</p>
+
+        <div class="footnotes">
+            <p>------------------<br />
+1.- English translation of the Tirumandiram, Babaji´s Kriya Yoga and Publications, 2010. tomo uno.<br />
+2.- Nandi es el nombre de Shiva y del gurú de Tirumular.<br />
+3.- Las cinco letras son <i>Nama Sivaya</i>, mantra fundamental, en sus múltiples variaciones, del Tirumandiram y del Saiva Siddhanta.<br />
+4.- Nada: sonido divino, Om.<br />
+5.- Nadanta: la consciencia más allá del sonido Om.<br />
+6.- Treinta y seis tattvas: 36 elementos que forman la creación.<br />
+7.- Uma: la compañera (shakti o energía) de Siva.<br />
+8.- Siva-loka: el plano de Siva.</p>
+        </div>
+    </div><!-- de mobile-noticias -->
+
     </li><!-- de noticias-->   
  
   </ul><!-- de contenidos2-->
   
   	<p>&nbsp;</p> <p>&nbsp;</p>
 
-  <div id="fin"><a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;">&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;</a> - Copyright 2019©.Se permite la libre reproducción <b><u>siempre que se cite la fuente</u></b>.</div>  
+  <div id="fin"><a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;">&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;</a> - Copyright 2025©. Se permite la libre reproducción <b><u>siempre que se cite la fuente</u></b>.</div>  
 </div><!-- de todaPaginaB-->
 </div><!-- de todaPagina-->
 
 </div><!-- de contenedor-->
+
+<!-- Botón de toggle flotante -->
+<button class="view-toggle-btn" id="viewToggle">Vista Móvil</button>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleBtn = document.getElementById('viewToggle');
+    const desktopView = document.querySelector('.desktop-noticias');
+    const mobileView = document.querySelector('.mobile-noticias');
+
+    let isMobileView = window.innerWidth <= 768;
+
+    function updateButtonText() {
+        toggleBtn.textContent = isMobileView ? 'Vista Desktop' : 'Vista Móvil';
+    }
+
+    updateButtonText();
+
+    toggleBtn.addEventListener('click', function() {
+        isMobileView = !isMobileView;
+
+        if (isMobileView) {
+            desktopView.style.display = 'none';
+            mobileView.style.display = 'block';
+        } else {
+            desktopView.style.display = 'block';
+            mobileView.style.display = 'none';
+        }
+
+        updateButtonText();
+    });
+
+    window.addEventListener('resize', function() {
+        if (window.innerWidth <= 768) {
+            isMobileView = true;
+            desktopView.style.display = 'none';
+            mobileView.style.display = 'block';
+        } else {
+            if (!isMobileView) {
+                desktopView.style.display = 'block';
+                mobileView.style.display = 'none';
+            }
+        }
+        updateButtonText();
+    });
+});
+</script>
 
 </body>
 </html>
