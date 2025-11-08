@@ -17,342 +17,13 @@
 <link rel="stylesheet" type="text/css" href="css/textos.css" />
 <link rel="stylesheet" type="text/css" href="css/menus.css" />
 <link rel="stylesheet" type="text/css" href="css/cuerpoIndex.css" />
-<link rel="stylesheet" type="text/css" href="css/fuentes.css" />
-
-<style>
-/* Estilos responsive para mobile */
-@media only screen and (max-width: 768px) {
-  .desktop-only { display: none !important; }
-  .mobile-only { display: block !important; }
-
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Lato', Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    background-color: #fff;
-  }
-
-  .mobile-container {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
-
-  .mobile-header {
-    background-color: #8B0000;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    position: relative;
-  }
-
-  .mobile-header h1 {
-    margin: 0;
-    font-size: 20px;
-    font-weight: normal;
-    line-height: 1.3;
-  }
-
-  .mobile-menu-btn {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 5px;
-  }
-
-  .mobile-nav {
-    display: none;
-    background-color: #f5f5f5;
-    border-bottom: 1px solid #ddd;
-  }
-
-  .mobile-nav.active {
-    display: block;
-  }
-
-  .mobile-nav a {
-    display: block;
-    padding: 12px 15px;
-    color: #8B0000;
-    text-decoration: none;
-    border-bottom: 1px solid #ddd;
-    font-size: 14px;
-  }
-
-  .mobile-nav a:active {
-    background-color: #e0e0e0;
-  }
-
-  .mobile-content {
-    padding: 20px 15px;
-  }
-
-  .mobile-image {
-    width: 100%;
-    height: auto;
-    margin: 15px 0;
-  }
-
-  .mobile-title {
-    color: #8B0000;
-    font-size: 22px;
-    font-weight: bold;
-    margin: 20px 0 10px 0;
-    line-height: 1.3;
-  }
-
-  .mobile-author {
-    font-style: italic;
-    color: #666;
-    margin-bottom: 20px;
-    font-size: 14px;
-  }
-
-  .mobile-text {
-    text-align: justify;
-    color: #333;
-    margin-bottom: 15px;
-    font-size: 16px;
-    line-height: 1.6;
-  }
-
-  .mobile-text b {
-    font-weight: bold;
-    color: #000;
-  }
-
-  .mobile-text i {
-    font-style: italic;
-  }
-
-  .mobile-verse {
-    text-align: center;
-    font-weight: bold;
-    margin: 20px 0;
-    padding: 15px;
-    background-color: #f9f9f9;
-    border-left: 3px solid #8B0000;
-    line-height: 1.8;
-  }
-
-  .mobile-citation {
-    text-align: center;
-    font-style: italic;
-    margin: 15px 0;
-    color: #666;
-  }
-
-  .mobile-footer {
-    background-color: #f5f5f5;
-    padding: 20px 15px;
-    text-align: center;
-    font-size: 12px;
-    color: #666;
-    border-top: 1px solid #ddd;
-    margin-top: 30px;
-  }
-
-  .mobile-footer a {
-    color: #8B0000;
-    text-decoration: none;
-  }
-
-  .pdf-link {
-    display: inline-block;
-    background-color: #8B0000;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin: 15px 0;
-    font-size: 14px;
-  }
-}
-
-/* Estilos para desktop */
-@media only screen and (min-width: 769px) {
-  .mobile-only { display: none !important; }
-  .desktop-only { display: block !important; }
-}
-
-/* Estilos del botón de alternancia */
-.version-toggle {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 9999;
-  background-color: #8B0000;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 14px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-  font-family: 'Lato', Arial, sans-serif;
-}
-
-.version-toggle:hover {
-  background-color: #660000;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="css/fuentes.css" /><link rel="stylesheet" type="text/css" href="css-responsive/responsive.css" />
+<link rel="stylesheet" type="text/css" href="css-responsive/version-toggle.css" />
+<link rel="stylesheet" type="text/css" href="css-responsive/hamburger-menu.css" />
 
 </head>
 
 <body >
-
-<!-- Botón de alternancia de versión -->
-<button class="version-toggle" onclick="toggleVersion()" id="toggleBtn">
-  Ver versión escritorio
-</button>
-
-<!-- ESTRUCTURA MOBILE -->
-<div class="mobile-only">
-  <div class="mobile-container">
-
-    <!-- Cabecera Mobile -->
-    <div class="mobile-header">
-      <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
-      <h1>Kriya Yoga de Babaji</h1>
-    </div>
-
-    <!-- Menú de navegación Mobile -->
-    <nav class="mobile-nav" id="mobileMenu">
-      <a href="index.htm">Inicio</a>
-      <a href="kriya.htm">Kriya Yoga</a>
-      <a href="seminarios.htm">Seminarios</a>
-      <a href="clases.htm">Clases y Sesiones</a>
-      <a href="articulos.htm">Artículos</a>
-      <a href="libros.htm">Libros</a>
-      <a href="contacto.htm">Contacto</a>
-      <a href="descargas.htm">Música</a>
-      <a href="18siddhas.htm">La tradición de los 18 Siddhas</a>
-      <a href="kriyababaji.htm">Historias de Kriya Babaji</a>
-      <a href="babaji.htm">Babaji</a>
-      <a href="empezar.htm">¿Cómo empezar?</a>
-      <a href="18posturas.htm">18 posturas</a>
-      <a href="viaje_norte.htm">Viajes India</a>
-      <a href="satsang.htm">Grupos de estudiantes</a>
-      <a href="enlaces.htm">Enlaces</a>
-    </nav>
-
-    <!-- Contenido Mobile -->
-    <div class="mobile-content">
-
-      <a href="docs/bogar.pdf" class="pdf-link">📄 Descargar versión PDF</a>
-
-      <img src="imagenes/bogar.jpg" alt="Boganathar" class="mobile-image">
-
-      <div class="mobile-title">
-        Boganathar: convertir el cuerpo en Verdad
-      </div>
-
-      <div class="mobile-author">
-        por Nityananda
-      </div>
-
-      <div class="mobile-verse">
-        Para preservar el cuerpo, abre la tapa;<br>
-        la tapa se abre mediante el Hatha Yoga;<br>
-        el cuerpo humano considerado como una apariencia es la puerta;<br>
-        al revertir el cuerpo de muchas ataduras hazlo verdad y logra la victoria
-      </div>
-
-      <div class="mobile-citation">
-        <i>Siddha Boganathar, Samadhi Diksai-10, verso 5</i>
-      </div>
-
-      <div class="mobile-text">
-        Igual que lo hace Boganathar, sri Aurobindo, un Siddha moderno, habla también de una tapa ubicada en lo alto de la cabeza:
-      </div>
-
-      <div class="mobile-text">
-        "Encima de la mente está no sólo el infinito mismo, sino el mar infinito de paz, alegría, luz, poder, etc., encima de la cabeza. La "tapa dorada" (<i>Hiranmaya patra</i>) interviene entre lo que está encima de la mente y lo que está debajo. Una vez uno puede romper esa tapa, aquellos elementos pueden descender en cualquier momento en el que uno quiera, y para ello la quietud es necesaria", (<i>Evening talks</i>, A. B. Purani).
-      </div>
-
-      <div class="mobile-text">
-        La práctica profunda de Hatha Yoga no se limita a ejecutar <i>asanas</i>, posturas de Yoga, sino que va más allá de eso. El Hatha Yoga incluye <i>asanas</i> y <i>bandahs</i>, cierres musculares, con el fin de limpiar los <i>nadis</i> o canales de energía, activar los chakras, y finalmente dirigir y concentrar la energía vital en la parte superior de la cabeza. La finalidad es abrir con ella los chakras superiores. El yogui Sivananda, de hecho, llama "Hatha Yoga" a lo que otros considerarían que es la práctica de "Kundalini Yoga", tal como la describe en su libro "Kundalini Yoga".
-      </div>
-
-      <div class="mobile-text">
-        La práctica de <i>pranayama</i> también resulta fundamental en este proceso de despertar y concentrar la energía en lo alto de la cabeza. Los Siddhas insisten una y otra vez en ello; Bogar también lo hace en los versos precedentes de este poema:
-      </div>
-
-      <div class="mobile-verse">
-        Libera la energía meditativa del muladhara básico y dirige la respiración<br>
-        a través de los abundantes y encantados cuatro círculos<br>
-        hasta el círculo con el que está conectada la sílaba ya<br>
-        y donde la respiración ordenada ha sido interiorizada
-        <br><br>(verso 1)
-      </div>
-
-      <div class="mobile-text">
-        Los "cuatro círculos" son los cuatro chakras por encima del primer chakra. Mediante la práctica del <i>pranayama</i>, la respiración llega a equilibrarse y aquietarse, y se dice que se concentra en el sexto chakra del entrecejo, <i>Ajna</i>, relacionado con la sílaba <i>"ya"</i> ("la respiración "se interioriza").
-      </div>
-
-      <div class="mobile-text">
-        En otros yogas la concentración de energía y de consciencia en lo alto de la cabeza, en el chakra de la corona, buscaría la meta última de abandonar el <i>samsara</i>, el ciclo interminable de reencarnaciones. Pero la meta del <i>Siddhantam</i> de los Siddhas es otra. Una vez ahí, se busca el descenso de la gracia divina que hará posible la transformación total del yogui, incluyendo su cuerpo físico: transformar "el cobre en oro", el <i>jiva</i> (individuo) en Shiva (Divinidad), tal como dicen los Siddhas. El chakra <i>Sahasrara</i> de la corona, una vez abierta la tapa, es el punto por el que descienden energías superiores. Así lo señala sri Aurobindo en sus escritos:
-      </div>
-
-      <div class="mobile-text">
-        "El centro organizado más elevado de nuestro ser encarnado y de su acción en el cuerpo es el centro mental supremo, representado por el símbolo yóguico del loto de los mil pétalos, <i>Sahasrara</i>, y en su cima es donde tiene lugar la comunicación directa con los niveles supramentales. Entonces es posible adoptar un método diferente y más directo (…) y recibirlo todo mediante una especie de descenso desde lo alto, un descenso del cual nos hacemos conscientes no sólo espiritualmente sino también físicamente." (<i>Síntesis del Yoga</i>, 774-5).
-      </div>
-
-      <div class="mobile-text">
-        El yogui no puede realizar por sí mismo esta transformación del cuerpo físico, es el descenso del Divino mismo quien la realiza. El papel del yogui es 1) consumar con éxito la aspiración al Divino, manifestada por la concentración completa de la energía en ese punto superior, hasta "abrir la tapa", y 2) tras ello, consumar la entrega completa, manifestada por el posterior silencio y receptividad absolutos, sin fisuras, hacia esa gracia. El logro de tales realizaciones puede llevar una vida (o más) hasta que sean absolutamente completas y efectivas.
-      </div>
-
-      <div class="mobile-text">
-        Sri Aurobindo señala en sus textos que lo único que puede transformar la naturaleza y el cuerpo físico y divinizarlos es el descenso de la consciencia Supramental o consciencia-Verdad, que se halla muy por encima de los estados mentales superiores actuales del ser humano. Esta consciencia-Verdad no admite engaño posible, es la Verdad del Ser. Resulta interesante que Bogar hable también en estos versos de convertir el cuerpo en "verdad".
-      </div>
-
-      <div class="mobile-text">
-        La transformación y divinización física del yogui es la unión suprema de Shiva y de Shakti, de la consciencia y de la energía, hasta el punto de que no hay diferencia entre ambos. La creación se vuelve una con el creador.
-      </div>
-
-      <div class="mobile-citation">
-        "Estando absorto en el Absoluto en la concentración,<br>
-        se ha hecho posible el descender manifestando la gracia;<br>
-        el universo y los cinco sentidos se combinan juntos<br>
-        se han convertido en la forma del uno con el pelo enredado y sabiduría"<br>
-        <i>Siddha Sundaranandar, Meyjnanaccurukkam-16</i>
-      </div>
-
-      <div class="mobile-text">
-        El universo y los cinco sentidos son entonces inseparables de Shiva ("el uno con el pelo enredado y sabiduría"), la consciencia absoluta.
-      </div>
-
-      <div class="mobile-text">
-        Así que el cuerpo físico, en la concepción de los Siddhas, más que una limitación o un engaño para el alma, es una puerta para acceder a ese inefable estado de realización: "el cuerpo humano considerado como una apariencia es la puerta".
-      </div>
-
-      <div class="mobile-text">
-        Estos versos del Siddha Bogar resumen de forma concisa el camino del Siddhantam: el proceso de ascenso de la energía y del descenso por parte del Divino de la gracia transformadora, para la realización yóguica suprema de los Siddhas.
-      </div>
-
-    </div>
-
-    <!-- Footer Mobile -->
-    <div class="mobile-footer">
-      <a href="mailto:info@kriyayogadebabaji.net">info@kriyayogadebabaji.net</a><br>
-      Copyright 2025©. Se permite la libre reproducción <b><u>siempre que se cite la fuente</u></b>.
-    </div>
-
-  </div>
-</div>
-
-<!-- ESTRUCTURA DESKTOP -->
-<div class="desktop-only">
 <div id="contenedor">
   <div id="todaPagina"> <div id="todaPaginaB"> 
 <div id="cabeceraIndex"> 
@@ -396,9 +67,76 @@
             
             
 			
-            <li><div id="blanco2">&nbsp;</div></li>
-		
-        	<li><div id="noticias">
+            <li><div id="blanco2">&nbsp;</div></li>        	<li>
+
+<!-- CONTENIDO MOBILE -->
+<div id="mobile-noticias" style="display: none;">
+  <div class="mobile-content-wrapper">
+    <div class="mobile-section">
+      <h2>Boganathar: convertir el cuerpo en Verdad</h2>
+      <p><em>por Nityananda</em></p>
+
+      <p style="text-align: center; font-weight: bold; margin: 20px 0; padding: 15px; background-color: #f9f9f9; border-left: 3px solid #8B0000; line-height: 1.8;">
+        Para preservar el cuerpo, abre la tapa;<br>
+        la tapa se abre mediante el Hatha Yoga;<br>
+        el cuerpo humano considerado como una apariencia es la puerta;<br>
+        al revertir el cuerpo de muchas ataduras hazlo verdad y logra la victoria
+      </p>
+
+      <p style="text-align: center; font-style: italic; color: #666;">
+        <em>Siddha Boganathar, Samadhi Diksai-10, verso 5</em>
+      </p>
+
+      <p>Igual que lo hace Boganathar, sri Aurobindo, un Siddha moderno, habla también de una tapa ubicada en lo alto de la cabeza:</p>
+
+      <p>"Encima de la mente está no sólo el infinito mismo, sino el mar infinito de paz, alegría, luz, poder, etc., encima de la cabeza. La "tapa dorada" (<em>Hiranmaya patra</em>) interviene entre lo que está encima de la mente y lo que está debajo. Una vez uno puede romper esa tapa, aquellos elementos pueden descender en cualquier momento en el que uno quiera, y para ello la quietud es necesaria", (<em>Evening talks</em>, A. B. Purani).</p>
+
+      <p>La práctica profunda de Hatha Yoga no se limita a ejecutar <em>asanas</em>, posturas de Yoga, sino que va más allá de eso. El Hatha Yoga incluye <em>asanas</em> y <em>bandahs</em>, cierres musculares, con el fin de limpiar los <em>nadis</em> o canales de energía, activar los chakras, y finalmente dirigir y concentrar la energía vital en la parte superior de la cabeza. La finalidad es abrir con ella los chakras superiores. El yogui Sivananda, de hecho, llama "Hatha Yoga" a lo que otros considerarían que es la práctica de "Kundalini Yoga", tal como la describe en su libro "Kundalini Yoga".</p>
+
+      <p>La práctica de <em>pranayama</em> también resulta fundamental en este proceso de despertar y concentrar la energía en lo alto de la cabeza. Los Siddhas insisten una y otra vez en ello; Bogar también lo hace en los versos precedentes de este poema:</p>
+
+      <p style="text-align: center; font-weight: bold; margin: 20px 0; padding: 15px; background-color: #f9f9f9; border-left: 3px solid #8B0000; line-height: 1.8;">
+        Libera la energía meditativa del muladhara básico y dirige la respiración<br>
+        a través de los abundantes y encantados cuatro círculos<br>
+        hasta el círculo con el que está conectada la sílaba ya<br>
+        y donde la respiración ordenada ha sido interiorizada<br><br>
+        (verso 1)
+      </p>
+
+      <p>Los "cuatro círculos" son los cuatro chakras por encima del primer chakra. Mediante la práctica del <em>pranayama</em>, la respiración llega a equilibrarse y aquietarse, y se dice que se concentra en el sexto chakra del entrecejo, <em>Ajna</em>, relacionado con la sílaba <em>"ya"</em> ("la respiración "se interioriza").</p>
+
+      <p>En otros yogas la concentración de energía y de consciencia en lo alto de la cabeza, en el chakra de la corona, buscaría la meta última de abandonar el <em>samsara</em>, el ciclo interminable de reencarnaciones. Pero la meta del <em>Siddhantam</em> de los Siddhas es otra. Una vez ahí, se busca el descenso de la gracia divina que hará posible la transformación total del yogui, incluyendo su cuerpo físico: transformar "el cobre en oro", el <em>jiva</em> (individuo) en Shiva (Divinidad), tal como dicen los Siddhas. El chakra <em>Sahasrara</em> de la corona, una vez abierta la tapa, es el punto por el que descienden energías superiores. Así lo señala sri Aurobindo en sus escritos:</p>
+
+      <p>"El centro organizado más elevado de nuestro ser encarnado y de su acción en el cuerpo es el centro mental supremo, representado por el símbolo yóguico del loto de los mil pétalos, <em>Sahasrara</em>, y en su cima es donde tiene lugar la comunicación directa con los niveles supramentales. Entonces es posible adoptar un método diferente y más directo (…) y recibirlo todo mediante una especie de descenso desde lo alto, un descenso del cual nos hacemos conscientes no sólo espiritualmente sino también físicamente." (<em>Síntesis del Yoga</em>, 774-5).</p>
+
+      <p>El yogui no puede realizar por sí mismo esta transformación del cuerpo físico, es el descenso del Divino mismo quien la realiza. El papel del yogui es 1) consumar con éxito la aspiración al Divino, manifestada por la concentración completa de la energía en ese punto superior, hasta "abrir la tapa", y 2) tras ello, consumar la entrega completa, manifestada por el posterior silencio y receptividad absolutos, sin fisuras, hacia esa gracia. El logro de tales realizaciones puede llevar una vida (o más) hasta que sean absolutamente completas y efectivas.</p>
+
+      <p>Sri Aurobindo señala en sus textos que lo único que puede transformar la naturaleza y el cuerpo físico y divinizarlos es el descenso de la consciencia Supramental o consciencia-Verdad, que se halla muy por encima de los estados mentales superiores actuales del ser humano. Esta consciencia-Verdad no admite engaño posible, es la Verdad del Ser. Resulta interesante que Bogar hable también en estos versos de convertir el cuerpo en "verdad".</p>
+
+      <p>La transformación y divinización física del yogui es la unión suprema de Shiva y de Shakti, de la consciencia y de la energía, hasta el punto de que no hay diferencia entre ambos. La creación se vuelve una con el creador.</p>
+
+      <p style="text-align: center; font-style: italic; color: #666;">
+        "Estando absorto en el Absoluto en la concentración,<br>
+        se ha hecho posible el descender manifestando la gracia;<br>
+        el universo y los cinco sentidos se combinan juntos<br>
+        se han convertido en la forma del uno con el pelo enredado y sabiduría"<br>
+        <em>Siddha Sundaranandar, Meyjnanaccurukkam-16</em>
+      </p>
+
+      <p>El universo y los cinco sentidos son entonces inseparables de Shiva ("el uno con el pelo enredado y sabiduría"), la consciencia absoluta.</p>
+
+      <p>Así que el cuerpo físico, en la concepción de los Siddhas, más que una limitación o un engaño para el alma, es una puerta para acceder a ese inefable estado de realización: "el cuerpo humano considerado como una apariencia es la puerta".</p>
+
+      <p>Estos versos del Siddha Bogar resumen de forma concisa el camino del Siddhantam: el proceso de ascenso de la energía y del descenso por parte del Divino de la gracia transformadora, para la realización yóguica suprema de los Siddhas.</p>
+
+      <p><a href="docs/bogar.pdf">Descargar versión en PDF</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- CONTENIDO DESKTOP -->
+<div id="desktop-noticias">
+<div id="noticias">
 
 
 
@@ -480,7 +218,10 @@ Estos versos del Siddha Bogar resumen de forma concisa el camino del Siddhantam:
 
               </h2>
             </div></div><!-- de noticias-->
-    </li><!-- de noticias-->   
+</div>
+<!-- FIN CONTENIDO DESKTOP -->
+
+</li><!-- de noticias-->   
  
   </ul><!-- de contenidos2-->
   
@@ -492,56 +233,15 @@ Estos versos del Siddha Bogar resumen de forma concisa el camino del Siddhantam:
 
 </div><!-- de contenedor-->
 
-</div>
-<!-- FIN ESTRUCTURA DESKTOP -->
 
-<script>
-// Función para alternar el menú mobile
-function toggleMenu() {
-  var menu = document.getElementById('mobileMenu');
-  menu.classList.toggle('active');
-}
+<!-- JavaScript para menú responsive -->
+<script src="js/menu-toggle.js"></script>
 
-// Función para alternar entre versión mobile y desktop
-function toggleVersion() {
-  var mobileVersion = document.querySelector('.mobile-only');
-  var desktopVersion = document.querySelector('.desktop-only');
-  var toggleBtn = document.getElementById('toggleBtn');
+<!-- JavaScript para contenido mobile personalizado -->
+<script src="js/mobile-content.js"></script>
 
-  if (mobileVersion.style.display === 'none') {
-    mobileVersion.style.display = 'block';
-    desktopVersion.style.display = 'none';
-    toggleBtn.textContent = 'Ver versión escritorio';
-    localStorage.setItem('preferredVersion', 'mobile');
-  } else {
-    mobileVersion.style.display = 'none';
-    desktopVersion.style.display = 'block';
-    toggleBtn.textContent = 'Ver versión móvil';
-    localStorage.setItem('preferredVersion', 'desktop');
-  }
-}
-
-// Cargar preferencia guardada al cargar la página
-window.addEventListener('load', function() {
-  var preferredVersion = localStorage.getItem('preferredVersion');
-  var mobileVersion = document.querySelector('.mobile-only');
-  var desktopVersion = document.querySelector('.desktop-only');
-  var toggleBtn = document.getElementById('toggleBtn');
-
-  if (preferredVersion === 'desktop') {
-    mobileVersion.style.display = 'none';
-    desktopVersion.style.display = 'block';
-    toggleBtn.textContent = 'Ver versión móvil';
-  }
-});
-
-// Cerrar menú al hacer clic en un enlace
-document.querySelectorAll('.mobile-nav a').forEach(function(link) {
-  link.addEventListener('click', function() {
-    document.getElementById('mobileMenu').classList.remove('active');
-  });
-});
-</script>
+<!-- JavaScript para botón scroll to top -->
+<script src="js/scroll-to-top.js"></script>
 
 </body>
 </html>

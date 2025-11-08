@@ -17,381 +17,12 @@
 <link rel="stylesheet" type="text/css" href="css/textos.css" />
 <link rel="stylesheet" type="text/css" href="css/menus.css" />
 <link rel="stylesheet" type="text/css" href="css/cuerpoIndex.css" />
-<link rel="stylesheet" type="text/css" href="css/fuentes.css" />
-
-<style>
-/* ===== ESTILOS RESPONSIVE MOBILE ===== */
-@media only screen and (max-width: 768px) {
-  body { margin: 0; padding: 0; }
-  #mobile-container { display: block !important; }
-  #desktop-container { display: none !important; }
-}
-
-@media only screen and (min-width: 769px) {
-  #mobile-container { display: none !important; }
-  #desktop-container { display: block !important; }
-}
-
-/* Estilos base mobile */
-#mobile-container {
-  display: none;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: #fff;
-  font-family: 'Lato', Arial, sans-serif;
-}
-
-/* Header Mobile */
-.mobile-header {
-  background: linear-gradient(135deg, #8B0000 0%, #DC143C 100%);
-  padding: 15px;
-  text-align: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.mobile-logo {
-  max-width: 280px;
-  height: auto;
-  margin: 0 auto;
-  display: block;
-}
-
-/* Menú hamburguesa */
-.mobile-menu-btn {
-  background: #8B0000;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  width: 100%;
-  text-align: left;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
-  border-radius: 5px;
-}
-
-.mobile-menu-btn:active { background: #6B0000; }
-
-.mobile-nav {
-  display: none;
-  background: #f8f8f8;
-  border-top: 2px solid #8B0000;
-}
-
-.mobile-nav.active { display: block; animation: slideDown 0.3s ease; }
-
-@keyframes slideDown {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.mobile-nav a {
-  display: block;
-  padding: 12px 20px;
-  color: #333;
-  text-decoration: none;
-  border-bottom: 1px solid #ddd;
-  font-size: 14px;
-}
-
-.mobile-nav a:active { background: #e0e0e0; }
-
-/* Contenido principal */
-.mobile-content {
-  padding: 20px 15px;
-  line-height: 1.6;
-}
-
-.mobile-image {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  display: block;
-  margin: 15px auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.mobile-pdf-link {
-  display: inline-block;
-  background: #8B0000;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  margin: 15px 0;
-  font-size: 14px;
-}
-
-.mobile-pdf-link:active { background: #6B0000; }
-
-.mobile-title {
-  font-size: 24px;
-  color: #8B0000;
-  font-weight: bold;
-  margin: 20px 0 10px 0;
-  line-height: 1.3;
-  text-align: center;
-}
-
-.mobile-author {
-  font-size: 14px;
-  color: #666;
-  font-style: italic;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.mobile-text {
-  font-size: 16px;
-  color: #333;
-  line-height: 1.8;
-  text-align: justify;
-  margin-bottom: 15px;
-}
-
-.mobile-subtitle {
-  font-size: 18px;
-  color: #8B0000;
-  font-weight: bold;
-  margin: 25px 0 15px 0;
-}
-
-.mobile-link {
-  color: #8B0000;
-  text-decoration: none;
-  border-bottom: 1px solid #8B0000;
-}
-
-.mobile-link:active { color: #6B0000; }
-
-.mobile-divider {
-  border: 0;
-  border-top: 2px solid #8B0000;
-  margin: 30px 0;
-}
-
-.mobile-related {
-  background: #f8f8f8;
-  padding: 20px 15px;
-  margin-top: 30px;
-  border-radius: 8px;
-}
-
-.mobile-related-title {
-  font-size: 18px;
-  color: #8B0000;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.mobile-related a {
-  display: block;
-  color: #333;
-  text-decoration: none;
-  padding: 10px 0;
-  border-bottom: 1px solid #ddd;
-  font-size: 14px;
-}
-
-.mobile-related a:active { color: #8B0000; }
-
-/* Footer Mobile */
-.mobile-footer {
-  background: #333;
-  color: white;
-  text-align: center;
-  padding: 20px 15px;
-  font-size: 12px;
-  line-height: 1.6;
-  margin-top: 40px;
-}
-
-.mobile-footer a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-/* Botón toggle versión */
-.version-toggle {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #8B0000;
-  color: white;
-  border: none;
-  padding: 12px 16px;
-  border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  cursor: pointer;
-  z-index: 9999;
-  font-size: 20px;
-  width: 56px;
-  height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.version-toggle:active { background: #6B0000; }
-</style>
+<link rel="stylesheet" type="text/css" href="css/fuentes.css" /><link rel="stylesheet" type="text/css" href="css-responsive/responsive.css" />
+<link rel="stylesheet" type="text/css" href="css-responsive/version-toggle.css" />
+<link rel="stylesheet" type="text/css" href="css-responsive/hamburger-menu.css" />
 </head>
 
 <body >
-
-<!-- ========== VERSIÓN MOBILE ========== -->
-<div id="mobile-container">
-  <!-- Header -->
-  <div class="mobile-header">
-    <a href="index.htm">
-      <img src="imagenes/logTextos.png" alt="Kriya Yoga de Babaji" class="mobile-logo">
-    </a>
-    <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menú">
-      <span>MENÚ</span>
-      <span>☰</span>
-    </button>
-  </div>
-
-  <!-- Navegación -->
-  <nav class="mobile-nav" id="mobileMenu">
-    <a href="kriya.htm">KRIYA YOGA</a>
-    <a href="seminarios.htm">SEMINARIOS</a>
-    <a href="clases.htm">CLASES Y SESIONES</a>
-    <a href="articulos.htm">ARTÍCULOS</a>
-    <a href="libros.htm">LIBROS</a>
-    <a href="contacto.htm">CONTACTO</a>
-    <a href="index.htm">Inicio</a>
-    <a href="descargas.htm">Música</a>
-    <a href="18siddhas.htm">La tradición de los 18 Siddhas</a>
-    <a href="kriyababaji.htm">Historias de Kriya Babaji</a>
-    <a href="babaji.htm">Babaji</a>
-    <a href="empezar.htm">¿Cómo empezar?</a>
-    <a href="18posturas.htm">18 posturas</a>
-    <a href="viaje_norte.htm">Viajes India</a>
-    <a href="satsang.htm">Grupos de estudiantes</a>
-    <a href="enlaces.htm">Enlaces</a>
-  </nav>
-
-  <!-- Contenido principal -->
-  <div class="mobile-content">
-    <a href="docs/siddhas.pdf" class="mobile-pdf-link">📄 Versión en PDF</a>
-
-    <img src="imagenes/siddhas.jpg" alt="Los Siddhas" class="mobile-image">
-
-    <h1 class="mobile-title">El camino a la inmortalidad de los Siddhas</h1>
-    <div class="mobile-author">por M. Govindan Satchidananda</div>
-
-    <div class="mobile-text">
-      Hay diversos usos del término Siddha. El más común es describir a un "ser perfecto", o "uno que se ha vuelto uno con Dios", o "uno que ha realizado la no dualidad de su psique, o de la consciencia del alma individual y la consciencia del Señor", o "un adepto yogui que posee poderes específicos psíquicos o supernaturales, conocidos como siddhis". La mayoría de los Siddhas vivieron y escribieron durante el periodo desde varios cientos de años antes de la era cristiana hasta cerca del siglo trece después de Cristo.
-    </div>
-
-    <div class="mobile-text">
-      Según las enseñanzas de los Siddhas, el cuerpo humano es un templo de Dios. El hombre es una representación en miniatura de la Inteligencia Suprema, la Fuente de todo. El propósito de la vida es realizar a Dios y manifestar esa realización en todos los planos de la existencia. Es posible para un hombre sobrepasar las cinco limitaciones del cabello gris, la visión oscurecida, la vejez, la enfermedad y la muerte. Es posible para el cuerpo humano mantener su juventud. Cuando son estimulados por prácticas yóguicas intensas, los chakras o centros psicoenergéticos internos despiertan facultades superiores, y le permiten a uno conectar con el potencial de poder y consciencia de uno, conocido como kundalini. Al hacerlo así, uno puede obtener la perfección en el cuerpo y la mente. Ciertos poderes divinos o siddhis se manifiestan.
-    </div>
-
-    <div class="mobile-text">
-      Usando los destacables poderes mencionados, los Siddhas llevaron a cabo un estudio sistemático de la naturaleza y de sus elementos, y desde lo que fueron capaces de entender desarrollaron una elevada medicina sistemática conocida como "Siddha Vaidya". Escribieron muchos tratados médicos sobre longevidad, que hoy en día forman el fundamento de uno de los cuatro sistemas de medicina reconocidos por el gobierno de la India.
-    </div>
-
-    <div class="mobile-text">
-      Los Siddhas descubrieron por qué el cuerpo envejece, y desarrollaron pasos para prevenir el envejecimiento. Por ejemplo, ellos vieron que la duración de toda vida animal es inversamente proporcional a su ritmo de respiración. Esto es, cuanto más lenta la respiración, más larga la vida. Y al revés, cuanto más rápida la respiración, más corta la vida. Animales como la tortuga marina, la ballena, el delfín y el loro, que toman las más pocas respiraciones por minuto, tienen vidas que son mucho más largas que las de los humanos, mientras que el perro y el ratón, que respiran cinco veces más rápido que el humano promedio, tienen una quinta parte de su longevidad. Los Siddhas sugieren que si uno respira quince veces o menos por minuto, debería vivir cien años. Es cuando la respiración se vuelve agitada o cuando uno respira mucho más rápido que esto que la duración de la vida se reduce.
-    </div>
-
-    <h2 class="mobile-subtitle">Iniciación en la respiración Kundalini</h2>
-
-    <div class="mobile-text">
-      Los Siddhas desarrollaron prácticas que se centraban en la respiración, mientras visualizaban una luz subiendo y bajando por los canales de energía que discurren entre la región de los genitales, por la columna, hasta la coronilla de la cabeza. Debido a su gran potencial, tales técnicas fueron mantenidas en secreto y compartidas sólo con personas cualificadas que estaban preparadas para practicarlas según ciertas instrucciones que asegurarían su profundo efecto. Como la naturaleza humana está generalmente llena de hábitos negativos y es adversa al cambio, tales prácticas tuvieron que ser manejadas dentro del contexto de un proceso entero de auto-purificación, con atención en la dieta, la limpieza, las normas morales, la higiene mental, la meditación y las disciplinas espirituales. Durante formaciones especiales, conocidas como "iniciaciones", tales técnicas esotéricas fueron y todavía son enseñadas por adeptos yóguicos a aquellos que están dispuestos a comprometerse a su práctica.
-    </div>
-
-    <div class="mobile-text">
-      Junto con tales técnicas de respiración, los Siddhas aprendieron a ralentizar la respiración hasta cero, de modo que entraban en el "estado sin aliento de comunión con Dios". Este estado de consciencia es conocido como "samadhi", que llevó la influencia de estados más elevados de consciencia sobre su cuerpo físico, transformándolo gradualmente en un cuerpo divino o <em>cuerpo dorado</em>.
-    </div>
-
-    <h2 class="mobile-subtitle">El desarrollo progresivo del místico</h2>
-
-    <div class="mobile-text">
-      Cuando la comunión mística con las dimensiones espirituales de la vida se vuelve fácil y la norma, podemos referirnos al místico como a un "santo". La perspectiva egoísta de un santo es reemplazada, al menos en parte, por una consciencia de la Presencia de la Divinidad. El egoísmo es el hábito de identificarnos con el cuerpo, sus sensaciones, las emociones y los movimientos de la mente. Conforme dejamos partir estas falsas identificaciones, el trasfondo, que es consciencia pura, salta a un primer plano.
-    </div>
-
-    <div class="mobile-text">
-      Sin embargo, si la entrega o comunión del místico está limitada sólo al plano o a la realidad espiritual, él puede estar todavía atado a una necesidad de realizar distinciones filosóficas o teológicas hasta que comience a entregar su ego en el plano intelectual. Conforme se profundiza la entrega, sin embargo, se dejan partir gradualmente el "yo" y el "mío", el ego es disuelto y la consciencia silenciosa impregna todo lo que uno piensa, dice o hace. Ya no hay más "mío" y "tuyo" que forzar o influenciar o resistir; no hay necesidad de reunir información.
-    </div>
-
-    <div class="mobile-text">
-      Sin embargo el ego persiste todavía hasta que la entrega abarca todos los planos de existencia. Siempre está el riesgo de una caída, y el deseo, la aversión, el aferrarse a la vida pueden todavía crear sufrimiento. Como lo señaló San Agustín: "Señor, ayúdame a entregarme, pero todavía no". Esto es parte de nuestra naturaleza humana inferior, en particular el plano mental, el asiento de la fantasía y de los deseos, y el plano vital, el asiento de las emociones, se resisten a la transformación que conlleva la entrega. Conforme se hace más profunda la entrega del místico y abraza al plano mental, donde residen los cincos sentidos, uno se vuelve un Siddha, manifestando siddhis (poderes divinos), empezando por la clarividencia – la habilidad para ver cosas a distancia en el tiempo o en el espacio, o clariaudiencia – el sentido sutil del oído, o clarisientiencia – el sentido sutil de sentir.
-    </div>
-
-    <div class="mobile-text">
-      Unos pocos raros Siddhas tienen éxito en entregar su ego en el nivel del plano vital de la existencia. Ellos se convierten en <em>Maha Siddhas</em> o grandes Siddhas, capaces de manifestar siddhis o poderes que implican a la naturaleza misma. Esto puede incluir materialización de objetos, levitación, control del tiempo atmosférico, cumplimiento de deseos e invisibilidad. Aunque han vivido principalmente en la India, Tibet, China y el sureste de Asia, según sus propias narraciones, los Siddhas han viajado por todo el mundo.
-    </div>
-
-    <h2 class="mobile-subtitle">La inmortalidad física es sólo una consecuencia, no la meta, del sendero de la entrega completa al Señor</h2>
-
-    <div class="mobile-text">
-      Muy pocos Siddhas son capaces de entregar sus egos al nivel del plano físico. Éstos son conocidos como Maha siddhas o grandes Siddhas, capaces de manifestar siddhis o poderes que implican a la naturaleza material misma. De lo que estoy hablando es de un estado tan avanzado de purificación del ego que las células del cuerpo físico entregan su agenda limitada del metabolismo y se quedan sometidas a la dirección de la consciencia más grande de uno. El cuerpo físico, brillando con la luz dorada de esta consciencia se vuelve impermeable a la enfermedad y a la muerte.
-    </div>
-
-    <div class="mobile-text">
-      Estos seres iluminados fueron instrumentos de la fuerza y de la luz divinas y toda acción y reposo que se movía a través de ellos eran debidas al Poder divino. No es por tanto coincidencia que sepamos tan poco ciertamente sobre lo que hicieron los Siddhas o sobre cuáles fueron los detalles de sus vidas personales, pero conocemos sus enseñanzas de sabiduría.
-    </div>
-
-    <div class="mobile-text">
-      El Siddha puede ser llamado a permanecer en el mismo cuerpo físico durante un periodo indefinido de tiempo, o incluso a transmigrar a otro cuerpo o a desmaterializarse, o a ascender como lo hizo Jesús, o a estar en más de un cuerpo visible durante el mismo periodo de tiempo, en dos lugares separados. Está el ejemplo bien documentado de Ramalinga Swamigal, del siglo diecinueve, cuyo cuerpo no proyectaba sombra ante el sol, ni podía ser dañado o fotografiado, a pesar de intentos repetidos, cuando posó con un grupo ante fotógrafos expertos, y cuyo cuerpo desapareció de la tierra, bastante dramáticamente, con un destello de luz violeta. Desde entonces se ha informado que Ramalinga Swamigal reapareció en ocasiones para asistir a devotos necesitados. Niños y devotos del sur de India continuan cantando hasta hoy muchos de los más de cuarenta mil poemas y canciones que escribió, ensalzando el camino de la "luz suprema de gracia". También tenemos el ejemplo de Kriya Babaji, descrito en <em>Autobiografía de un Yogui</em>, y en <em>La voz de Babaji: una trilogía de Kriya Yoga</em>, y el de los Siddhas Agastyar, Boganathar y Sri Aurobindo, que dejaron narraciones detalladas de sus propios procesos de entrega al nivel del cuerpo físico, y varias formas de inmortalidad.
-    </div>
-
-    <div class="mobile-text">
-      La afiliación sectaria no tiene importancia para los Siddhas. Ellos se sintieron cómodos con personas de todas las fes. Su acercamiento hacia la verdad es experimentarla primero en el samadhi, la comunión mística de la absorción cognitiva, y luego entregarse gradualmente completamente a ella hasta que se convierta en su constante estado de consciencia, en el estado de iluminación. Su enfoque no incluye intentos de construir sistemas de filosofía o de construir sistemas religiosos de creencias; la suya es una "filosofía abierta" en la que son valoradas todas las expresiones de la verdad. Sus poemas y canciones no predican ninguna doctrina; sólo sugieren una dirección por la que puede ser realizada la aspiración por una realización directa, intuitiva, personal de la verdad divina.
-    </div>
-
-    <h2 class="mobile-subtitle">La aspiración por nuestro potencial más grande</h2>
-
-    <div class="mobile-text">
-      Muchas personas consideran las enseñanzas de sabiduría y de Kundalini Yoga entregada a nosotros por los Siddhas como la herencia más grande de la humanidad. En palabras de Swami Hariharananda Aranya: "Si el propósito del conocimiento humano es aliviar el sufrimiento humano, ese conocimiento que elimina el sufrimiento completamente es el conocimiento más grande". Las enseñanzas de los Siddhas son de una naturaleza práctica, y se centran en el uso del arte científico del Yoga, como medio no sólo para curar, para prevenir la enfermedad física y mental, sino finalmente para aspirar a nuestro potencial humano más grande. Que todos aspiremos a Eso.
-    </div>
-
-    <hr class="mobile-divider">
-
-    <div class="mobile-text" style="font-style: italic; font-size: 14px;">
-      Extraído del periódico de Kriya Yoga, números de
-      <a href="http://www.babajiskriyayoga.net/spanish/flexpaper/Journal-S-Summer-09-art.htm" class="mobile-link">verano del 2009</a> y
-      <a href="http://www.babajiskriyayoga.net/spanish/flexpaper/Journal-S-Fall-09-art.htm" class="mobile-link">otoño del 2009</a>.
-    </div>
-
-    <!-- Artículos relacionados -->
-    <div class="mobile-related">
-      <div class="mobile-related-title">+ Artículos de meses anteriores:</div>
-      <a href="t-templo2.htm">Construyendo el templo perfecto del gozo</a>
-      <a href="t-sutras.htm">Samadhi, la meta del Yoga Real</a>
-      <a href="t-tantra2.htm">El Tantra de los 18 Siddhas</a>
-      <a href="t-tantra.htm">Tantra, el tejido de la consciencia</a>
-      <a href="t-gurupurnima.htm">Gurupurnimá: celebrando al Gurú eterno</a>
-      <a href="t-nidra.htm">Yoga Nidra, el descanso yóguico</a>
-      <a href="t-entrega.htm">Entrega, auto-ofrenda y consagración</a>
-      <a href="t-guru.htm">La gracia del gurú</a>
-      <a href="t-silencio.htm">El poder del silencio</a>
-      <a href="t-babaji.htm">Cómo Babaji salvó mi vida</a>
-      <a href="t-nombre.htm">El poder del Nombre</a>
-      <a href="t-guia.htm">Buscando guía en nuestra práctica espiritual</a>
-      <a href="t-mente.htm">Manejando la mente</a>
-      <a href="t-progreso.htm">¿Cómo sabemos si estamos progresando espiritualmente?</a>
-      <a href="t-gracia.htm">¿Cómo ganar la gracia de Babaji?</a>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <div class="mobile-footer">
-    <a href="mailto:info@kriyayogadebabaji.net">info@kriyayogadebabaji.net</a><br>
-    Copyright 2025©<br>
-    Se permite la libre reproducción <strong>siempre que se cite la fuente</strong>.
-  </div>
-</div>
-
-<!-- ========== VERSIÓN DESKTOP ========== -->
-<div id="desktop-container">
 <div id="contenedor">
   <div id="todaPagina"> <div id="todaPaginaB"> 
 <div id="cabeceraIndex"> 
@@ -427,17 +58,71 @@
                
                	</div><!-- de lateral-->
  				</li><!-- de lateral-->
-            
-            
-            
-            
-            
-            
-            
-			
-            <li><div id="blanco2">&nbsp;</div></li>
-		
-        	<li><div id="noticias">
+
+
+
+
+
+
+
+
+            <li><div id="blanco2">&nbsp;</div></li>        	<li>
+
+<!-- CONTENIDO MOBILE -->
+<div id="mobile-noticias" style="display: none;">
+  <div class="mobile-content-wrapper">
+    <div class="mobile-section">
+      <h2>El camino a la inmortalidad de los Siddhas</h2>
+      <p><em>por M. Govindan Satchidananda</em></p>
+
+      <p>Hay diversos usos del término Siddha. El más común es describir a un "ser perfecto", o "uno que se ha vuelto uno con Dios", o "uno que ha realizado la no dualidad de su psique, o de la consciencia del alma individual y la consciencia del Señor", o "un adepto yogui que posee poderes específicos psíquicos o supernaturales, conocidos como siddhis". La mayoría de los Siddhas vivieron y escribieron durante el periodo desde varios cientos de años antes de la era cristiana hasta cerca del siglo trece después de Cristo.</p>
+
+      <p>Según las enseñanzas de los Siddhas, el cuerpo humano es un templo de Dios. El hombre es una representación en miniatura de la Inteligencia Suprema, la Fuente de todo. El propósito de la vida es realizar a Dios y manifestar esa realización en todos los planos de la existencia. Es posible para un hombre sobrepasar las cinco limitaciones del cabello gris, la visión oscurecida, la vejez, la enfermedad y la muerte. Es posible para el cuerpo humano mantener su juventud. Cuando son estimulados por prácticas yóguicas intensas, los chakras o centros psicoenergéticos internos despiertan facultades superiores, y le permiten a uno conectar con el potencial de poder y consciencia de uno, conocido como kundalini. Al hacerlo así, uno puede obtener la perfección en el cuerpo y la mente. Ciertos poderes divinos o siddhis se manifiestan.</p>
+
+      <p>Usando los destacables poderes mencionados, los Siddhas llevaron a cabo un estudio sistemático de la naturaleza y de sus elementos, y desde lo que fueron capaces de entender desarrollaron una elevada medicina sistemática conocida como "Siddha Vaidya". Escribieron muchos tratados médicos sobre longevidad, que hoy en día forman el fundamento de uno de los cuatro sistemas de medicina reconocidos por el gobierno de la India.</p>
+
+      <p>Los Siddhas descubrieron por qué el cuerpo envejece, y desarrollaron pasos para prevenir el envejecimiento. Por ejemplo, ellos vieron que la duración de toda vida animal es inversamente proporcional a su ritmo de respiración. Esto es, cuanto más lenta la respiración, más larga la vida. Y al revés, cuanto más rápida la respiración, más corta la vida. Animales como la tortuga marina, la ballena, el delfín y el loro, que toman las más pocas respiraciones por minuto, tienen vidas que son mucho más largas que las de los humanos, mientras que el perro y el ratón, que respiran cinco veces más rápido que el humano promedio, tienen una quinta parte de su longevidad. Los Siddhas sugieren que si uno respira quince veces o menos por minuto, debería vivir cien años. Es cuando la respiración se vuelve agitada o cuando uno respira mucho más rápido que esto que la duración de la vida se reduce.</p>
+
+      <h3>Iniciación en la respiración Kundalini</h3>
+
+      <p>Los Siddhas desarrollaron prácticas que se centraban en la respiración, mientras visualizaban una luz subiendo y bajando por los canales de energía que discurren entre la región de los genitales, por la columna, hasta la coronilla de la cabeza. Debido a su gran potencial, tales técnicas fueron mantenidas en secreto y compartidas sólo con personas cualificadas que estaban preparadas para practicarlas según ciertas instrucciones que asegurarían su profundo efecto. Como la naturaleza humana está generalmente llena de hábitos negativos y es adversa al cambio, tales prácticas tuvieron que ser manejadas dentro del contexto de un proceso entero de auto-purificación, con atención en la dieta, la limpieza, las normas morales, la higiene mental, la meditación y las disciplinas espirituales. Durante formaciones especiales, conocidas como "iniciaciones", tales técnicas esotéricas fueron y todavía son enseñadas por adeptos yóguicos a aquellos que están dispuestos a comprometerse a su práctica.</p>
+
+      <p>Junto con tales técnicas de respiración, los Siddhas aprendieron a ralentizar la respiración hasta cero, de modo que entraban en el "estado sin aliento de comunión con Dios". Este estado de consciencia es conocido como "samadhi", que llevó la influencia de estados más elevados de consciencia sobre su cuerpo físico, transformándolo gradualmente en un cuerpo divino o <em>cuerpo dorado</em>.</p>
+
+      <h3>El desarrollo progresivo del místico</h3>
+
+      <p>Cuando la comunión mística con las dimensiones espirituales de la vida se vuelve fácil y la norma, podemos referirnos al místico como a un "santo". La perspectiva egoísta de un santo es reemplazada, al menos en parte, por una consciencia de la Presencia de la Divinidad. El egoísmo es el hábito de identificarnos con el cuerpo, sus sensaciones, las emociones y los movimientos de la mente. Conforme dejamos partir estas falsas identificaciones, el trasfondo, que es consciencia pura, salta a un primer plano.</p>
+
+      <p>Sin embargo, si la entrega o comunión del místico está limitada sólo al plano o a la realidad espiritual, él puede estar todavía atado a una necesidad de realizar distinciones filosóficas o teológicas hasta que comience a entregar su ego en el plano intelectual. Conforme se profundiza la entrega, sin embargo, se dejan partir gradualmente el "yo" y el "mío", el ego es disuelto y la consciencia silenciosa impregna todo lo que uno piensa, dice o hace. Ya no hay más "mío" y "tuyo" que forzar o influenciar o resistir; no hay necesidad de reunir información.</p>
+
+      <p>Sin embargo el ego persiste todavía hasta que la entrega abarca todos los planos de existencia. Siempre está el riesgo de una caída, y el deseo, la aversión, el aferrarse a la vida pueden todavía crear sufrimiento. Como lo señaló San Agustín: "Señor, ayúdame a entregarme, pero todavía no". Esto es parte de nuestra naturaleza humana inferior, en particular el plano mental, el asiento de la fantasía y de los deseos, y el plano vital, el asiento de las emociones, se resisten a la transformación que conlleva la entrega. Conforme se hace más profunda la entrega del místico y abraza al plano mental, donde residen los cincos sentidos, uno se vuelve un Siddha, manifestando siddhis (poderes divinos), empezando por la clarividencia – la habilidad para ver cosas a distancia en el tiempo o en el espacio, o clariaudiencia – el sentido sutil del oído, o clarisientiencia – el sentido sutil de sentir.</p>
+
+      <p>Unos pocos raros Siddhas tienen éxito en entregar su ego en el nivel del plano vital de la existencia. Ellos se convierten en <em>Maha Siddhas</em> o grandes Siddhas, capaces de manifestar siddhis o poderes que implican a la naturaleza misma. Esto puede incluir materialización de objetos, levitación, control del tiempo atmosférico, cumplimiento de deseos e invisibilidad. Aunque han vivido principalmente en la India, Tibet, China y el sureste de Asia, según sus propias narraciones, los Siddhas han viajado por todo el mundo.</p>
+
+      <h3>La inmortalidad física es sólo una consecuencia, no la meta, del sendero de la entrega completa al Señor</h3>
+
+      <p>Muy pocos Siddhas son capaces de entregar sus egos al nivel del plano físico. Éstos son conocidos como Maha siddhas o grandes Siddhas, capaces de manifestar siddhis o poderes que implican a la naturaleza material misma. De lo que estoy hablando es de un estado tan avanzado de purificación del ego que las células del cuerpo físico entregan su agenda limitada del metabolismo y se quedan sometidas a la dirección de la consciencia más grande de uno. El cuerpo físico, brillando con la luz dorada de esta consciencia se vuelve impermeable a la enfermedad y a la muerte.</p>
+
+      <p>Estos seres iluminados fueron instrumentos de la fuerza y de la luz divinas y toda acción y reposo que se movía a través de ellos eran debidas al Poder divino. No es por tanto coincidencia que sepamos tan poco ciertamente sobre lo que hicieron los Siddhas o sobre cuáles fueron los detalles de sus vidas personales, pero conocemos sus enseñanzas de sabiduría.</p>
+
+      <p>El Siddha puede ser llamado a permanecer en el mismo cuerpo físico durante un periodo indefinido de tiempo, o incluso a transmigrar a otro cuerpo o a desmaterializarse, o a ascender como lo hizo Jesús, o a estar en más de un cuerpo visible durante el mismo periodo de tiempo, en dos lugares separados. Está el ejemplo bien documentado de Ramalinga Swamigal, del siglo diecinueve, cuyo cuerpo no proyectaba sombra ante el sol, ni podía ser dañado o fotografiado, a pesar de intentos repetidos, cuando posó con un grupo ante fotógrafos expertos, y cuyo cuerpo desapareció de la tierra, bastante dramáticamente, con un destello de luz violeta. Desde entonces se ha informado que Ramalinga Swamigal reapareció en ocasiones para asistir a devotos necesitados. Niños y devotos del sur de India continuan cantando hasta hoy muchos de los más de cuarenta mil poemas y canciones que escribió, ensalzando el camino de la "luz suprema de gracia". También tenemos el ejemplo de Kriya Babaji, descrito en <em>Autobiografía de un Yogui</em>, y en <em>La voz de Babaji: una trilogía de Kriya Yoga</em>, y el de los Siddhas Agastyar, Boganathar y Sri Aurobindo, que dejaron narraciones detalladas de sus propios procesos de entrega al nivel del cuerpo físico, y varias formas de inmortalidad.</p>
+
+      <p>La afiliación sectaria no tiene importancia para los Siddhas. Ellos se sintieron cómodos con personas de todas las fes. Su acercamiento hacia la verdad es experimentarla primero en el samadhi, la comunión mística de la absorción cognitiva, y luego entregarse gradualmente completamente a ella hasta que se convierta en su constante estado de consciencia, en el estado de iluminación. Su enfoque no incluye intentos de construir sistemas de filosofía o de construir sistemas religiosos de creencias; la suya es una "filosofía abierta" en la que son valoradas todas las expresiones de la verdad. Sus poemas y canciones no predican ninguna doctrina; sólo sugieren una dirección por la que puede ser realizada la aspiración por una realización directa, intuitiva, personal de la verdad divina.</p>
+
+      <h3>La aspiración por nuestro potencial más grande</h3>
+
+      <p>Muchas personas consideran las enseñanzas de sabiduría y de Kundalini Yoga entregada a nosotros por los Siddhas como la herencia más grande de la humanidad. En palabras de Swami Hariharananda Aranya: "Si el propósito del conocimiento humano es aliviar el sufrimiento humano, ese conocimiento que elimina el sufrimiento completamente es el conocimiento más grande". Las enseñanzas de los Siddhas son de una naturaleza práctica, y se centran en el uso del arte científico del Yoga, como medio no sólo para curar, para prevenir la enfermedad física y mental, sino finalmente para aspirar a nuestro potencial humano más grande. Que todos aspiremos a Eso.</p>
+
+      <p style="font-style: italic;"><em>Extraído del periódico de Kriya Yoga, números de <a href="http://www.babajiskriyayoga.net/spanish/flexpaper/Journal-S-Summer-09-art.htm">verano del 2009</a> y <a href="http://www.babajiskriyayoga.net/spanish/flexpaper/Journal-S-Fall-09-art.htm">otoño del 2009</a>.</em></p>
+
+      <p><a href="docs/siddhas.pdf">Descargar versión en PDF</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- CONTENIDO DESKTOP -->
+<div id="desktop-noticias">
+<div id="noticias">
 
 
 
@@ -462,47 +147,213 @@
               
 
             <div id="texto">
-              <h2 align="center"> <br />
-Hay diversos usos del término Siddha. El más común es describir a un “ser perfecto”, o “uno que se ha vuelto uno con Dios”, o “uno que ha realizado la no dualidad de su psique, o de la consciencia del alma individual y la consciencia del Señor”, o “un adepto yogui que posee poderes específicos psíquicos o supernaturales, conocidos como siddhis”. La mayoría de los Siddhas vivieron y escribieron durante el periodo desde varios cientos de años antes de la era cristiana hasta cerca del siglo trece después de Cristo.<br /><br />
-Según las enseñanzas de los Siddhas, el cuerpo humano es un templo de Dios. El hombre es una representación en miniatura de la Inteligencia Suprema, la Fuente de todo. El propósito de la vida es realizar a Dios y manifestar esa realización en todos los planos de la existencia. Es posible para un hombre sobrepasar las cinco limitaciones del cabello gris, la visión oscurecida, la vejez, la enfermedad y la muerte. Es posible para el cuerpo humano mantener su juventud. 
-Cuando son estimulados por prácticas yóguicas intensas, los chakras o centros psicoenergéticos internos despiertan facultades superiores, y le permiten a uno conectar con el potencial de poder y consciencia de uno, conocido como kundalini. Al hacerlo así, uno puede obtener la perfección en el cuerpo y la mente. Ciertos poderes divinos o siddhis se manifiestan. <br /><br />
-Usando los destacables poderes mencionados, los Siddhas llevaron a cabo un estudio sistemático de la naturaleza y de sus elementos, y desde lo que fueron capaces de entender desarrollaron una elevada medicina sistemática conocida como “Siddha Vaidya”. Escribieron muchos tratados médicos sobre longevidad, que hoy en día forman el fundamento de uno de los cuatro sistemas de medicina reconocidos por el gobierno de la India. <br /><br />
-Los Siddhas descubrieron por qué el cuerpo envejece, y desarrollaron pasos para prevenir el envejecimiento. Por ejemplo, ellos vieron que la duración de toda vida animal es inversamente proporcional a su ritmo de respiración. Esto es, cuanto más lenta la respiración, más larga la vida. Y al revés, cuanto más rápida la respiración, más corta la vida. Animales como la tortuga marina, la ballena, el delfín y el loro, que toman las más pocas respiraciones por minuto, tienen vidas que son mucho más largas que las de los humanos, mientras que el perro y el ratón, que respiran cinco veces más rápido que el humano promedio, tienen una quinta parte de su longevidad. Los Siddhas sugieren que si uno respira quince veces o menos por minuto, debería vivir cien años. Es cuando la respiración se vuelve agitada o cuando uno respira mucho más rápido que esto que la duración de la vida se reduce.
-<br /><br /><br />
-<b>Iniciación en la respiración Kundalini</b>
-<br /><br />
-Los Siddhas desarrollaron prácticas que se centraban en la respiración, mientras visualizaban una luz subiendo y bajando por los canales de energía que discurren entre la región de los genitales, por la columna, hasta la coronilla de la cabeza. Debido a su gran potencial, tales técnicas fueron mantenidas en secreto y compartidas sólo con personas cualificadas que estaban preparadas para practicarlas según ciertas instrucciones que asegurarían su profundo efecto. Como la naturaleza humana está generalmente llena de hábitos negativos y es adversa al cambio, tales prácticas tuvieron que ser manejadas dentro del contexto de un proceso entero de auto-purificación, con atención en la dieta, la limpieza, las normas morales, la higiene mental, la meditación y las disciplinas espirituales. Durante formaciones especiales, conocidas como “iniciaciones”, tales técnicas esotéricas fueron y todavía son enseñadas por adeptos yóguicos a aquellos que están dispuestos a comprometerse a su práctica. <br /><br />
-Junto con tales técnicas de respiración, los Siddhas aprendieron a ralentizar la respiración hasta cero, de modo que entraban en el “estado sin aliento de comunión con Dios”. Este estado de consciencia es conocido como “samadhi”, que llevó la influencia de estados más elevados de consciencia sobre su cuerpo físico, transformándolo gradualmente en un cuerpo divino o <i>cuerpo dorado</i>.
-<br /><br /><br />
-<b>El desarrollo progresivo del místico </b>
-<br /><br />
-Cuando la comunión mística con las dimensiones espirituales de la vida se vuelve fácil y la norma, podemos referirnos al místico como a un “santo”. La perspectiva egoísta de un santo es reemplazada, al menos en parte, por una consciencia de la Presencia de la Divinidad. El egoísmo es el hábito de identificarnos con el cuerpo, sus sensaciones, las emociones y los movimientos de la mente. Conforme dejamos partir estas falsas identificaciones, el trasfondo, que es consciencia pura, salta a un primer plano. 
-<br /><br />
-Sin embargo, si la entrega o comunión del místico está limitada sólo al plano o a la realidad espiritual, él puede estar todavía atado a una necesidad de realizar distinciones filosóficas o teológicas hasta que comience a entregar su ego en el plano intelectual. Conforme se profundiza la entrega, sin embargo, se dejan partir gradualmente el “yo” y el “mío”, el ego es disuelto y la consciencia silenciosa impregna todo lo que uno piensa, dice o hace. Ya no hay más “mío” y “tuyo” que forzar o influenciar o resistir; no hay necesidad de reunir información. 
-<br /><br />
-Sin embargo el ego persiste todavía hasta que la entrega abarca todos los planos de existencia. Siempre está el riesgo de una caída, y el deseo, la aversión, el aferrarse a la vida pueden todavía crear sufrimiento. Como lo señaló San Agustín: “Señor, ayúdame a entregarme, pero todavía no”. Esto es parte de nuestra naturaleza humana inferior, en particular el plano mental, el asiento de la fantasía y de los deseos, y el plano vital, el asiento de las emociones, se resisten a la transformación que conlleva la entrega. Conforme se hace más profunda la entrega del místico y abraza al plano mental, donde residen los cincos sentidos, uno se vuelve un Siddha, manifestando siddhis (poderes divinos), empezando por la clarividencia – la habilidad para ver cosas a distancia en el tiempo o en el espacio, o clariaudiencia – el sentido sutil del oído, o clarisientiencia – el sentido sutil de sentir. 
-<br /><br />
-Unos pocos raros Siddhas tienen éxito en entregar su ego en el nivel del plano vital de la existencia. Ellos se convierten en <i>Maha Siddhas</i> o grandes Siddhas, capaces de manifestar siddhis o poderes que implican a la naturaleza misma. Esto puede incluir materialización de objetos, levitación, control del tiempo atmosférico, cumplimiento de deseos e invisibilidad. Aunque han vivido principalmente en la India, Tibet, China y el sureste de Asia, según sus propias narraciones, los Siddhas han viajado por todo el mundo.
-<br /><br /><br />
-<b>La inmortalidad física es sólo una consecuencia, no la meta, del sendero de la entrega completa al Señor</b>
-<br /><br />
-Muy pocos Siddhas son capaces de entregar sus egos al nivel del plano físico. Éstos son conocidos como Maha siddhas o grandes Siddhas, capaces de manifestar siddhis o poderes que implican a la naturaleza material misma. De lo que estoy hablando es de un estado tan avanzado de purificación del ego que las células del cuerpo físico entregan su agenda limitada del metabolismo y se quedan sometidas a la dirección de la consciencia más grande de uno. El cuerpo físico, brillando con la luz dorada de esta consciencia se vuelve impermeable a la enfermedad y a la muerte. 
-<br /><br />
-Estos seres iluminados fueron instrumentos de la fuerza y de la luz divinas y toda acción y reposo que se movía a través de ellos eran debidas al Poder divino. No es por tanto coincidencia que sepamos tan poco ciertamente sobre lo que hicieron los Siddhas o sobre cuáles fueron los detalles de sus vidas personales, pero conocemos sus enseñanzas de sabiduría. 
-<br /><br />
-El Siddha puede ser llamado a permanecer en el mismo cuerpo físico durante un periodo indefinido de tiempo, o incluso a transmigrar a otro cuerpo o a desmaterializarse, o a ascender como lo hizo Jesús, o a estar en más de un cuerpo visible durante el mismo periodo de tiempo, en dos lugares separados. Está el ejemplo bien documentado de Ramalinga Swamigal, del siglo diecinueve, cuyo cuerpo no proyectaba sombra ante el sol, ni podía ser dañado o fotografiado, a pesar de intentos repetidos, cuando posó con un grupo ante fotógrafos expertos, y cuyo cuerpo desapareció de la tierra, bastante dramáticamente, con un destello de luz violeta. Desde entonces se ha informado que Ramalinga Swamigal reapareció en ocasiones para asistir a devotos necesitados. Niños y devotos del sur de India continuan cantando hasta hoy muchos de los más de cuarenta mil poemas y canciones que escribió, ensalzando el camino de la “luz suprema de gracia”. También tenemos el ejemplo de Kriya Babaji, descrito en <i>Autobiografía de un Yogui</i>, y en <i>La voz de Babaji: una trilogía de Kriya Yoga</i>, y el de los Siddhas Agastyar, Boganathar y Sri Aurobindo, que dejaron narraciones detalladas de sus propios procesos de entrega al nivel del cuerpo físico, y varias formas de inmortalidad. 
-<br /><br />
-La afiliación sectaria no tiene importancia para los Siddhas. Ellos se sintieron cómodos con personas de todas las fes. Su acercamiento hacia la verdad es experimentarla primero en el samadhi, la comunión mística de la absorción cognitiva, y luego entregarse gradualmente completamente a ella hasta que se convierta en su constante estado de consciencia, en el estado de iluminación. Su enfoque no incluye intentos de construir sistemas de filosofía o de construir sistemas religiosos de creencias; la suya es una “filosofía abierta” en la que son valoradas todas las expresiones de la verdad. Sus poemas y canciones no predican ninguna doctrina; sólo sugieren una dirección por la que puede ser realizada la aspiración por una realización directa, intuitiva, personal de la verdad divina. 
-<br /><br /><br />
-<b>La aspiración por nuestro potencial más grande</b>
-<br /><br />
-Muchas personas consideran las enseñanzas de sabiduría y de Kundalini Yoga entregada a nosotros por los Siddhas como la herencia más grande de la humanidad. En palabras de Swami Hariharananda Aranya: “Si el propósito del conocimiento humano es aliviar el sufrimiento humano, ese conocimiento que elimina el sufrimiento completamente es el conocimiento más grande”. Las enseñanzas de los Siddhas son de una naturaleza práctica, y se centran en el uso del arte científico del Yoga, como medio no sólo para curar, para prevenir la enfermedad física y mental, sino finalmente para aspirar a nuestro potencial humano más grande. Que todos aspiremos a Eso.
-
-
-
-<br />
-                <br /><br />
-              <i>Extraído del periódico de Kriya Yoga, números de <a href="http://www.babajiskriyayoga.net/spanish/flexpaper/Journal-S-Summer-09-art.htm">verano del 2009</a> y <a href="http://www.babajiskriyayoga.net/spanish/flexpaper/Journal-S-Fall-09-art.htm">otoño del 2009</a></i>.  <br />
+              <h2 align="center">
+                <br />
+                Hay diversos usos del término Siddha. El más común es describir
+                a un "ser perfecto", o "uno que se ha vuelto uno con Dios", o
+                "uno que ha realizado la no dualidad de su psique, o de la consciencia
+                del alma individual y la consciencia del Señor", o "un adepto yogui
+                que posee poderes específicos psíquicos o supernaturales, conocidos
+                como siddhis". La mayoría de los Siddhas vivieron y escribieron
+                durante el periodo desde varios cientos de años antes de la era
+                cristiana hasta cerca del siglo trece después de Cristo.
+                <br />
+                <br />
+                Según las enseñanzas de los Siddhas, el cuerpo humano es un templo
+                de Dios. El hombre es una representación en miniatura de la Inteligencia
+                Suprema, la Fuente de todo. El propósito de la vida es realizar a
+                Dios y manifestar esa realización en todos los planos de la existencia.
+                Es posible para un hombre sobrepasar las cinco limitaciones del cabello
+                gris, la visión oscurecida, la vejez, la enfermedad y la muerte. Es
+                posible para el cuerpo humano mantener su juventud. Cuando son estimulados
+                por prácticas yóguicas intensas, los chakras o centros psicoenergéticos
+                internos despiertan facultades superiores, y le permiten a uno conectar
+                con el potencial de poder y consciencia de uno, conocido como kundalini.
+                Al hacerlo así, uno puede obtener la perfección en el cuerpo y la mente.
+                Ciertos poderes divinos o siddhis se manifiestan.
+                <br />
+                <br />
+                Usando los destacables poderes mencionados, los Siddhas llevaron a cabo
+                un estudio sistemático de la naturaleza y de sus elementos, y desde lo
+                que fueron capaces de entender desarrollaron una elevada medicina
+                sistemática conocida como "Siddha Vaidya". Escribieron muchos tratados
+                médicos sobre longevidad, que hoy en día forman el fundamento de uno
+                de los cuatro sistemas de medicina reconocidos por el gobierno de la India.
+                <br />
+                <br />
+                Los Siddhas descubrieron por qué el cuerpo envejece, y desarrollaron
+                pasos para prevenir el envejecimiento. Por ejemplo, ellos vieron que
+                la duración de toda vida animal es inversamente proporcional a su ritmo
+                de respiración. Esto es, cuanto más lenta la respiración, más larga la
+                vida. Y al revés, cuanto más rápida la respiración, más corta la vida.
+                Animales como la tortuga marina, la ballena, el delfín y el loro, que
+                toman las más pocas respiraciones por minuto, tienen vidas que son mucho
+                más largas que las de los humanos, mientras que el perro y el ratón, que
+                respiran cinco veces más rápido que el humano promedio, tienen una quinta
+                parte de su longevidad. Los Siddhas sugieren que si uno respira quince
+                veces o menos por minuto, debería vivir cien años. Es cuando la respiración
+                se vuelve agitada o cuando uno respira mucho más rápido que esto que la
+                duración de la vida se reduce.
+                <br />
+                <br />
+                <br />
+                <b>Iniciación en la respiración Kundalini</b>
+                <br />
+                <br />
+                Los Siddhas desarrollaron prácticas que se centraban en la respiración,
+                mientras visualizaban una luz subiendo y bajando por los canales de
+                energía que discurren entre la región de los genitales, por la columna,
+                hasta la coronilla de la cabeza. Debido a su gran potencial, tales
+                técnicas fueron mantenidas en secreto y compartidas sólo con personas
+                cualificadas que estaban preparadas para practicarlas según ciertas
+                instrucciones que asegurarían su profundo efecto. Como la naturaleza
+                humana está generalmente llena de hábitos negativos y es adversa al
+                cambio, tales prácticas tuvieron que ser manejadas dentro del contexto
+                de un proceso entero de auto-purificación, con atención en la dieta,
+                la limpieza, las normas morales, la higiene mental, la meditación y
+                las disciplinas espirituales. Durante formaciones especiales, conocidas
+                como "iniciaciones", tales técnicas esotéricas fueron y todavía son
+                enseñadas por adeptos yóguicos a aquellos que están dispuestos a
+                comprometerse a su práctica.
+                <br />
+                <br />
+                Junto con tales técnicas de respiración, los Siddhas aprendieron a
+                ralentizar la respiración hasta cero, de modo que entraban en el "estado
+                sin aliento de comunión con Dios". Este estado de consciencia es conocido
+                como "samadhi", que llevó la influencia de estados más elevados de
+                consciencia sobre su cuerpo físico, transformándolo gradualmente en un
+                cuerpo divino o <i>cuerpo dorado</i>.
+                <br />
+                <br />
+                <br />
+                <b>El desarrollo progresivo del místico</b>
+                <br />
+                <br />
+                Cuando la comunión mística con las dimensiones espirituales de la vida
+                se vuelve fácil y la norma, podemos referirnos al místico como a un
+                "santo". La perspectiva egoísta de un santo es reemplazada, al menos
+                en parte, por una consciencia de la Presencia de la Divinidad. El egoísmo
+                es el hábito de identificarnos con el cuerpo, sus sensaciones, las
+                emociones y los movimientos de la mente. Conforme dejamos partir estas
+                falsas identificaciones, el trasfondo, que es consciencia pura, salta
+                a un primer plano.
+                <br />
+                <br />
+                Sin embargo, si la entrega o comunión del místico está limitada sólo
+                al plano o a la realidad espiritual, él puede estar todavía atado a
+                una necesidad de realizar distinciones filosóficas o teológicas hasta
+                que comience a entregar su ego en el plano intelectual. Conforme se
+                profundiza la entrega, sin embargo, se dejan partir gradualmente el
+                "yo" y el "mío", el ego es disuelto y la consciencia silenciosa impregna
+                todo lo que uno piensa, dice o hace. Ya no hay más "mío" y "tuyo" que
+                forzar o influenciar o resistir; no hay necesidad de reunir información.
+                <br />
+                <br />
+                Sin embargo el ego persiste todavía hasta que la entrega abarca todos
+                los planos de existencia. Siempre está el riesgo de una caída, y el
+                deseo, la aversión, el aferrarse a la vida pueden todavía crear
+                sufrimiento. Como lo señaló San Agustín: "Señor, ayúdame a entregarme,
+                pero todavía no". Esto es parte de nuestra naturaleza humana inferior,
+                en particular el plano mental, el asiento de la fantasía y de los deseos,
+                y el plano vital, el asiento de las emociones, se resisten a la
+                transformación que conlleva la entrega. Conforme se hace más profunda
+                la entrega del místico y abraza al plano mental, donde residen los
+                cincos sentidos, uno se vuelve un Siddha, manifestando siddhis (poderes
+                divinos), empezando por la clarividencia – la habilidad para ver cosas
+                a distancia en el tiempo o en el espacio, o clariaudiencia – el sentido
+                sutil del oído, o clarisientiencia – el sentido sutil de sentir.
+                <br />
+                <br />
+                Unos pocos raros Siddhas tienen éxito en entregar su ego en el nivel
+                del plano vital de la existencia. Ellos se convierten en <i>Maha Siddhas</i>
+                o grandes Siddhas, capaces de manifestar siddhis o poderes que implican
+                a la naturaleza misma. Esto puede incluir materialización de objetos,
+                levitación, control del tiempo atmosférico, cumplimiento de deseos e
+                invisibilidad. Aunque han vivido principalmente en la India, Tibet,
+                China y el sureste de Asia, según sus propias narraciones, los Siddhas
+                han viajado por todo el mundo.
+                <br />
+                <br />
+                <br />
+                <b>La inmortalidad física es sólo una consecuencia, no la meta, del
+                sendero de la entrega completa al Señor</b>
+                <br />
+                <br />
+                Muy pocos Siddhas son capaces de entregar sus egos al nivel del plano
+                físico. Éstos son conocidos como Maha siddhas o grandes Siddhas, capaces
+                de manifestar siddhis o poderes que implican a la naturaleza material
+                misma. De lo que estoy hablando es de un estado tan avanzado de
+                purificación del ego que las células del cuerpo físico entregan su
+                agenda limitada del metabolismo y se quedan sometidas a la dirección
+                de la consciencia más grande de uno. El cuerpo físico, brillando con
+                la luz dorada de esta consciencia se vuelve impermeable a la enfermedad
+                y a la muerte.
+                <br />
+                <br />
+                Estos seres iluminados fueron instrumentos de la fuerza y de la luz
+                divinas y toda acción y reposo que se movía a través de ellos eran
+                debidas al Poder divino. No es por tanto coincidencia que sepamos tan
+                poco ciertamente sobre lo que hicieron los Siddhas o sobre cuáles fueron
+                los detalles de sus vidas personales, pero conocemos sus enseñanzas
+                de sabiduría.
+                <br />
+                <br />
+                El Siddha puede ser llamado a permanecer en el mismo cuerpo físico
+                durante un periodo indefinido de tiempo, o incluso a transmigrar a
+                otro cuerpo o a desmaterializarse, o a ascender como lo hizo Jesús,
+                o a estar en más de un cuerpo visible durante el mismo periodo de
+                tiempo, en dos lugares separados. Está el ejemplo bien documentado de
+                Ramalinga Swamigal, del siglo diecinueve, cuyo cuerpo no proyectaba
+                sombra ante el sol, ni podía ser dañado o fotografiado, a pesar de
+                intentos repetidos, cuando posó con un grupo ante fotógrafos expertos,
+                y cuyo cuerpo desapareció de la tierra, bastante dramáticamente, con
+                un destello de luz violeta. Desde entonces se ha informado que Ramalinga
+                Swamigal reapareció en ocasiones para asistir a devotos necesitados.
+                Niños y devotos del sur de India continuan cantando hasta hoy muchos
+                de los más de cuarenta mil poemas y canciones que escribió, ensalzando
+                el camino de la "luz suprema de gracia". También tenemos el ejemplo
+                de Kriya Babaji, descrito en <i>Autobiografía de un Yogui</i>, y en
+                <i>La voz de Babaji: una trilogía de Kriya Yoga</i>, y el de los Siddhas
+                Agastyar, Boganathar y Sri Aurobindo, que dejaron narraciones detalladas
+                de sus propios procesos de entrega al nivel del cuerpo físico, y varias
+                formas de inmortalidad.
+                <br />
+                <br />
+                La afiliación sectaria no tiene importancia para los Siddhas. Ellos
+                se sintieron cómodos con personas de todas las fes. Su acercamiento
+                hacia la verdad es experimentarla primero en el samadhi, la comunión
+                mística de la absorción cognitiva, y luego entregarse gradualmente
+                completamente a ella hasta que se convierta en su constante estado de
+                consciencia, en el estado de iluminación. Su enfoque no incluye intentos
+                de construir sistemas de filosofía o de construir sistemas religiosos
+                de creencias; la suya es una "filosofía abierta" en la que son valoradas
+                todas las expresiones de la verdad. Sus poemas y canciones no predican
+                ninguna doctrina; sólo sugieren una dirección por la que puede ser
+                realizada la aspiración por una realización directa, intuitiva, personal
+                de la verdad divina.
+                <br />
+                <br />
+                <br />
+                <b>La aspiración por nuestro potencial más grande</b>
+                <br />
+                <br />
+                Muchas personas consideran las enseñanzas de sabiduría y de Kundalini
+                Yoga entregada a nosotros por los Siddhas como la herencia más grande
+                de la humanidad. En palabras de Swami Hariharananda Aranya: "Si el
+                propósito del conocimiento humano es aliviar el sufrimiento humano,
+                ese conocimiento que elimina el sufrimiento completamente es el
+                conocimiento más grande". Las enseñanzas de los Siddhas son de una
+                naturaleza práctica, y se centran en el uso del arte científico del
+                Yoga, como medio no sólo para curar, para prevenir la enfermedad física
+                y mental, sino finalmente para aspirar a nuestro potencial humano más
+                grande. Que todos aspiremos a Eso.
+                <br />
+                <br />
+                <br />
+                <i>Extraído del periódico de Kriya Yoga, números de
+                <a href="http://www.babajiskriyayoga.net/spanish/flexpaper/Journal-S-Summer-09-art.htm">verano del 2009</a>
+                y <a href="http://www.babajiskriyayoga.net/spanish/flexpaper/Journal-S-Fall-09-art.htm">otoño del 2009</a></i>.
+                <br />
                 <br /> <br /> <br />
                 + Artículos de meses anteriores: <br />
                 <br />
@@ -544,10 +395,12 @@ Muchas personas consideran las enseñanzas de sabiduría y de Kundalini Yoga ent
                 <a href="t-gracia.htm">- ¿Cómo ganar la gracia de Babaji?</a> 
               </h2>
             </div></div><!-- de noticias-->
-    </li><!-- de noticias-->   
- 
+</div>
+<!-- FIN CONTENIDO DESKTOP -->
+    </li><!-- de noticias-->
+
   </ul><!-- de contenidos2-->
-  
+
   	<p>&nbsp;</p> <p>&nbsp;</p>
 
   <div id="fin"><a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;">&#105;&#110;&#102;&#111;&#064;&#107;&#114;&#105;&#121;&#097;&#121;&#111;&#103;&#097;&#100;&#101;&#098;&#097;&#098;&#097;&#106;&#105;&#046;&#110;&#101;&#116;</a> - Copyright 2025©.Se permite la libre reproducción <b><u>siempre que se cite la fuente</u></b>.</div>
@@ -555,59 +408,16 @@ Muchas personas consideran las enseñanzas de sabiduría y de Kundalini Yoga ent
 </div><!-- de todaPagina-->
 
 </div><!-- de contenedor-->
-</div><!-- FIN desktop-container -->
 
-<!-- Botón toggle versión -->
-<button class="version-toggle" onclick="toggleVersion()" aria-label="Cambiar versión" title="Cambiar a versión móvil/escritorio">
-  ⇄
-</button>
 
-<!-- Scripts JavaScript -->
-<script>
-// Toggle menú móvil
-function toggleMenu() {
-  const menu = document.getElementById('mobileMenu');
-  menu.classList.toggle('active');
-}
+<!-- JavaScript para menú responsive -->
+<script src="js/menu-toggle.js"></script>
 
-// Toggle entre versión mobile y desktop
-function toggleVersion() {
-  const mobile = document.getElementById('mobile-container');
-  const desktop = document.getElementById('desktop-container');
+<!-- JavaScript para contenido mobile personalizado -->
+<script src="js/mobile-content.js"></script>
 
-  if (window.innerWidth <= 768) {
-    // En móvil, cambiar a desktop
-    mobile.style.display = 'none';
-    desktop.style.display = 'block';
-    document.body.style.overflow = 'auto';
-  } else {
-    // En desktop, cambiar a mobile
-    if (mobile.style.display === 'none' || !mobile.style.display) {
-      mobile.style.display = 'block';
-      desktop.style.display = 'none';
-    } else {
-      mobile.style.display = 'none';
-      desktop.style.display = 'block';
-    }
-  }
-}
-
-// Cerrar menú al hacer clic en un enlace
-document.addEventListener('DOMContentLoaded', function() {
-  const menuLinks = document.querySelectorAll('.mobile-nav a');
-  menuLinks.forEach(link => {
-    link.addEventListener('click', function() {
-      const menu = document.getElementById('mobileMenu');
-      menu.classList.remove('active');
-    });
-  });
-});
-
-// Detectar orientación y ajustar vista
-window.addEventListener('orientationchange', function() {
-  location.reload();
-});
-</script>
+<!-- JavaScript para botón scroll to top -->
+<script src="js/scroll-to-top.js"></script>
 
 </body>
 </html>
