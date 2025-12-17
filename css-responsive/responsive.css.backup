@@ -60,8 +60,8 @@
   }
 
   /* Forzar imágenes con atributos inline width/height */
-  body:not(.prefer-web-version) img[width],
-  body:not(.prefer-web-version) img[height] {
+  img[width],
+  img[height] {
     max-width: 100% !important;
     height: auto !important;
     width: auto !important;
@@ -83,31 +83,30 @@
   }
 
   /* Tables responsive on mobile */
-  body:not(.prefer-web-version) table {
+  table {
     width: 100% !important;
     border-collapse: collapse;
   }
 
-  body:not(.prefer-web-version) table td,
-  body:not(.prefer-web-version) table th {
+  table td, table th {
     padding: 8px;
     font-size: 14px;
   }
 
   /* Basic responsive utilities - mobile only */
-  body:not(.prefer-web-version) .mobile-text-center {
+  .mobile-text-center {
     text-align: center;
   }
 
-  body:not(.prefer-web-version) .mobile-full-width {
+  .mobile-full-width {
     width: 100%;
   }
 
-  body:not(.prefer-web-version) .mobile-hidden {
+  .mobile-hidden {
     display: none;
   }
 
-  body:not(.prefer-web-version) .mobile-block {
+  .mobile-block {
     display: block;
   }
 
@@ -117,8 +116,8 @@
      ======================================== */
 
   /* FIX 1: Layout de 3 columnas (#lateral + #blanco2 + #noticias) a 1 columna */
-  body:not(.prefer-web-version) #contenidos2,
-  body:not(.prefer-web-version) #contenidos2 li {
+  #contenidos2,
+  #contenidos2 li {
     float: none !important;
     display: block !important;
     width: 100% !important;
@@ -143,20 +142,20 @@
   }
 
   /* FIX 5: Barra divisoria responsive */
-  body:not(.prefer-web-version) #barra,
-  body:not(.prefer-web-version) #barra img {
+  #barra,
+  #barra img {
     width: 100% !important;
   }
 
   /* FIX 6: Sub-layouts de noticias (bloques flotantes internos) */
-  body:not(.prefer-web-version) .noticias1,
-  body:not(.prefer-web-version) .noticias2 {
+  .noticias1,
+  .noticias2 {
     width: 100% !important;
   }
 
-  body:not(.prefer-web-version) .noticias1Ul li,
-  body:not(.prefer-web-version) .noticias2Ul li,
-  body:not(.prefer-web-version) .bienvenidosUl li {
+  .noticias1Ul li,
+  .noticias2Ul li,
+  .bienvenidosUl li {
     float: none !important;
     display: block !important;
     width: 100% !important;
@@ -164,17 +163,17 @@
   }
 
   /* FIX 7: Ocultar separadores "|" del menú en móvil */
-  body:not(.prefer-web-version) #menu li:not(:has(a)) {
+  #menu li:not(:has(a)) {
     display: none !important;
   }
 
   /* Alternativa compatible (si :has no funciona en navegadores antiguos) */
-  body:not(.prefer-web-version) #menu ul > li:nth-child(2),
-  body:not(.prefer-web-version) #menu ul > li:nth-child(4),
-  body:not(.prefer-web-version) #menu ul > li:nth-child(6),
-  body:not(.prefer-web-version) #menu ul > li:nth-child(8),
-  body:not(.prefer-web-version) #menu ul > li:nth-child(10),
-  body:not(.prefer-web-version) #menu ul > li:nth-child(12) {
+  #menu ul > li:nth-child(2),
+  #menu ul > li:nth-child(4),
+  #menu ul > li:nth-child(6),
+  #menu ul > li:nth-child(8),
+  #menu ul > li:nth-child(10),
+  #menu ul > li:nth-child(12) {
     display: none !important;
   }
 
@@ -300,50 +299,50 @@
   }
 
   /* Orden forzado en mobile: imagen primero, texto después */
-  body:not(.prefer-web-version) .noticias1Ul li:has(#fotoNoticias1),
-  body:not(.prefer-web-version) .noticias1Ul li:has(#fotoNoticias2),
-  body:not(.prefer-web-version) .noticias1Ul li:has(#fotoNoticias3),
-  body:not(.prefer-web-version) .noticias1Ul li:has(#fotoNoticias4),
-  body:not(.prefer-web-version) .noticias1Ul li:has(#fotoLibro),
-  body:not(.prefer-web-version) .noticias2Ul li:has(#fotoNoticias1),
-  body:not(.prefer-web-version) .noticias2Ul li:has(#fotoNoticias2),
-  body:not(.prefer-web-version) .noticias2Ul li:has(#fotoNoticias3),
-  body:not(.prefer-web-version) .noticias2Ul li:has(#fotoNoticias4),
-  body:not(.prefer-web-version) .noticias2Ul li:has(#fotoLibro) {
+  .noticias1Ul li:has(#fotoNoticias1),
+  .noticias1Ul li:has(#fotoNoticias2),
+  .noticias1Ul li:has(#fotoNoticias3),
+  .noticias1Ul li:has(#fotoNoticias4),
+  .noticias1Ul li:has(#fotoLibro),
+  .noticias2Ul li:has(#fotoNoticias1),
+  .noticias2Ul li:has(#fotoNoticias2),
+  .noticias2Ul li:has(#fotoNoticias3),
+  .noticias2Ul li:has(#fotoNoticias4),
+  .noticias2Ul li:has(#fotoLibro) {
     order: 1 !important;  /* Imagen va primero */
   }
 
-  body:not(.prefer-web-version) .noticias1Ul li:has(#textoNoticias1),
-  body:not(.prefer-web-version) .noticias1Ul li:has(#textoNoticias2),
-  body:not(.prefer-web-version) .noticias1Ul li:has(#textoNoticias3),
-  body:not(.prefer-web-version) .noticias1Ul li:has(#textoLibro),
-  body:not(.prefer-web-version) .noticias2Ul li:has(#textoNoticias1),
-  body:not(.prefer-web-version) .noticias2Ul li:has(#textoNoticias2),
-  body:not(.prefer-web-version) .noticias2Ul li:has(#textoNoticias3),
-  body:not(.prefer-web-version) .noticias2Ul li:has(#textoLibro) {
+  .noticias1Ul li:has(#textoNoticias1),
+  .noticias1Ul li:has(#textoNoticias2),
+  .noticias1Ul li:has(#textoNoticias3),
+  .noticias1Ul li:has(#textoLibro),
+  .noticias2Ul li:has(#textoNoticias1),
+  .noticias2Ul li:has(#textoNoticias2),
+  .noticias2Ul li:has(#textoNoticias3),
+  .noticias2Ul li:has(#textoLibro) {
     order: 2 !important;  /* Texto va segundo */
   }
 
   /* Espaciadores siempre ocultos */
-  body:not(.prefer-web-version) .noticias1Ul li:has(#blancoNoticias1),
-  body:not(.prefer-web-version) .noticias1Ul li:has(#blancoLibro),
-  body:not(.prefer-web-version) .noticias2Ul li:has(#blancoNoticias1),
-  body:not(.prefer-web-version) .noticias2Ul li:has(#blancoLibro) {
+  .noticias1Ul li:has(#blancoNoticias1),
+  .noticias1Ul li:has(#blancoLibro),
+  .noticias2Ul li:has(#blancoNoticias1),
+  .noticias2Ul li:has(#blancoLibro) {
     display: none !important;
   }
 
   /* Respaldo: ocultar espaciadores directamente */
-  body:not(.prefer-web-version) #blancoNoticias1,
-  body:not(.prefer-web-version) #blancoLibro {
+  #blancoNoticias1,
+  #blancoLibro {
     display: none !important;
   }
 
   /* Contenedor de foto: centrado y sin dimensiones fijas */
-  body:not(.prefer-web-version) #fotoNoticias1,
-  body:not(.prefer-web-version) #fotoNoticias2,
-  body:not(.prefer-web-version) #fotoNoticias3,
-  body:not(.prefer-web-version) #fotoNoticias4,
-  body:not(.prefer-web-version) #fotoLibro {
+  #fotoNoticias1,
+  #fotoNoticias2,
+  #fotoNoticias3,
+  #fotoNoticias4,
+  #fotoLibro {
     text-align: center !important;
     margin: 0 auto 12px auto !important;  /* 12px entre imagen y texto */
     padding: 0 !important;
@@ -354,11 +353,11 @@
   }
 
   /* Imágenes centradas y sin restricciones que causen superposición */
-  body:not(.prefer-web-version) #fotoNoticias1 img,
-  body:not(.prefer-web-version) #fotoNoticias2 img,
-  body:not(.prefer-web-version) #fotoNoticias3 img,
-  body:not(.prefer-web-version) #fotoNoticias4 img,
-  body:not(.prefer-web-version) #fotoLibro img {
+  #fotoNoticias1 img,
+  #fotoNoticias2 img,
+  #fotoNoticias3 img,
+  #fotoNoticias4 img,
+  #fotoLibro img {
     display: block !important;
     margin: 0 auto !important;
     max-width: 85% !important;  /* Un poco de margen a los lados */
@@ -369,10 +368,10 @@
   }
 
   /* Contenedor de texto: pegado a la imagen, sin dimensiones fijas */
-  body:not(.prefer-web-version) #textoNoticias1,
-  body:not(.prefer-web-version) #textoNoticias2,
-  body:not(.prefer-web-version) #textoNoticias3,
-  body:not(.prefer-web-version) #textoLibro {
+  #textoNoticias1,
+  #textoNoticias2,
+  #textoNoticias3,
+  #textoLibro {
     margin: 0 !important;
     padding: 0 20px !important; /* Aumentado de 10px a 20px */
     text-align: left !important;
@@ -385,29 +384,29 @@
   }
 
   /* === TIPOGRAFÍA === */
-  body:not(.prefer-web-version) #textoNoticias1 h2,
-  body:not(.prefer-web-version) #textoNoticias2 h2,
-  body:not(.prefer-web-version) #textoNoticias3 h2,
-  body:not(.prefer-web-version) #textoLibro h2 {
+  #textoNoticias1 h2,
+  #textoNoticias2 h2,
+  #textoNoticias3 h2,
+  #textoLibro h2 {
     margin-top: 0 !important;
     margin-bottom: 8px !important;
     line-height: 1.3 !important;
   }
 
-  body:not(.prefer-web-version) #textoNoticias1 h4,
-  body:not(.prefer-web-version) #textoNoticias2 h4,
-  body:not(.prefer-web-version) #textoNoticias3 h4,
-  body:not(.prefer-web-version) #textoLibro h4 {
+  #textoNoticias1 h4,
+  #textoNoticias2 h4,
+  #textoNoticias3 h4,
+  #textoLibro h4 {
     margin: 8px 0 !important;
     color: #AC1429 !important;
     font-weight: bold !important;
   }
 
   /* Párrafos dentro de textos */
-  body:not(.prefer-web-version) #textoNoticias1 p,
-  body:not(.prefer-web-version) #textoNoticias2 p,
-  body:not(.prefer-web-version) #textoNoticias3 p,
-  body:not(.prefer-web-version) #textoLibro p {
+  #textoNoticias1 p,
+  #textoNoticias2 p,
+  #textoNoticias3 p,
+  #textoLibro p {
     margin: 6px 0 !important;
   }
 
@@ -423,62 +422,62 @@
 
   /* === ELIMINAR ESPACIOS INNECESARIOS === */
   /* Párrafos vacíos completamente ocultos */
-  body:not(.prefer-web-version) p:empty,
-  body:not(.prefer-web-version) p:blank {
+  p:empty,
+  p:blank {
     display: none !important;
     margin: 0 !important;
     padding: 0 !important;
   }
 
   /* Párrafos con solo &nbsp; */
-  body:not(.prefer-web-version) #noticias > p {
+  #noticias > p {
     display: none !important;
   }
 
   /* BRs ocultos */
-  body:not(.prefer-web-version) br {
+  br {
     display: none !important;
   }
 
   /* Barra divisoria principal (#barra) */
-  body:not(.prefer-web-version) #barra {
+  #barra {
     margin: 20px 0 !important;
     padding: 0 !important;
   }
 
-  body:not(.prefer-web-version) #barra img {
+  #barra img {
     width: 100% !important;
     opacity: 0.5 !important;
   }
 
   /* === SLIDESHOW Y OTRAS IMÁGENES === */
   /* OCULTAR slideshow en mobile */
-  body:not(.prefer-web-version) .bienvenidos {
+  .bienvenidos {
     display: none !important;
   }
 
-  body:not(.prefer-web-version) .bienvenidosUl {
+  .bienvenidosUl {
     margin: 0 !important;
     padding: 0 !important;
   }
 
-  body:not(.prefer-web-version) .bienvenidosUl li {
+  .bienvenidosUl li {
     margin: 0 auto !important;
     padding: 0 !important;
     text-align: center !important;
   }
 
   /* Contenedor del slideshow */
-  body:not(.prefer-web-version) #pictureholder,
-  body:not(.prefer-web-version) .pictureholder {
+  #pictureholder,
+  .pictureholder {
     margin: 0 auto !important;
     text-align: center !important;
   }
 
   /* Todas las imágenes del slideshow centradas */
-  body:not(.prefer-web-version) #pictureholder img,
-  body:not(.prefer-web-version) .pictureholder img,
-  body:not(.prefer-web-version) .picture {
+  #pictureholder img,
+  .pictureholder img,
+  .picture {
     display: block !important;
     margin: 0 auto !important;
     max-width: 100% !important;
@@ -487,14 +486,14 @@
 
   /* === LINKS EN IMÁGENES === */
   /* Asegurar que los enlaces no descuadren las imágenes */
-  body:not(.prefer-web-version) a img {
+  a img {
     display: block !important;
     margin: 0 auto !important;
   }
 
   /* === TEXTO "OM KRIYA BABAJI" === */
   /* OCULTAR en mobile */
-  body:not(.prefer-web-version) .textoBienvenidos {
+  .textoBienvenidos {
     display: none !important;
   }
 
@@ -503,14 +502,14 @@
      Estilos para el contenido personalizado de mobile
      ======================================== */
 
-  body:not(.prefer-web-version) .mobile-content-wrapper {
+  .mobile-content-wrapper {
     width: 100% !important;
     padding: 0 !important;
     margin: 0 !important;
   }
 
   /* Cita del día - elegante y minimalista (va primero, debajo del navbar) */
-  body:not(.prefer-web-version) .mobile-cita-container {
+  .mobile-cita-container {
     width: 100% !important;
     padding: 15px 15px 15px 15px !important;
     margin: -130px 0 15px 0 !important;
@@ -518,7 +517,7 @@
   }
 
   /* Título Kriya Yoga - parte superior de la tarjeta unificada */
-  body:not(.prefer-web-version) .mobile-titulo-kriya {
+  .mobile-titulo-kriya {
     width: 100% !important;
     text-align: center !important;
     padding: 28px 28px 20px 28px !important;
@@ -531,7 +530,7 @@
     border-bottom: none;
   }
 
-  body:not(.prefer-web-version) .mobile-titulo-kriya h1 {
+  .mobile-titulo-kriya h1 {
     color: #AC1429 !important;
     font-size: 28px !important;
     font-weight: bold !important;
@@ -541,7 +540,7 @@
     position: relative;
   }
 
-  body:not(.prefer-web-version) .mobile-titulo-kriya h1::after {
+  .mobile-titulo-kriya h1::after {
     content: '';
     display: block;
     width: 100%;
@@ -554,7 +553,7 @@
   }
 
   /* Portada mobile - parte media de la tarjeta unificada */
-  body:not(.prefer-web-version) .mobile-portada {
+  .mobile-portada {
     width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -565,7 +564,7 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   }
 
-  body:not(.prefer-web-version) .mobile-portada img {
+  .mobile-portada img {
     width: 100% !important;
     max-width: 100% !important;
     height: auto !important;
@@ -575,14 +574,14 @@
   }
 
   /* Contenedor de imágenes en otras páginas */
-  body:not(.prefer-web-version) .mobile-image-container {
+  .mobile-image-container {
     width: 100% !important;
     margin: 20px 0 !important;
     padding: 0 !important;
     text-align: center !important;
   }
 
-  body:not(.prefer-web-version) .mobile-image-container img {
+  .mobile-image-container img {
     width: 100% !important;
     max-width: 100% !important;
     height: auto !important;
@@ -591,7 +590,7 @@
     border-radius: 8px !important;
   }
 
-  body:not(.prefer-web-version) .mobile-cita {
+  .mobile-cita {
     background: linear-gradient(to bottom, #FFFFFF, #FAFAFA);
     border-left: 4px solid #B8860B;
     border-radius: 8px;
@@ -601,7 +600,7 @@
     overflow: hidden;
   }
 
-  body:not(.prefer-web-version) .mobile-cita::before {
+  .mobile-cita::before {
     content: '';
     position: absolute;
     top: 0;
@@ -612,7 +611,7 @@
     border-radius: 0 8px 0 100%;
   }
 
-  body:not(.prefer-web-version) .cita-titulo {
+  .cita-titulo {
     color: #AC1429;
     font-size: 14px;
     font-weight: bold;
@@ -624,7 +623,7 @@
     z-index: 1;
   }
 
-  body:not(.prefer-web-version) .cita-icon {
+  .cita-icon {
     color: #B8860B;
     font-size: 24px;
     text-align: center;
@@ -632,7 +631,7 @@
     opacity: 0.6;
   }
 
-  body:not(.prefer-web-version) .cita-texto {
+  .cita-texto {
     font-size: 16px !important;
     line-height: 1.7 !important;
     color: #444 !important;
@@ -642,7 +641,7 @@
     z-index: 1;
   }
 
-  body:not(.prefer-web-version) .mobile-section {
+  .mobile-section {
     width: 100% !important;
     padding: 28px !important;
     margin-bottom: 40px !important;
@@ -654,14 +653,14 @@
   }
 
   /* Sección Kriya Yoga - parte inferior de la tarjeta unificada */
-  body:not(.prefer-web-version) #mobile-kriya-yoga {
+  #mobile-kriya-yoga {
     border-radius: 0 0 12px 12px !important;
     border-top: none !important;
     margin-top: 0 !important;
     margin-bottom: 40px !important;
   }
 
-   body:not(.prefer-web-version) .mobile-section h1 {
+   .mobile-section h1 {
     color: #AC1429 !important;
     font-size: 20px !important;
     margin-bottom: 20px !important;
@@ -672,7 +671,7 @@
     position: relative;
   }
 
-  body:not(.prefer-web-version) .mobile-section h1::after {
+  .mobile-section h1::after {
     content: '';
     display: block;
     width: 100%;
@@ -683,7 +682,7 @@
     left: 0;
     border-radius: 2px;
   }
-  body:not(.prefer-web-version) .mobile-section h2 {
+  .mobile-section h2 {
     color: #AC1429 !important;
     font-size: 20px !important;
     margin-bottom: 20px !important;
@@ -694,7 +693,7 @@
     position: relative;
   }
 
-  body:not(.prefer-web-version) .mobile-section h2::after {
+  .mobile-section h2::after {
     content: '';
     display: block;
     width: 100%;
@@ -706,7 +705,7 @@
     border-radius: 2px;
   }
 
-  body:not(.prefer-web-version) .mobile-section h3 {
+  .mobile-section h3 {
     color: #AC1429 !important;
     font-size: 18px !important;
     margin-bottom: 15px !important;
@@ -717,7 +716,7 @@
     position: relative;
   }
 
-  body:not(.prefer-web-version) .mobile-section h3::after {
+  .mobile-section h3::after {
     content: '';
     display: block;
     width: 80%;
@@ -729,7 +728,7 @@
     border-radius: 2px;
   }
 
-  body:not(.prefer-web-version) .mobile-section p {
+  .mobile-section p {
     font-size: 20px !important;
     line-height: 1.6 !important;
     margin-bottom: 15px !important;
@@ -741,7 +740,7 @@
   }
 
   /* Mantra centrado - debe tener mayor especificidad para sobrescribir justify */
-  body:not(.prefer-web-version) .mobile-section p.mantra-centrado {
+  .mobile-section p.mantra-centrado {
     text-align: center !important;
     font-style: italic !important;
     color: #AC1429 !important;
@@ -750,7 +749,7 @@
   }
 
   /* Botones de contacto (Llamar y WhatsApp) */
-  body:not(.prefer-web-version) .mobile-contact-buttons {
+  .mobile-contact-buttons {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -758,8 +757,8 @@
     margin: 25px 0 10px 0 !important;
   }
 
-  body:not(.prefer-web-version) .mobile-section .contact-button,
-  body:not(.prefer-web-version) .mobile-section a.contact-button {
+  .mobile-section .contact-button,
+  .mobile-section a.contact-button {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -776,52 +775,52 @@
     color: white !important;
   }
 
-  body:not(.prefer-web-version) .mobile-section .contact-button:hover,
-  body:not(.prefer-web-version) .mobile-section a.contact-button:hover {
+  .mobile-section .contact-button:hover,
+  .mobile-section a.contact-button:hover {
     transform: scale(0.97) !important;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2) !important;
     color: white !important;
   }
 
-  body:not(.prefer-web-version) .mobile-section .contact-button:active,
-  body:not(.prefer-web-version) .mobile-section a.contact-button:active {
+  .mobile-section .contact-button:active,
+  .mobile-section a.contact-button:active {
     transform: scale(0.92) !important;
     transition: transform 0.1s ease-in !important;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
   }
 
   /* Botón de llamada - Rojo a Naranja */
-  body:not(.prefer-web-version) .mobile-section .contact-button.phone-button,
-  body:not(.prefer-web-version) .mobile-section a.contact-button.phone-button {
+  .mobile-section .contact-button.phone-button,
+  .mobile-section a.contact-button.phone-button {
     background: linear-gradient(to bottom, #fa460a 0%, #ffa83d 100%) !important;
   }
 
   /* Botón de WhatsApp - Verde */
-  body:not(.prefer-web-version) .mobile-section .contact-button.whatsapp-button,
-  body:not(.prefer-web-version) .mobile-section a.contact-button.whatsapp-button {
+  .mobile-section .contact-button.whatsapp-button,
+  .mobile-section a.contact-button.whatsapp-button {
     background: linear-gradient(to bottom, #4e9c5d 0%, #6be883 100%) !important;
   }
 
   /* Texto de los botones */
-  body:not(.prefer-web-version) .mobile-section .contact-button span,
-  body:not(.prefer-web-version) .mobile-section a.contact-button span {
+  .mobile-section .contact-button span,
+  .mobile-section a.contact-button span {
     text-decoration: none !important;
     color: white !important;
   }
 
-  body:not(.prefer-web-version) .mobile-section ul {
+  .mobile-section ul {
     margin: 20px 0 !important;
     padding-left: 20px !important;
   }
 
-  body:not(.prefer-web-version) .mobile-section ul li {
+  .mobile-section ul li {
     font-size: 17px !important;
     line-height: 1.6 !important;
     margin-bottom: 15px !important;
     color: #333 !important;
   }
 
-  body:not(.prefer-web-version) .mobile-section a {
+  .mobile-section a {
     color: #AC1429 !important;
     text-decoration: underline !important;
     word-wrap: break-word !important;
@@ -833,24 +832,24 @@
     transition: all 0.3s ease;
   }
 
-  body:not(.prefer-web-version) .mobile-section a:hover {
+  .mobile-section a:hover {
     color: #B8860B !important;
     text-decoration-color: #B8860B !important;
   }
 
-  body:not(.prefer-web-version) .mobile-section strong {
+  .mobile-section strong {
     font-weight: bold !important;
     color: #AC1429 !important;
   }
 
   /* Imagen de terapias (Chakras) */
-  body:not(.prefer-web-version) .mobile-terapia-image {
+  .mobile-terapia-image {
     width: 100% !important;
     margin: 20px 0 !important;
     text-align: center !important;
   }
 
-  body:not(.prefer-web-version) .mobile-terapia-image img {
+  .mobile-terapia-image img {
     max-width: 100% !important;
     width: auto !important;
     height: auto !important;
@@ -861,13 +860,13 @@
   }
 
   /* Imágenes de linaje */
-  body:not(.prefer-web-version) .mobile-linaje-image {
+  .mobile-linaje-image {
     width: 100% !important;
     margin: 20px 0 !important;
     text-align: center !important;
   }
 
-  body:not(.prefer-web-version) .mobile-linaje-image img {
+  .mobile-linaje-image img {
     max-width: 100% !important;
     width: auto !important;
     height: auto !important;
@@ -878,13 +877,13 @@
   }
 
   /* Imagen de contacto (Nityananda) */
-  body:not(.prefer-web-version) .mobile-contacto-image {
+  .mobile-contacto-image {
     width: 100% !important;
     margin: 20px 0 !important;
     text-align: center !important;
   }
 
-  body:not(.prefer-web-version) .mobile-contacto-image img {
+  .mobile-contacto-image img {
     max-width: 100% !important;
     width: auto !important;
     height: auto !important;
@@ -895,7 +894,7 @@
   }
 
   /* Estilos para libros en mobile */
-  body:not(.prefer-web-version) .mobile-book {
+  .mobile-book {
     margin: 20px 0 !important;
     padding: 20px !important;
     background-color: #FAFAFA;
@@ -905,7 +904,7 @@
     text-align: center !important;
   }
 
-  body:not(.prefer-web-version) .mobile-book img {
+  .mobile-book img {
     max-width: 200px !important;
     width: auto !important;
     height: auto !important;
@@ -916,32 +915,32 @@
     transition: all 0.3s ease;
   }
 
-  body:not(.prefer-web-version) .mobile-book a:hover img {
+  .mobile-book a:hover img {
     transform: translateY(-4px) scale(1.02);
     box-shadow: 0 6px 16px rgba(0,0,0,0.25);
   }
 
-  body:not(.prefer-web-version) .mobile-book p {
+  .mobile-book p {
     text-align: left !important;
     font-size: 14px !important;
     margin: 0 !important;
   }
 
   /* Slider de álbumes musicales */
-  body:not(.prefer-web-version) .music-slider-container {
+  .music-slider-container {
     position: relative;
     width: 100%;
     overflow: hidden;
     margin: 20px 0 !important;
   }
 
-  body:not(.prefer-web-version) .music-slider {
+  .music-slider {
     display: flex;
     transition: transform 0.5s ease;
     will-change: transform;
   }
 
-  body:not(.prefer-web-version) .music-slide {
+  .music-slide {
     min-width: 100%;
     display: flex;
     justify-content: center;
@@ -950,7 +949,7 @@
     box-sizing: border-box;
   }
 
-  body:not(.prefer-web-version) .music-slide img {
+  .music-slide img {
     width: 220px !important;
     height: 220px !important;
     object-fit: cover !important;
@@ -961,20 +960,20 @@
     transition: all 0.3s ease;
   }
 
-  body:not(.prefer-web-version) .music-slide a:hover img {
+  .music-slide a:hover img {
     transform: scale(1.03);
     box-shadow: 0 8px 24px rgba(0,0,0,0.3);
   }
 
   /* Controles del slider */
-  body:not(.prefer-web-version) .slider-dots {
+  .slider-dots {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-top: 20px;
   }
 
-  body:not(.prefer-web-version) .slider-dot {
+  .slider-dot {
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -985,31 +984,31 @@
     padding: 0;
   }
 
-  body:not(.prefer-web-version) .slider-dot.active {
+  .slider-dot.active {
     background: linear-gradient(to bottom, #AC1429, #C23750);
     width: 28px;
     border-radius: 5px;
   }
 
-  body:not(.prefer-web-version) .slider-dot:hover {
+  .slider-dot:hover {
     background: #B8860B;
   }
 
   /* Slider de Terapias */
-  body:not(.prefer-web-version) .terapias-slider-container {
+  .terapias-slider-container {
     position: relative;
     width: 100%;
     overflow: hidden;
     margin: 20px 0 !important;
   }
 
-  body:not(.prefer-web-version) .terapias-slider {
+  .terapias-slider {
     display: flex;
     transition: transform 0.5s ease;
     will-change: transform;
   }
 
-  body:not(.prefer-web-version) .terapias-slide {
+  .terapias-slide {
     min-width: 100%;
     display: flex;
     flex-direction: column;
@@ -1019,7 +1018,7 @@
     box-sizing: border-box;
   }
 
-  body:not(.prefer-web-version) .terapias-slide img {
+  .terapias-slide img {
     width: 220px !important;
     height: 300px !important;
     object-fit: contain !important;
@@ -1030,7 +1029,7 @@
     transition: all 0.3s ease;
   }
 
-  body:not(.prefer-web-version) .terapia-description {
+  .terapia-description {
     text-align: center !important;
     font-size: 16px !important;
     line-height: 1.6 !important;
@@ -1039,25 +1038,25 @@
     margin: 0 !important;
   }
 
-  body:not(.prefer-web-version) .terapia-description strong {
+  .terapia-description strong {
     color: #AC1429 !important;
   }
 
   /* Slider de Libros */
-  body:not(.prefer-web-version) .libros-slider-container {
+  .libros-slider-container {
     position: relative;
     width: 100%;
     overflow: hidden;
     margin: 20px 0 !important;
   }
 
-  body:not(.prefer-web-version) .libros-slider {
+  .libros-slider {
     display: flex;
     transition: transform 0.5s ease;
     will-change: transform;
   }
 
-  body:not(.prefer-web-version) .libros-slide {
+  .libros-slide {
     min-width: 100%;
     display: flex;
     flex-direction: column;
@@ -1067,7 +1066,7 @@
     box-sizing: border-box;
   }
 
-  body:not(.prefer-web-version) .libros-slide img {
+  .libros-slide img {
     width: 220px !important;
     height: 300px !important;
     object-fit: contain !important;
@@ -1078,7 +1077,7 @@
     transition: all 0.3s ease;
   }
 
-  body:not(.prefer-web-version) .libro-description {
+  .libro-description {
     text-align: center !important;
     font-size: 16px !important;
     line-height: 1.6 !important;
@@ -1087,25 +1086,25 @@
     margin: 0 !important;
   }
 
-  body:not(.prefer-web-version) .libro-description strong {
+  .libro-description strong {
     color: #AC1429 !important;
   }
 
   /* Slider de Linaje */
-  body:not(.prefer-web-version) .linaje-slider-container {
+  .linaje-slider-container {
     position: relative;
     width: 100%;
     overflow: hidden;
     margin: 20px 0 !important;
   }
 
-  body:not(.prefer-web-version) .linaje-slider {
+  .linaje-slider {
     display: flex;
     transition: transform 0.5s ease;
     will-change: transform;
   }
 
-  body:not(.prefer-web-version) .linaje-slide {
+  .linaje-slide {
     min-width: 100%;
     display: flex;
     flex-direction: column;
@@ -1115,7 +1114,7 @@
     box-sizing: border-box;
   }
 
-  body:not(.prefer-web-version) .linaje-slide img {
+  .linaje-slide img {
     width: 220px !important;
     height: 300px !important;
     object-fit: contain !important;
@@ -1126,7 +1125,7 @@
     transition: all 0.3s ease;
   }
 
-  body:not(.prefer-web-version) .linaje-description {
+  .linaje-description {
     text-align: center !important;
     font-size: 16px !important;
     line-height: 1.4 !important;
@@ -1137,13 +1136,13 @@
     white-space: normal !important;
   }
 
-  body:not(.prefer-web-version) .linaje-description-second {
+  .linaje-description-second {
     margin-top: -8px !important;
     padding-top: 0 !important;
   }
 
   /* Enlaces de música */
-  body:not(.prefer-web-version) .mobile-music-links {
+  .mobile-music-links {
     margin: 20px 0 !important;
     background-color: #FAFAFA;
     padding: 20px !important;
@@ -1154,14 +1153,14 @@
     max-width: 100% !important;
   }
 
-  body:not(.prefer-web-version) .mobile-music-links p {
+  .mobile-music-links p {
     margin: 15px 0 !important;
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
     max-width: 100% !important;
   }
 
-  body:not(.prefer-web-version) .mobile-music-links a {
+  .mobile-music-links a {
     display: block !important;
     padding: 10px !important;
     background-color: #f0f0f0;
@@ -1175,18 +1174,18 @@
     overflow: hidden !important;
   }
 
-  body:not(.prefer-web-version) .mobile-music-links a:hover {
+  .mobile-music-links a:hover {
     background-color: #e0e0e0;
   }
 
   /* Ocultar el footer y los botones de compartir en mobile */
-  body:not(.prefer-web-version) #final,
-  body:not(.prefer-web-version) #botones {
+  #final,
+  #botones {
     display: none !important;
   }
 
   /* Botón Scroll to Top */
-  body:not(.prefer-web-version) #scroll-to-top {
+  #scroll-to-top {
     position: fixed;
     bottom: 30px;
     right: 20px;
@@ -1207,18 +1206,18 @@
     transition: all 0.3s ease;
   }
 
-  body:not(.prefer-web-version) #scroll-to-top:hover {
+  #scroll-to-top:hover {
     background: linear-gradient(to bottom, #C23750, #D4526E);
     box-shadow: 0 6px 16px rgba(172, 20, 41, 0.4);
     transform: translateY(-3px) scale(1.05);
   }
 
-  body:not(.prefer-web-version) #scroll-to-top:active {
+  #scroll-to-top:active {
     transform: translateY(-1px) scale(1.02);
   }
 
   /* Estilos para el formulario de Mailchimp en mobile */
-  body:not(.prefer-web-version) #mc_embed_signup {
+  #mc_embed_signup {
     background-color: #FFFFFF !important;
     padding: 28px 28px 40px 28px !important;
     margin-bottom: 40px !important;
@@ -1228,12 +1227,12 @@
     overflow: visible !important;
   }
 
-  body:not(.prefer-web-version) #mc_embed_signup_scroll {
+  #mc_embed_signup_scroll {
     padding-bottom: 30px !important;
     overflow: visible !important;
   }
 
-  body:not(.prefer-web-version) #mc_embed_signup h2 {
+  #mc_embed_signup h2 {
     color: #AC1429 !important;
     font-size: 20px !important;
     margin-bottom: 20px !important;
@@ -1244,7 +1243,7 @@
     position: relative;
   }
 
-  body:not(.prefer-web-version) #mc_embed_signup h2::after {
+  #mc_embed_signup h2::after {
     content: '';
     display: block;
     width: 100%;
@@ -1256,7 +1255,7 @@
     border-radius: 2px;
   }
 
-  body:not(.prefer-web-version) #mc_embed_signup p {
+  #mc_embed_signup p {
     text-align: justify !important;
     font-size: 20px !important;
     line-height: 1.6 !important;
@@ -1264,11 +1263,11 @@
     color: #333 !important;
   }
 
-  body:not(.prefer-web-version) #mc_embed_signup .mc-field-group {
+  #mc_embed_signup .mc-field-group {
     margin-bottom: 20px !important;
   }
 
-  body:not(.prefer-web-version) #mc_embed_signup .mc-field-group label {
+  #mc_embed_signup .mc-field-group label {
     display: block !important;
     margin-bottom: 5px !important;
     font-weight: bold !important;
@@ -1286,7 +1285,7 @@
     box-sizing: border-box !important;
   }
 
-  body:not(.prefer-web-version) #mc_embed_signup .button {
+  #mc_embed_signup .button {
     width: 100% !important;
     height: auto !important;
     line-height: normal !important;
@@ -1303,31 +1302,31 @@
     transition: all 0.3s ease !important;
   }
 
-  body:not(.prefer-web-version) #mc_embed_signup .button:hover {
+  #mc_embed_signup .button:hover {
     background: linear-gradient(to bottom, #8B1021 0%, #C23750 100%) !important;
     transform: translateY(-2px) !important;
     box-shadow: 0 4px 12px rgba(172, 20, 41, 0.4) !important;
   }
 
-  body:not(.prefer-web-version) #mc_embed_signup .clear {
+  #mc_embed_signup .clear {
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
     overflow: visible !important;
   }
 
-  body:not(.prefer-web-version) #mc_embed_signup .indicates-required {
+  #mc_embed_signup .indicates-required {
     font-size: 15px !important;
   }
 
   /* Privacy link con fuente más pequeña */
-  body:not(.prefer-web-version) #mc_embed_signup .privacy-link {
+  #mc_embed_signup .privacy-link {
     font-size: 13px !important;
     display: inline-block !important;
     white-space: nowrap !important;
   }
 
   /* Redes sociales centradas sin tarjeta */
-  body:not(.prefer-web-version) .mobile-social-links {
+  .mobile-social-links {
     text-align: center !important;
     padding: 20px 28px !important;
     margin: 20px 0 !important;
@@ -1336,7 +1335,7 @@
     box-shadow: none !important;
   }
 
-  body:not(.prefer-web-version) .mobile-social-links p {
+  .mobile-social-links p {
     font-size: 16px !important;
     margin-bottom: 15px !important;
     line-height: 1.6 !important;
@@ -1344,7 +1343,7 @@
     text-align: left !important;
   }
 
-  body:not(.prefer-web-version) .mobile-social-links a {
+  .mobile-social-links a {
     color: #AC1429 !important;
     text-decoration: underline !important;
     display: block !important;
@@ -1355,13 +1354,13 @@
     text-align: left !important;
   }
 
-  body:not(.prefer-web-version) .mobile-social-links a:hover {
+  .mobile-social-links a:hover {
     color: #B8860B !important;
     text-decoration-color: #B8860B !important;
   }
 
   /* Copyright centrado sin tarjeta */
-  body:not(.prefer-web-version) .mobile-copyright {
+  .mobile-copyright {
     text-align: center !important;
     padding: 20px 28px 0px 28px !important;
     margin: 0 0 -30px 0 !important;
@@ -1370,18 +1369,18 @@
     box-shadow: none !important;
   }
 
-  body:not(.prefer-web-version) .mobile-copyright p {
+  .mobile-copyright p {
     font-size: 14px !important;
     color: #666 !important;
     margin: 0 !important;
   }
 
-  body:not(.prefer-web-version) .mobile-copyright a {
+  .mobile-copyright a {
     color: #666 !important;
     text-decoration: underline !important;
   }
 
-  body:not(.prefer-web-version) .mobile-copyright a:hover {
+  .mobile-copyright a:hover {
     color: #333 !important;
   }
 
@@ -1396,14 +1395,14 @@
   }
 
   /* Botón Versión Web - disponible en ambos modos */
-  body:not(.prefer-web-version) .mobile-version-toggle {
+  .mobile-version-toggle {
     text-align: center !important;
     padding: 20px 28px !important;
     margin: 0 0 20px 0 !important;
     background: none !important;
   }
 
-  body:not(.prefer-web-version) .version-web-button {
+  .version-web-button {
     display: inline-block !important;
     padding: 12px 40px !important;
     background: linear-gradient(to bottom, #AC1429 0%, #D4526E 100%) !important;
@@ -1418,14 +1417,14 @@
     border: none !important;
   }
 
-  body:not(.prefer-web-version) .version-web-button:hover {
+  .version-web-button:hover {
     background: linear-gradient(to bottom, #8B1021 0%, #C23750 100%) !important;
     transform: translateY(-2px) !important;
     box-shadow: 0 6px 16px rgba(172, 20, 41, 0.4) !important;
     color: white !important;
   }
 
-  body:not(.prefer-web-version) .version-web-button:active {
+  .version-web-button:active {
     transform: translateY(0) !important;
     box-shadow: 0 2px 6px rgba(172, 20, 41, 0.3) !important;
   }
