@@ -66,56 +66,183 @@
 
   /* Evitar overflow horizontal en versión web desde mobile */
   body.prefer-web-version {
-    overflow-x: hidden !important;
+    overflow-x: auto !important;
+    overflow-y: visible !important;
+    min-height: 0 !important;
+    position: relative !important;
   }
 
-  /* Ocultar navbar mobile cuando se ve versión web */
-  body.prefer-web-version #menu {
+  body.prefer-web-version html {
+    overflow-y: visible !important;
+    height: auto !important;
+  }
+
+  /* Ocultar TODOS los elementos mobile del menú */
+  body.prefer-web-version .menu-toggle,
+  body.prefer-web-version #menu .navbar-logo {
     display: none !important;
+  }
+
+  /* Restaurar estilos desktop del menú cuando prefer-web-version está activo */
+  body.prefer-web-version #menu {
+    display: block !important;
+    position: static !important;
+    /* Mantener estilos originales del menu desktop */
+    width: 870px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    background-color: #FFF !important;
+    font-family: Lato, Helvetica, sans-serif !important;
+    font-size: 17px !important;
+    color: #dc353c !important;
+    height: auto !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+  }
+
+  body.prefer-web-version #menu ul {
+    display: block !important;
+    position: static !important;
+    /* Mantener estilos originales del menu desktop */
+    margin-right: auto !important;
+    margin-left: auto !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    width: auto !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+  }
+
+  body.prefer-web-version #menu li {
+    float: left !important;
+    margin-left: 18px !important;
+    width: auto !important;
+    border: none !important;
+  }
+
+  body.prefer-web-version #menu li a {
+    text-decoration: none !important;
+    color: #AC1429 !important;
+  }
+
+  body.prefer-web-version #menu li a:hover {
+    text-decoration: underline !important;
+    color: #FFB321 !important;
+  }
+
+  /* Mostrar el header desktop (cabeceraIndex) cuando se prefiere versión web */
+  body.prefer-web-version #cabeceraIndex {
+    display: block !important;
+    background-color: #FFF !important;
+    height: auto !important;
+  }
+
+  body.prefer-web-version #cabeceraIndex img[name="logo"] {
+    display: block !important;
+    width: 922px !important;
+    height: 122px !important;
+  }
+
+  /* Mostrar la cita del día en versión web desktop */
+  body.prefer-web-version #cita {
+    display: block !important;
+  }
+
+  /* Mostrar el slideshow (bienvenidos) en versión web desktop */
+  body.prefer-web-version .bienvenidos {
+    display: block !important;
+  }
+
+  body.prefer-web-version .textoBienvenidos {
+    display: block !important;
+  }
+
+  /* Mostrar el footer y botones en versión web desktop */
+  body.prefer-web-version #final {
+    display: block !important;
+  }
+
+  body.prefer-web-version #botones {
+    display: block !important;
+  }
+
+  /* Mostrar el menú cabecera desktop cuando se prefiere versión web */
+  body.prefer-web-version #cabecera {
+    display: block !important;
+    float: left !important;
+  }
+
+  body.prefer-web-version #cabecera li {
+    float: left !important;
+    display: inline !important;
   }
 
   /* Ajustar escala del contenido desktop para que encaje en mobile */
   body.prefer-web-version #contenedor {
+    width: 922px !important;
+    height: auto !important;
+    margin-top: 0px !important;
+    margin-left: calc((100vw - (922px * 0.38)) / 2) !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+    padding: 5px !important;
+    padding-bottom: 0 !important;
     transform: scale(0.38) !important;
     transform-origin: top left !important;
-    width: 263% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow: visible !important;
+    background-color: #FFF !important;
   }
 
   body.prefer-web-version #todaPagina {
+    /* Mantener estilos originales de todaPagina desktop */
+    width: 922px !important;
+    border: 1px solid #FFF !important;
+    background-color: #FFF !important;
+    padding: 15px !important;
     margin: 0 !important;
-    padding: 0 !important;
+  }
+
+  body.prefer-web-version #todaPaginaB {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
   }
 
   /* Botón flotante visible solo cuando prefer-web-version está activo */
   body.prefer-web-version #floating-version-toggle {
-    display: block !important;
+    display: inline-block !important;
     position: fixed !important;
     bottom: 20px !important;
     right: 20px !important;
     z-index: 2147483647 !important;
+    padding: 12px 40px !important;
     background: linear-gradient(to bottom, #AC1429 0%, #D4526E 100%) !important;
-    padding: 12px 30px !important;
-    border-radius: 25px !important;
-    box-shadow: 0 4px 20px rgba(172, 20, 41, 0.6) !important;
-    cursor: pointer !important;
     color: white !important;
-    font-family: 'Lato', Helvetica, Arial, sans-serif !important;
+    text-decoration: none !important;
+    border-radius: 25px !important;
     font-size: 16px !important;
     font-weight: bold !important;
+    box-shadow: 0 4px 12px rgba(172, 20, 41, 0.3) !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+    border: none !important;
+    font-family: 'Lato', Helvetica, Arial, sans-serif !important;
   }
 
   body.prefer-web-version #floating-version-toggle:hover {
     background: linear-gradient(to bottom, #8B1021 0%, #C23750 100%) !important;
     transform: translateY(-2px) !important;
-    box-shadow: 0 6px 20px rgba(172, 20, 41, 0.5) !important;
+    box-shadow: 0 6px 16px rgba(172, 20, 41, 0.4) !important;
+    color: white !important;
   }
 
   body.prefer-web-version #floating-version-toggle:active {
     transform: translateY(0) !important;
-    box-shadow: 0 4px 20px rgba(172, 20, 41, 0.6) !important;
+    box-shadow: 0 2px 6px rgba(172, 20, 41, 0.3) !important;
   }
 
 }

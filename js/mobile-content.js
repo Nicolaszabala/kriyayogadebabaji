@@ -87,7 +87,13 @@
             content: `
                 <div class="mobile-section" id="mobile-seminarios">
                     <h2>Próximos seminarios</h2>
-                    <p>Suelo dar un seminario de primera iniciación el último fin de semana de cada mes, en Valencia, donde vivo. Más información: <a href="mailto:info@kriyayogadebabaji.net">info@kriyayogadebabaji.net</a></p>
+                    <p>- <b>Primera Iniciación</b> en Valencia: 24-25 enero 2026.</p> 
+					<div class="mobile-image-container">
+<img src="imagenes/PRIMERA-FACEBOOK0recortado.jpg" alt="Primera iniciación" />
+<p class="linaje-description" </p>
+</div>
+					<p>Más información:</p> 
+					<p><a href="mailto:info@kriyayogadebabaji.net">info@kriyayogadebabaji.net</a></p>
                     <div class="mobile-contact-buttons">
                         <a href="tel:+34649145057" class="contact-button phone-button">
                             <span>Llamar</span>
@@ -111,11 +117,11 @@
                     <div class="terapias-slider-container">
                         <div class="terapias-slider">
                             <div class="terapias-slide">
-                                <img src="imagenes/terapias1.jpg" alt="Sesión de activación de chakras" />
+                                <img src="imagenes/chakras_terapias.jpg" alt="Sesión de activación de chakras" />
                                 <p class="terapia-description"><strong>Sesión de activación de chakras:</strong> descubre el estado de tus chakras, liberando posibles bloqueos.</p>
                             </div>
                             <div class="terapias-slide">
-                                <img src="imagenes/terapias2.jpg" alt="Sesión de respiración" />
+                                <img src="imagenes/respiracion_slide.jpg" alt="Sesión de respiración" />
                                 <p class="terapia-description"><strong>Sesión de respiración:</strong> aprende a integrar emociones conflictivas usando la respiración.</p>
                             </div>
                         </div>
@@ -158,7 +164,7 @@
                             </div>
                             <div class="libros-slide">
                                 <a href="https://www.amazon.com/dp/B088YB64CK/ref=cm_sw_em_r_mt_dp_U_4muZEbC7H8XVW" target="_blank">
-                                    <img src="imagenes/recobrandoP.jpg" alt="Recobrando el Ser" />
+                                    <img src="imagenes/PortadaESP.jpg" alt="Recobrando el Ser" />
                                 </a>
                                 <p class="libro-description"><strong>Recobrando el Ser:</strong> una visión general sobre el sendero del Kriya Yoga de Babaji: su origen, en qué consiste, y sus diferentes aspectos.</p>
                             </div>
@@ -270,7 +276,8 @@
                             </div>
                             <div class="linaje-slide">
                                 <img src="imagenes/linaje4.jpg" alt="M.Govindan Satchidananda" />
-                                <p class="linaje-description">M.Govindan Satchidananda</p>
+                                <p class="linaje-description">M.Govindan</p>
+                                <p class="linaje-description linaje-description-second">Satchidananda</p>
                             </div>
                         </div>
                         <div class="slider-dots linaje-dots">
@@ -281,8 +288,7 @@
                         </div>
                     </div>
 
-                    <p>Govindan Satchidananda, estudiante de Yogui Ramaiah y mi profesor, ha seguido enseñando el Kriya Yoga de Babaji a miles de personas.<br>
-                    En 2010 fui autorizado por Govindan Satchidananda a dar el tercer nivel de Kriya Yoga de Babaji, pudiendo dar así los tres seminarios de iniciación.</p>
+                    <p>Govindan Satchidananda, estudiante de Yogui Ramaiah y mi profesor, ha seguido enseñando el Kriya Yoga de Babaji a miles de personas. En 2010 fui autorizado por él a dar el tercer nivel de Kriya Yoga de Babaji, pudiendo dar así los tres seminarios de iniciación.</p>
 
                     <div class="mobile-linaje-image">
                         <img src="imagenes/NityanandaMarshall.jpg" alt="Nityananda y Marshall Govindan" />
@@ -350,7 +356,7 @@
     <button class="version-web-button" id="toggle-version-button">Ver Versión Web</button>
 </div>
 <div class="mobile-copyright">
-    <p>Copyright 2025©. Se permite la libre reproducción siempre que se cite la fuente</p>
+    <p>Esta web fue creada y es mantenida por Nacho Albalat, Nityananda: info@kriyayogadebabaji.net. Copyright 2025©. Se permite la libre reproducción siempre que se cite la fuente. Desarrollo web: <a href="https://conexos.es" target="_blank">Conexos</a></p>
 </div>
             `
         }
@@ -441,26 +447,44 @@
             return;
         }
 
-        // Ajustar altura del body para eliminar espacio blanco
-        setTimeout(function() {
+        // Ajustar altura del contenedor escalado
+        function adjustScaledHeight() {
             const contenedor = document.getElementById('contenedor');
             if (contenedor) {
+                // Obtener la altura real del contenedor SIN el efecto del scale
                 const realHeight = contenedor.scrollHeight;
                 const scale = 0.38;
-                const extraMargin = 50; // Margen extra para incluir todo el contenido
-                const scaledHeight = (realHeight * scale) + extraMargin;
 
-                document.body.style.height = scaledHeight + 'px';
-                document.body.style.overflow = 'hidden';
-                document.documentElement.style.height = scaledHeight + 'px';
-                document.documentElement.style.overflow = 'auto';
+                // Calcular la altura escalada
+                const scaledHeight = realHeight * scale;
+
+                // Aplicar la altura al body para eliminar espacio en blanco
+                document.body.style.minHeight = scaledHeight + 'px';
+                document.body.style.height = 'auto';
+                document.body.style.overflow = 'visible';
+                document.documentElement.style.minHeight = scaledHeight + 'px';
+                document.documentElement.style.height = 'auto';
+                document.documentElement.style.overflow = 'visible';
+
+                // Forzar que el contenedor no genere espacio extra
+                contenedor.style.marginBottom = '0';
+                contenedor.style.paddingBottom = '0';
             }
-        }, 500);
+        }
+
+        // Esperar a que las imágenes y todo el contenido cargue
+        window.addEventListener('load', function() {
+            setTimeout(adjustScaledHeight, 100);
+            setTimeout(adjustScaledHeight, 500);
+        });
+
+        // Ajustar inmediatamente también
+        setTimeout(adjustScaledHeight, 100);
 
         // Crear botón flotante (los estilos están en version-toggle.css que NO se desactiva)
-        const toggleButton = document.createElement('div');
+        const toggleButton = document.createElement('button');
         toggleButton.id = 'floating-version-toggle';
-        toggleButton.textContent = 'Ver Versión Mobile';
+        toggleButton.textContent = 'Ver Versión Móvil';
         document.body.appendChild(toggleButton);
 
         toggleButton.addEventListener('click', function() {
@@ -468,10 +492,12 @@
             localStorage.removeItem('preferWebVersion');
             enableResponsiveCss();
 
-            // Restaurar altura del body
+            // Restaurar altura y overflow
             document.body.style.height = '';
+            document.body.style.minHeight = '';
             document.body.style.overflow = '';
             document.documentElement.style.height = '';
+            document.documentElement.style.minHeight = '';
             document.documentElement.style.overflow = '';
 
             toggleButton.remove();

@@ -10,8 +10,8 @@
 
 @media screen and (max-width: 767px) {
 
-  /* Mobile menu container adjustments */
-  #menu {
+  /* Mobile menu container adjustments - SOLO cuando NO es prefer-web-version */
+  body:not(.prefer-web-version) #menu {
     width: 100% !important;
     margin: 0 !important;
     position: fixed;
@@ -26,22 +26,22 @@
     z-index: 9999;
   }
 
-  /* Logo in navbar */
-  #menu .navbar-logo {
+  /* Logo in navbar - SOLO cuando NO es prefer-web-version */
+  body:not(.prefer-web-version) #menu .navbar-logo {
     display: block;
     max-width: 91% !important;
     overflow: hidden;
     transition: transform 0.3s ease;
   }
 
-  #menu .navbar-logo img {
+  body:not(.prefer-web-version) #menu .navbar-logo img {
     max-width: 100% !important;
     height: auto !important;
     width: 100% !important;
   }
 
-  /* Hide the regular menu on mobile initially */
-  #menu ul {
+  /* Hide the regular menu on mobile initially - SOLO cuando NO es prefer-web-version */
+  body:not(.prefer-web-version) #menu ul {
     display: none;
     position: absolute;
     top: 100%;
@@ -60,13 +60,13 @@
     overflow-x: hidden;
   }
 
-  /* Show menu when active */
-  #menu.menu-active ul {
+  /* Show menu when active - SOLO cuando NO es prefer-web-version */
+  body:not(.prefer-web-version) #menu.menu-active ul {
     display: block;
   }
 
-  /* Mobile menu items */
-  #menu li {
+  /* Mobile menu items - SOLO cuando NO es prefer-web-version */
+  body:not(.prefer-web-version) #menu li {
     float: none !important;
     margin: 0 !important;
     display: block;
@@ -74,11 +74,11 @@
     border-bottom: 1px solid #f0f0f0;
   }
 
-  #menu li:last-child {
+  body:not(.prefer-web-version) #menu li:last-child {
     border-bottom: none;
   }
 
-  #menu li a {
+  body:not(.prefer-web-version) #menu li a {
     display: block;
     padding: 15px 20px;
     font-size: 16px;
@@ -87,15 +87,15 @@
     color: #333;
   }
 
-  #menu li a:hover {
+  body:not(.prefer-web-version) #menu li a:hover {
     background-color: rgba(172, 20, 41, 0.05);
     border-left-color: #AC1429;
     color: #AC1429;
     padding-left: 25px;
   }
 
-  /* Hamburger button */
-  .menu-toggle {
+  /* Hamburger button - SOLO cuando NO es prefer-web-version */
+  body:not(.prefer-web-version) .menu-toggle {
     display: block;
     width: 40px;
     height: 40px;
@@ -111,12 +111,12 @@
     transition: all 0.3s ease;
   }
 
-  .menu-toggle:hover {
+  body:not(.prefer-web-version) .menu-toggle:hover {
     transform: translateY(-50%) scale(1.1);
   }
 
-  /* Hamburger lines */
-  .menu-toggle span {
+  /* Hamburger lines - SOLO cuando NO es prefer-web-version */
+  body:not(.prefer-web-version) .menu-toggle span {
     display: block;
     width: 28px;
     height: 3px;
@@ -127,28 +127,39 @@
     box-shadow: 0 1px 3px rgba(172, 20, 41, 0.3);
   }
 
-  /* Active hamburger animation */
-  .menu-toggle.active {
+  /* Active hamburger animation - SOLO cuando NO es prefer-web-version */
+  body:not(.prefer-web-version) .menu-toggle.active {
     transform: translateY(-50%);
   }
 
-  .menu-toggle.active span:nth-child(1) {
+  body:not(.prefer-web-version) .menu-toggle.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
 
-  .menu-toggle.active span:nth-child(2) {
+  body:not(.prefer-web-version) .menu-toggle.active span:nth-child(2) {
     opacity: 0;
   }
 
-  .menu-toggle.active span:nth-child(3) {
+  body:not(.prefer-web-version) .menu-toggle.active span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -6px);
   }
 
-  /* Add some space for the hamburger button */
-  #menu {
+  /* Add some space for the hamburger button - SOLO cuando NO es prefer-web-version */
+  body:not(.prefer-web-version) #menu {
     padding-right: 60px;
   }
 
+}
+
+/* ========================================
+   OCULTAR MENÚ MOBILE CUANDO SE VE VERSIÓN WEB
+   ======================================== */
+
+@media screen and (max-width: 767px) {
+  /* Cuando se activa prefer-web-version, ocultar los enlaces mobile personalizados */
+  body.prefer-web-version .mobile-menu-item {
+    display: none !important;
+  }
 }
 
 /* ========================================
@@ -157,7 +168,7 @@
    ======================================== */
 
 @media screen and (min-width: 768px) {
-  
+
   /* Hide mobile elements on desktop */
   .menu-toggle {
     display: none;
