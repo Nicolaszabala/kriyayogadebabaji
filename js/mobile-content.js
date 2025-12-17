@@ -436,15 +436,21 @@
 
     function enableResponsiveCss() {
         const responsiveCss = document.querySelector('link[href*="responsive.css"]');
+        console.log('enableResponsiveCss() ejecutado - CSS encontrado:', !!responsiveCss, 'disabled antes:', responsiveCss?.disabled);
         if (responsiveCss) {
             responsiveCss.disabled = false;
+            console.log('CSS disabled después:', responsiveCss.disabled);
         }
     }
 
     function showWebVersionToggle() {
-        // Verificar si ya existe el botón
-        if (document.getElementById('floating-version-toggle')) {
-            return;
+        console.log('showWebVersionToggle() ejecutado');
+
+        // Limpiar cualquier botón existente para evitar duplicados
+        const existingButton = document.getElementById('floating-version-toggle');
+        if (existingButton) {
+            console.log('Botón existente encontrado, eliminándolo para recrearlo correctamente');
+            existingButton.remove();
         }
 
         // Scroll al top cuando se muestra versión web
@@ -490,9 +496,25 @@
         toggleButton.textContent = 'Ver Versión Móvil';
         document.body.appendChild(toggleButton);
 
-        toggleButton.addEventListener('click', function() {
+        console.log('Botón "Ver Versión Móvil" creado y añadido al DOM');
+
+        toggleButton.addEventListener('click', function(e) {
+            console.log('=== CLICK EN "VER VERSIÓN MÓVIL" ===');
+            console.log('localStorage ANTES:', localStorage.getItem('preferWebVersion'));
+            console.log('body.classList ANTES:', document.body.classList.contains('prefer-web-version'));
+
+            // Limpiar preferencia
             localStorage.removeItem('preferWebVersion');
-            location.reload();
+            document.body.classList.remove('prefer-web-version');
+
+            console.log('localStorage DESPUÉS:', localStorage.getItem('preferWebVersion'));
+            console.log('body.classList DESPUÉS:', document.body.classList.contains('prefer-web-version'));
+
+            // Esperar un momento para asegurar que se guardó el cambio
+            setTimeout(function() {
+                console.log('Ejecutando location.reload()...');
+                location.reload();
+            }, 50);
         });
     }
 
@@ -831,12 +853,28 @@
     function init() {
         const preferWebVersion = localStorage.getItem('preferWebVersion');
         const actuallyMobile = isActualMobileDevice();
+        const currentWidth = window.innerWidth;
+
+        console.log('=== INIT() EJECUTADO ===');
+        console.log('preferWebVersion:', preferWebVersion);
+        console.log('actuallyMobile:', actuallyMobile);
+        console.log('window.innerWidth:', currentWidth);
+        console.log('isMobile():', isMobile());
+
+        // Si NO hay preferencia de versión web, habilitar responsive.css
+        if (preferWebVersion !== 'true') {
+            console.log('NO hay preferWebVersion, habilitando responsive.css...');
+            enableResponsiveCss();
+        } else {
+            console.log('SÍ hay preferWebVersion, deshabilitando responsive.css...');
+        }
 
         // Restaurar preferencia de versión desde localStorage
         if (preferWebVersion === 'true' && actuallyMobile) {
+            console.log('Activando modo VERSIÓN WEB escalada...');
             document.body.classList.add('prefer-web-version');
 
-            // DESACTIVAR responsive.css inmediatamente para evitar flash de contenido mobile
+            // DESACTIVAR responsive.css para versión web
             disableResponsiveCss();
 
             // Esperar a que el DOM esté listo antes de crear el botón
@@ -849,9 +887,10 @@
                 showWebVersionToggle();
             }
         } else if (isMobile()) {
-            // IMPORTANTE: Asegurar que responsive.css esté habilitado
-            enableResponsiveCss();
+            console.log('Activando modo MOBILE responsive...');
             replaceContentOnMobile();
+        } else {
+            console.log('Modo DESKTOP normal (no hacer nada)');
         }
     }
 
