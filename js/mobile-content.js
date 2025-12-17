@@ -447,6 +447,9 @@
             return;
         }
 
+        // Scroll al top cuando se muestra versión web
+        window.scrollTo(0, 0);
+
         // Ajustar altura del contenedor escalado
         function adjustScaledHeight() {
             const contenedor = document.getElementById('contenedor');
@@ -488,19 +491,7 @@
         document.body.appendChild(toggleButton);
 
         toggleButton.addEventListener('click', function() {
-            document.body.classList.remove('prefer-web-version');
             localStorage.removeItem('preferWebVersion');
-            enableResponsiveCss();
-
-            // Restaurar altura y overflow
-            document.body.style.height = '';
-            document.body.style.minHeight = '';
-            document.body.style.overflow = '';
-            document.documentElement.style.height = '';
-            document.documentElement.style.minHeight = '';
-            document.documentElement.style.overflow = '';
-
-            toggleButton.remove();
             location.reload();
         });
     }
@@ -512,6 +503,9 @@
                 document.body.classList.add('prefer-web-version');
                 localStorage.setItem('preferWebVersion', 'true');
                 disableResponsiveCss();
+
+                // Scroll al top antes de recargar
+                window.scrollTo(0, 0);
 
                 location.reload();
             });
@@ -855,6 +849,8 @@
                 showWebVersionToggle();
             }
         } else if (isMobile()) {
+            // IMPORTANTE: Asegurar que responsive.css esté habilitado
+            enableResponsiveCss();
             replaceContentOnMobile();
         }
     }
