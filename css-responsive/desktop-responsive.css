@@ -764,6 +764,14 @@ body.prefer-new-desktop #desktop-noticias {
   display: none !important;
 }
 
+/* Asegurar que el contenedor no limite el ancho en nueva versión */
+body.prefer-new-desktop #contenedor {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
 /* ==========================================
    BUTTONS FOR OLD DESKTOP LAYOUT
    ========================================== */

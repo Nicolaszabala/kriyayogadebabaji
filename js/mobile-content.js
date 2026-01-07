@@ -847,7 +847,10 @@
 
         // Restaurar preferencia de versión desde localStorage
         if (preferWebVersion === 'true' && actuallyMobile) {
-            document.body.classList.add('prefer-web-version');
+            // Clase ya aplicada por script inline en <head>, solo asegurar
+            if (!document.body.classList.contains('prefer-web-version')) {
+                document.body.classList.add('prefer-web-version');
+            }
 
             // DESACTIVAR responsive.css para versión web
             disableResponsiveCss();

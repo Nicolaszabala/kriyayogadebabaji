@@ -37,6 +37,7 @@
 	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
 	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 </style>
+
 <!-- Scripts -->
 <script type="text/javascript">
 function frasedeldia(){
@@ -306,6 +307,30 @@ var _gaq = _gaq || [];
 
 
 <body >
+<script>
+// CRITICAL: Apply version preference immediately to prevent flickering
+(function() {
+  var body = document.body;
+  var isDesktop = window.innerWidth >= 768;
+
+  if (isDesktop) {
+    var preferOld = localStorage.getItem('preferOldDesktop') === 'true';
+    if (preferOld) {
+      body.className += ' prefer-old-desktop';
+    } else {
+      body.className += ' prefer-new-desktop';
+    }
+  } else {
+    var isActualMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (window.innerWidth <= 767);
+    if (isActualMobile) {
+      var preferWeb = localStorage.getItem('preferWebVersion') === 'true';
+      if (preferWeb) {
+        body.className += ' prefer-web-version';
+      }
+    }
+  }
+})();
+</script>
 
 <div id="contenedor"> 
 

@@ -1039,14 +1039,20 @@
 
     if (preferOld) {
       console.log('📜 User prefers OLD desktop layout');
-      document.body.classList.add('prefer-old-desktop');
+      // Clases ya aplicadas por script inline en <head>, solo asegurar
+      if (!document.body.classList.contains('prefer-old-desktop')) {
+        document.body.classList.add('prefer-old-desktop');
+      }
       document.body.classList.remove('prefer-new-desktop');
 
       injectOldDesktopContent();
       showOldDesktopContent();
     } else {
       console.log('✨ User prefers NEW desktop layout (default)');
-      document.body.classList.add('prefer-new-desktop');
+      // Clases ya aplicadas por script inline en <head>, solo asegurar
+      if (!document.body.classList.contains('prefer-new-desktop')) {
+        document.body.classList.add('prefer-new-desktop');
+      }
       document.body.classList.remove('prefer-old-desktop');
 
       injectNewDesktopContent();
