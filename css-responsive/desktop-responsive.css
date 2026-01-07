@@ -1,0 +1,1212 @@
+/*!
+ * Desktop Responsive CSS for Kriya Yoga de Babaji
+ * Version: 3.0.0 - Unified Design System
+ * Modern grid-based layout for NEW desktop version
+ *
+ * CHANGELOG v3.0.0:
+ * - COMPLETE design system unification
+ * - Consistent typography scale (6 sizes only)
+ * - Unified spacing system (multiples of 8px)
+ * - Eliminated ALL inline styles from desktop-content.js
+ * - Created semantic CSS classes for all components
+ * - Line-height standardization (1.6 for text, 1.3 for headings)
+ * - Font-family consistency across all elements
+ *
+ * DESIGN SYSTEM:
+ * Font sizes: 28px (h1), 24px (h2), 20px (h3), 18px (destacado), 16px (normal), 14px (pequeño)
+ * Spacing: 8px, 16px, 20px, 24px, 30px, 40px
+ * Line-height: 1.6 (text), 1.3 (headings)
+ * Font-family: 'Lato', Helvetica, Arial, sans-serif
+ */
+
+/* ==========================================
+   BODY BACKGROUND & MOUNTAIN TEXTURE
+   ========================================== */
+
+/* OM texture for page margins - subtle and spiritual */
+body.prefer-new-desktop {
+  background-color: #FFFFFF;
+  background-image:
+    linear-gradient(to bottom, rgba(172, 20, 41, 0.03) 0%, transparent 200px),
+    url("data:image/svg+xml,%3Csvg width='50' height='50' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='25' y='35' font-size='30' text-anchor='middle' fill='rgba(172,20,41,0.12)' font-family='serif'%3Eॐ%3C/text%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-position: 0 0, 0 0;
+  background-size: auto, 50px 50px;
+  background-repeat: repeat, repeat;
+}
+
+/* ==========================================
+   DESKTOP NEW LAYOUT (>= 768px)
+   ONLY applies when body has .prefer-new-desktop
+   ========================================== */
+
+@media screen and (min-width: 768px) {
+
+  /* Base wrapper - MOVED TO SIDEBAR SECTION BELOW (line ~950)
+     Now handles flex layout for sidebar + main content */
+  /* body.prefer-new-desktop .desktop-new-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #FFFFFF;
+    position: relative;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+  } */
+
+  /* ==========================================
+     HEADER & CITA
+     ========================================== */
+
+  body.prefer-new-desktop .desktop-new-header {
+    margin-bottom: 40px;
+  }
+
+  /* Logo container */
+  body.prefer-new-desktop .desktop-header-logo {
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  body.prefer-new-desktop .desktop-header-logo img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Top navigation menu (Clases, English, etc) */
+  body.prefer-new-desktop .desktop-header-top-nav {
+    text-align: center;
+    padding: 16px 0;
+    font-size: 16px;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+
+  body.prefer-new-desktop .desktop-header-top-nav a {
+    margin: 0 10px;
+    color: #AC1429;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  body.prefer-new-desktop .desktop-header-top-nav a:hover {
+    color: #B8860B;
+  }
+
+  /* Cita del día */
+  body.prefer-new-desktop .desktop-cita {
+    background: #FFFFFF;
+    border-left: 4px solid #B8860B;
+    border-radius: 8px;
+    padding: 30px 40px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    transition: box-shadow 0.3s ease;
+  }
+
+  body.prefer-new-desktop .desktop-cita:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  }
+
+  body.prefer-new-desktop .desktop-cita::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, rgba(184, 134, 11, 0.05));
+    border-radius: 0 8px 0 100%;
+    pointer-events: none;
+  }
+
+  body.prefer-new-desktop .cita-icon {
+    color: #B8860B;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 16px;
+    opacity: 0.6;
+  }
+
+  body.prefer-new-desktop .cita-texto {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+    font-style: italic;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+  }
+
+  /* Main navigation menu */
+  body.prefer-new-desktop .desktop-header-main-nav {
+    text-align: center;
+    padding: 30px 0 20px 0;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+  }
+
+  body.prefer-new-desktop .desktop-header-main-nav a {
+    margin: 0 5px;
+    color: #AC1429;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 700;
+    transition: color 0.3s ease;
+  }
+
+  body.prefer-new-desktop .desktop-header-main-nav a:hover {
+    color: #B8860B;
+  }
+
+  body.prefer-new-desktop .desktop-header-main-nav .nav-separator {
+    color: #AC1429;
+    margin: 0;
+  }
+
+  /* ==========================================
+     GRID LAYOUTS
+     ========================================== */
+
+  /* Grid 2 columnas */
+  body.prefer-new-desktop .desktop-section-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1; /* Base z-index for grid sections */
+  }
+
+  /* Grid 3 columnas */
+  body.prefer-new-desktop .desktop-items-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  /* Grid 4 columnas */
+  body.prefer-new-desktop .desktop-items-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  /* Sección full width */
+  body.prefer-new-desktop .desktop-section-full {
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 3; /* Higher z-index to prevent cards from overlapping this section */
+    background: #FFFFFF; /* Ensure section has solid background */
+  }
+
+  /* ==========================================
+     CARDS
+     ========================================== */
+
+  body.prefer-new-desktop .desktop-card {
+    background: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space evenly between elements */
+    min-height: 600px; /* Minimum height to ensure cards have similar proportions */
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Special handling for cards containing forms - keep content together at top */
+  body.prefer-new-desktop .desktop-card:has(#mc_embed_signup) {
+    justify-content: flex-start; /* Keep form content together instead of space-between */
+    gap: 20px; /* Uniform spacing between title and form */
+  }
+
+  body.prefer-new-desktop .desktop-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+    z-index: 2; /* Ensure hover card appears above others but not above next sections */
+  }
+
+  /* Card typography - unified design system */
+  body.prefer-new-desktop .desktop-card h2 {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    color: #AC1429;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    margin-top: 0;
+    padding-bottom: 16px;
+    text-align: center;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(to right, transparent, #AC1429, #D4526E, transparent) 1;
+    position: relative;
+  }
+
+  body.prefer-new-desktop .desktop-card h3 {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    color: #AC1429;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 16px;
+    margin-top: 20px;
+  }
+
+  body.prefer-new-desktop .desktop-card p {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 16px;
+  }
+
+  body.prefer-new-desktop .desktop-card p:last-child {
+    margin-bottom: 0;
+  }
+
+  body.prefer-new-desktop .desktop-card ul,
+  body.prefer-new-desktop .desktop-card ol {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 16px;
+    padding-left: 20px;
+  }
+
+  body.prefer-new-desktop .desktop-card li {
+    margin-bottom: 8px;
+  }
+
+  body.prefer-new-desktop .desktop-card a {
+    color: #AC1429;
+    text-decoration: underline;
+    transition: color 0.3s ease, text-decoration-color 0.3s ease;
+  }
+
+  body.prefer-new-desktop .desktop-card a:hover {
+    color: #B8860B;
+    text-decoration-color: #B8860B;
+  }
+
+  body.prefer-new-desktop .desktop-card strong {
+    font-weight: 700;
+    color: #AC1429;
+  }
+
+  /* Card image styles */
+  body.prefer-new-desktop .desktop-card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+  }
+
+  body.prefer-new-desktop .desktop-card-image-centered {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: block;
+    margin: 20px auto;
+  }
+
+  /* Card text alignment utilities */
+  body.prefer-new-desktop .desktop-card .text-center {
+    text-align: center;
+  }
+
+  /* ==========================================
+     BOOK CARDS
+     ========================================== */
+
+  body.prefer-new-desktop .desktop-book-card {
+    text-align: center;
+    padding: 20px;
+    background: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  body.prefer-new-desktop .desktop-book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  body.prefer-new-desktop .desktop-book-card img {
+    transition: transform 0.3s ease;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  body.prefer-new-desktop .desktop-book-card:hover img {
+    transform: scale(1.05);
+  }
+
+  body.prefer-new-desktop .desktop-book-card h3 {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    color: #AC1429 !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    margin: 15px 0 10px !important;
+  }
+
+  body.prefer-new-desktop .desktop-book-card p {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    color: #666 !important;
+  }
+
+  /* ==========================================
+     MUSIC CARDS
+     ========================================== */
+
+  body.prefer-new-desktop .desktop-music-card {
+    text-align: center;
+  }
+
+  body.prefer-new-desktop .desktop-music-card img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  body.prefer-new-desktop .desktop-music-card:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  }
+
+  body.prefer-new-desktop .desktop-music-card p {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #333 !important;
+    margin-top: 10px;
+  }
+
+  /* ==========================================
+     LINAJE CARDS
+     ========================================== */
+
+  body.prefer-new-desktop .desktop-linaje-card {
+    text-align: center;
+  }
+
+  body.prefer-new-desktop .desktop-linaje-card img {
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    height: auto;
+  }
+
+  body.prefer-new-desktop .desktop-linaje-card p {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #333 !important;
+    margin-top: 10px;
+    line-height: 1.4 !important;
+  }
+
+  /* ==========================================
+     GLOBAL TYPOGRAPHY (outside cards)
+     ========================================== */
+
+  /* Main headings - unified with mobile */
+  body.prefer-new-desktop .desktop-new-wrapper h1 {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    color: #AC1429 !important;
+    font-size: 28px !important;
+    font-weight: bold !important;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 40px;
+  }
+
+  body.prefer-new-desktop .desktop-new-wrapper h2 {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    color: #AC1429 !important;
+    font-size: 24px !important;
+    font-weight: bold !important;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
+
+  body.prefer-new-desktop .desktop-new-wrapper h3 {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    color: #AC1429 !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+    margin-bottom: 15px;
+    margin-top: 20px;
+  }
+
+  /* Body text - unified with mobile */
+  body.prefer-new-desktop .desktop-new-wrapper p {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    color: #333 !important;
+    margin-bottom: 15px;
+  }
+
+  body.prefer-new-desktop .desktop-new-wrapper a {
+    color: #AC1429 !important;
+    transition: color 0.3s ease;
+  }
+
+  body.prefer-new-desktop .desktop-new-wrapper a:hover {
+    color: #B8860B !important;
+  }
+
+  /* ==========================================
+     FOOTER
+     ========================================== */
+
+  body.prefer-new-desktop .desktop-new-footer {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 2px solid #E5E5E5;
+  }
+
+  body.prefer-new-desktop .desktop-new-footer p {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    color: #666 !important;
+  }
+
+  body.prefer-new-desktop .desktop-new-footer a {
+    color: #666 !important;
+    text-decoration: underline !important;
+    transition: color 0.3s ease;
+  }
+
+  body.prefer-new-desktop .desktop-new-footer a:hover {
+    color: #333 !important;
+  }
+
+  /* ==========================================
+     BUTTONS & FORMS
+     ========================================== */
+
+  /* Contact buttons container - igual que mobile */
+  body.prefer-new-desktop .mobile-contact-buttons {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 20px !important;
+    margin: 25px 0 10px 0 !important;
+  }
+
+  /* Contact buttons base - igual que mobile */
+  body.prefer-new-desktop .contact-button,
+  body.prefer-new-desktop a.contact-button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 180px !important;
+    padding: 12px 24px !important;
+    border-radius: 30px !important;
+    text-decoration: none !important;
+    transition: transform 0.15s ease-out, box-shadow 0.15s ease-out !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    font-family: 'Lato', Helvetica, Arial, sans-serif !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    color: white !important;
+  }
+
+  body.prefer-new-desktop .contact-button:hover,
+  body.prefer-new-desktop a.contact-button:hover {
+    transform: scale(0.97) !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2) !important;
+    color: white !important;
+  }
+
+  body.prefer-new-desktop .contact-button:active,
+  body.prefer-new-desktop a.contact-button:active {
+    transform: scale(0.92) !important;
+    transition: transform 0.1s ease-in !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  /* Botón de llamada - Rojo a Naranja (igual que mobile) */
+  body.prefer-new-desktop .contact-button.phone-button,
+  body.prefer-new-desktop a.contact-button.phone-button {
+    background: linear-gradient(to bottom, #fa460a 0%, #ffa83d 100%) !important;
+  }
+
+  /* Botón de WhatsApp - Verde (igual que mobile) */
+  body.prefer-new-desktop .contact-button.whatsapp-button,
+  body.prefer-new-desktop a.contact-button.whatsapp-button {
+    background: linear-gradient(to bottom, #4e9c5d 0%, #6be883 100%) !important;
+  }
+
+  /* Texto de los botones */
+  body.prefer-new-desktop .contact-button span,
+  body.prefer-new-desktop a.contact-button span {
+    text-decoration: none !important;
+    color: white !important;
+  }
+
+  /* Mailchimp form styling */
+  body.prefer-new-desktop #mc_embed_signup {
+    background-color: transparent !important;
+    font-family: 'Lato', Helvetica, Arial, sans-serif !important;
+  }
+
+  body.prefer-new-desktop #mc_embed_signup h2 {
+    font-family: 'Lato', Helvetica, Arial, sans-serif !important;
+    color: #AC1429 !important;
+    font-size: 24px !important;
+    font-weight: bold !important;
+  }
+
+  body.prefer-new-desktop #mc_embed_signup p {
+    font-family: 'Lato', Helvetica, Arial, sans-serif !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    color: #333 !important;
+  }
+
+  body.prefer-new-desktop #mc_embed_signup label {
+    font-family: 'Lato', Helvetica, Arial, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    color: #333 !important;
+  }
+
+  body.prefer-new-desktop #mc_embed_signup input[type="email"],
+  body.prefer-new-desktop #mc_embed_signup input[type="text"] {
+    font-family: 'Lato', Helvetica, Arial, sans-serif !important;
+    font-size: 16px !important;
+    padding: 10px !important;
+    border: 1px solid #ccc !important;
+    border-radius: 4px !important;
+    transition: border-color 0.3s ease;
+  }
+
+  body.prefer-new-desktop #mc_embed_signup input[type="email"]:focus,
+  body.prefer-new-desktop #mc_embed_signup input[type="text"]:focus {
+    border-color: #AC1429 !important;
+    outline: none;
+  }
+
+  body.prefer-new-desktop #mc_embed_signup .button {
+    font-family: 'Lato', Helvetica, Arial, sans-serif !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    background: linear-gradient(to bottom, #AC1429, #D4526E) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 25px !important;
+    padding: 12px 30px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    height: auto !important;
+    line-height: normal !important;
+    box-sizing: border-box !important;
+    vertical-align: middle !important;
+  }
+
+  body.prefer-new-desktop #mc_embed_signup .button:hover {
+    background: linear-gradient(to bottom, #8B1021, #C23750) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(172, 20, 41, 0.4) !important;
+  }
+
+  /* ==========================================
+     IMAGES
+     ========================================== */
+
+  body.prefer-new-desktop .desktop-new-wrapper img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* ==========================================
+     ACCESSIBILITY ENHANCEMENTS
+     ========================================== */
+
+  /* Focus states for better keyboard navigation */
+  body.prefer-new-desktop a:focus,
+  body.prefer-new-desktop button:focus,
+  body.prefer-new-desktop input:focus,
+  body.prefer-new-desktop select:focus,
+  body.prefer-new-desktop textarea:focus {
+    outline: 2px solid #AC1429;
+    outline-offset: 2px;
+  }
+
+  /* Skip to content link (for screen readers) */
+  body.prefer-new-desktop .skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #AC1429;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 10000;
+  }
+
+  body.prefer-new-desktop .skip-to-content:focus {
+    top: 0;
+  }
+
+  /* ==========================================
+     RESPONSIVE BREAKPOINTS
+     ========================================== */
+
+  /* Desktop grande (>1200px) - Expand grid to 4 columns for better use of space */
+  @media screen and (min-width: 1200px) {
+    body.prefer-new-desktop .desktop-items-grid-3 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    body.prefer-new-desktop .desktop-new-wrapper {
+      padding: 40px 40px; /* More padding on large screens */
+    }
+  }
+
+  /* Desktop medio (768px - 1024px) - Adjust to narrower screens */
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    body.prefer-new-desktop .desktop-section-grid-2 {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    body.prefer-new-desktop .desktop-items-grid-3 {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    body.prefer-new-desktop .desktop-items-grid-4 {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    body.prefer-new-desktop .desktop-card {
+      padding: 30px 30px 25px 30px; /* Reduced padding for medium screens */
+    }
+
+    body.prefer-new-desktop .desktop-cita {
+      padding: 25px 30px;
+    }
+
+    body.prefer-new-desktop .desktop-new-wrapper h1 {
+      font-size: 26px !important;
+    }
+
+    body.prefer-new-desktop .desktop-new-wrapper h2,
+    body.prefer-new-desktop .desktop-card h2 {
+      font-size: 22px !important;
+    }
+  }
+
+  /* Tablet landscape (landscape orientation) - Fine-tune for tablets in landscape */
+  @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    body.prefer-new-desktop .desktop-section-grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+}
+
+/* ==========================================
+   PRINT STYLES
+   ========================================== */
+
+@media print {
+  body.prefer-new-desktop {
+    background: white !important;
+    background-image: none !important;
+  }
+
+  body.prefer-new-desktop .desktop-new-wrapper {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  body.prefer-new-desktop .desktop-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
+/* ==========================================
+   HIDE NEW CONTENT IN OLD LAYOUT
+   ========================================== */
+
+body.prefer-old-desktop #desktop-noticias-new {
+  display: none !important;
+}
+
+body.prefer-new-desktop #desktop-noticias {
+  display: none !important;
+}
+
+/* ==========================================
+   BUTTONS FOR OLD DESKTOP LAYOUT
+   ========================================== */
+
+/* Botones en versión antigua desktop */
+@media screen and (min-width: 768px) {
+  body.prefer-old-desktop .mobile-contact-buttons {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 15px !important;
+    margin: 20px 0 !important;
+  }
+
+  body.prefer-old-desktop .contact-button,
+  body.prefer-old-desktop a.contact-button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 160px !important;
+    padding: 10px 20px !important;
+    border-radius: 30px !important;
+    text-decoration: none !important;
+    transition: transform 0.15s ease-out, box-shadow 0.15s ease-out !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    font-family: 'Lato', Helvetica, Arial, sans-serif !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    color: white !important;
+  }
+
+  body.prefer-old-desktop .contact-button:hover,
+  body.prefer-old-desktop a.contact-button:hover {
+    transform: scale(0.97) !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2) !important;
+    color: white !important;
+  }
+
+  body.prefer-old-desktop .contact-button:active,
+  body.prefer-old-desktop a.contact-button:active {
+    transform: scale(0.92) !important;
+    transition: transform 0.1s ease-in !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  body.prefer-old-desktop .contact-button.phone-button,
+  body.prefer-old-desktop a.contact-button.phone-button {
+    background: linear-gradient(to bottom, #fa460a 0%, #ffa83d 100%) !important;
+  }
+
+  body.prefer-old-desktop .contact-button.whatsapp-button,
+  body.prefer-old-desktop a.contact-button.whatsapp-button {
+    background: linear-gradient(to bottom, #4e9c5d 0%, #6be883 100%) !important;
+  }
+
+  body.prefer-old-desktop .contact-button span,
+  body.prefer-old-desktop a.contact-button span {
+    text-decoration: none !important;
+    color: white !important;
+  }
+}
+
+/* ==========================================
+   DESKTOP SLIDERS (Terapias y Libros)
+   ========================================== */
+
+body.prefer-new-desktop .desktop-slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 20px 0 !important;
+}
+
+body.prefer-new-desktop .desktop-slider {
+  display: flex;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+body.prefer-new-desktop .desktop-slide {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Slider de Terapias */
+body.prefer-new-desktop .terapias-slide img {
+  width: 300px !important;
+  height: 400px !important;
+  object-fit: contain !important;
+  display: block !important;
+  margin: 0 auto 20px auto !important;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+body.prefer-new-desktop .terapia-description {
+  text-align: center !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  color: #333 !important;
+  padding: 0 40px !important;
+  margin: 0 !important;
+}
+
+body.prefer-new-desktop .terapia-description strong {
+  color: #AC1429 !important;
+}
+
+/* Slider de Libros */
+body.prefer-new-desktop .libros-slide img {
+  width: 280px !important;
+  height: 380px !important;
+  object-fit: contain !important;
+  display: block !important;
+  margin: 0 auto 20px auto !important;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+body.prefer-new-desktop .libros-slide a:hover img {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+body.prefer-new-desktop .libros-slide h3 {
+  font-size: 20px !important;
+  margin: 15px 0 10px !important;
+  color: #AC1429 !important;
+  text-align: center !important;
+  font-weight: bold !important;
+}
+
+body.prefer-new-desktop .libro-description {
+  text-align: center !important;
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+  color: #666 !important;
+  padding: 0 60px !important;
+  margin: 0 !important;
+}
+
+/* Controles del slider (dots) */
+body.prefer-new-desktop .slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+body.prefer-new-desktop .slider-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #E5E5E5;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+body.prefer-new-desktop .slider-dot.active {
+  background: linear-gradient(to bottom, #AC1429, #C23750);
+  width: 32px;
+  border-radius: 6px;
+}
+
+body.prefer-new-desktop .slider-dot:hover {
+  background: #B8860B;
+}
+
+/* ==========================================
+   SIDEBAR + MAIN CONTENT LAYOUT
+   ========================================== */
+
+/* Wrapper con sidebar + main content */
+body.prefer-new-desktop .desktop-new-wrapper {
+  display: flex;
+  gap: 0; /* Sin gap por defecto */
+  max-width: 1200px; /* Ancho original cuando sidebar no visible */
+  margin: 0 auto;
+  padding: 40px 20px; /* Padding original */
+  background-color: #FFFFFF;
+  position: relative;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  transition: gap 0.5s ease, max-width 0.5s ease, padding 0.5s ease;
+}
+
+/* Wrapper más ancho cuando sidebar está activo */
+body.prefer-new-desktop .desktop-new-wrapper.sidebar-active {
+  gap: 40px;
+  max-width: 1600px; /* Más ancho para acomodar sidebar + contenido */
+  padding: 40px 20px;
+}
+
+/* Main content area (ocupa el espacio restante) */
+body.prefer-new-desktop .desktop-main-content {
+  flex: 1;
+  min-width: 0; /* Permite que el contenido se encoja */
+  transition: margin-left 0.5s ease;
+}
+
+/* ==========================================
+   SIDEBAR TOGGLE BUTTON
+   ========================================== */
+
+body.prefer-new-desktop .sidebar-toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: linear-gradient(to bottom, #AC1429, #D4526E);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(172, 20, 41, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(20px);
+  transition: all 0.4s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+body.prefer-new-desktop .sidebar-toggle-btn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+body.prefer-new-desktop .sidebar-toggle-btn.active {
+  background: linear-gradient(to bottom, #8B1021, #C23750);
+}
+
+body.prefer-new-desktop .sidebar-toggle-btn:hover {
+  background: linear-gradient(to bottom, #8B1021, #C23750);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(172, 20, 41, 0.4);
+}
+
+body.prefer-new-desktop .toggle-icon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+body.prefer-new-desktop .toggle-text {
+  font-size: 14px;
+}
+
+/* ==========================================
+   SIDEBAR (Navegación + Buscador)
+   ========================================== */
+
+body.prefer-new-desktop .desktop-sidebar {
+  width: 0;
+  flex-shrink: 0;
+  position: sticky;
+  top: 20px;
+  align-self: flex-start;
+  height: fit-content;
+  max-height: calc(100vh - 40px);
+  overflow: hidden; /* Oculta el contenido cuando width: 0 */
+  opacity: 0;
+  transition: width 0.5s ease, opacity 0.5s ease;
+}
+
+/* Sidebar visible cuando se activa por scroll */
+body.prefer-new-desktop .desktop-sidebar.visible {
+  width: 280px;
+  opacity: 1;
+  overflow-y: auto;
+}
+
+/* Navegación del sidebar */
+body.prefer-new-desktop .sidebar-nav {
+  background: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+body.prefer-new-desktop .sidebar-nav h3 {
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  color: #AC1429;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #E5E5E5;
+}
+
+body.prefer-new-desktop .sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body.prefer-new-desktop .sidebar-nav li {
+  margin: 0;
+}
+
+body.prefer-new-desktop .sidebar-nav a {
+  display: block;
+  padding: 10px 12px;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: #333;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+body.prefer-new-desktop .sidebar-nav a:hover {
+  background: rgba(172, 20, 41, 0.05);
+  color: #AC1429;
+  transform: translateX(5px);
+}
+
+/* Buscador del sidebar */
+body.prefer-new-desktop .sidebar-search {
+  background: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+body.prefer-new-desktop .sidebar-search h3 {
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  color: #AC1429;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 15px 0;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #E5E5E5;
+}
+
+body.prefer-new-desktop .sidebar-search form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+body.prefer-new-desktop .search-input {
+  width: 100%;
+  padding: 10px 12px;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  border: 1px solid #D0D0D0;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+body.prefer-new-desktop .search-input:focus {
+  outline: none;
+  border-color: #AC1429;
+}
+
+body.prefer-new-desktop .search-button {
+  padding: 10px 20px;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(to bottom, #AC1429, #D4526E);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+body.prefer-new-desktop .search-button:hover {
+  background: linear-gradient(to bottom, #8B1021, #C23750);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(172, 20, 41, 0.3);
+}
+
+/* ==========================================
+   ARTÍCULOS DESTACADOS
+   ========================================== */
+
+body.prefer-new-desktop .article-label {
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  color: #B8860B !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 10px 0 !important;
+  text-align: center;
+}
+
+body.prefer-new-desktop .article-image {
+  display: block;
+  width: 175px;
+  height: 175px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover;
+}
+
+body.prefer-new-desktop .article-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* ==========================================
+   RESPONSIVE - OCULTAR SIDEBAR EN TABLETS
+   ========================================== */
+
+@media screen and (max-width: 1200px) {
+  body.prefer-new-desktop .sidebar-toggle-btn {
+    display: none;
+  }
+
+  body.prefer-new-desktop .desktop-sidebar {
+    display: none;
+  }
+
+  body.prefer-new-desktop .desktop-new-wrapper {
+    display: block;
+  }
+
+  body.prefer-new-desktop .desktop-main-content {
+    width: 100%;
+  }
+}

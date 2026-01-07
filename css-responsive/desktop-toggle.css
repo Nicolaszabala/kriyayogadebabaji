@@ -1,0 +1,72 @@
+/*!
+ * Desktop Toggle Button Styles
+ * Version: 1.0.0
+ * Floating button for version switching
+ */
+
+/* ==========================================
+   FLOATING TOGGLE BUTTON (Desktop only)
+   ========================================== */
+
+@media screen and (min-width: 768px) {
+
+  .desktop-floating-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+
+    /* Sizing */
+    padding: 14px 32px;
+
+    /* Colors */
+    background: linear-gradient(to bottom, #AC1429 0%, #D4526E 100%);
+    color: white;
+
+    /* Typography */
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+
+    /* Border */
+    border: none;
+    border-radius: 30px;
+
+    /* Shadow */
+    box-shadow: 0 4px 16px rgba(172, 20, 41, 0.4);
+
+    /* Interaction */
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    /* Reset */
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .desktop-floating-toggle:hover {
+    background: linear-gradient(to bottom, #8B1021 0%, #C23750 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(172, 20, 41, 0.5);
+  }
+
+  .desktop-floating-toggle:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(172, 20, 41, 0.4);
+    transition: all 0.1s ease;
+  }
+
+  .desktop-floating-toggle:focus {
+    outline: 3px solid rgba(172, 20, 41, 0.3);
+    outline-offset: 2px;
+  }
+
+}
+
+/* Hide on mobile */
+@media screen and (max-width: 767px) {
+  .desktop-floating-toggle {
+    display: none !important;
+  }
+}

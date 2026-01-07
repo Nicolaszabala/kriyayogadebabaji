@@ -28,6 +28,10 @@
 <link rel="stylesheet" type="text/css" href="css-responsive/responsive.css" />
 <link rel="stylesheet" type="text/css" href="css-responsive/version-toggle.css" />
 <link rel="stylesheet" type="text/css" href="css-responsive/hamburger-menu.css" />
+
+<!-- CSS Desktop Responsive - NUEVO SISTEMA DESKTOP -->
+<link rel="stylesheet" type="text/css" href="css-responsive/desktop-responsive.css" />
+<link rel="stylesheet" type="text/css" href="css-responsive/desktop-toggle.css" />
 <style type="text/css">
 	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
 	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
@@ -3877,22 +3881,36 @@ de noticias2-->
 
 
     
-  </div><!-- de todaPaginaB-->             
+  </div><!-- de todaPaginaB-->
   </div><!-- de todaPagina-->
 
 
 </div><!-- de contenedor-->
+
+<!-- Contenedor para la NUEVA versión desktop (grid layout) -->
+<div id="desktop-noticias-new" style="display: none;">
+  <!-- El contenido será inyectado por desktop-content.js -->
+</div>
 
 <!--
   NOTA: El botón "Ver Versión Móvil" se crea dinámicamente en js/mobile-content.js
   mediante la función showWebVersionToggle() para asegurar el reload correcto.
 -->
 
+<!-- JavaScript para contenido unificado (carga PRIMERO) -->
+<script src="js/unified-content.js"></script>
+
 <!-- JavaScript para menú responsive -->
 <script src="js/menu-toggle.js"></script>
 
 <!-- JavaScript para contenido mobile personalizado -->
 <script src="js/mobile-content.js"></script>
+
+<!-- JavaScript para contenido desktop (NUEVO) -->
+<script src="js/desktop-content.js"></script>
+
+<!-- JavaScript para toggle desktop (NUEVO) -->
+<script src="js/desktop-toggle.js"></script>
 
 <!-- JavaScript para botón scroll to top -->
 <script src="js/scroll-to-top.js"></script>

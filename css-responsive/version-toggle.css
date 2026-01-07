@@ -246,3 +246,40 @@
   }
 
 }
+
+/* ========================================
+   DESKTOP VERSION CONTROL (>= 768px)
+   ======================================== */
+
+@media screen and (min-width: 768px) {
+
+  /* Por defecto: mostrar NUEVO, ocultar contenedor VIEJO completo */
+  body.prefer-new-desktop #contenedor {
+    display: none !important;
+  }
+
+  body.prefer-new-desktop #desktop-noticias-new {
+    display: block !important;
+  }
+
+  /* Cuando prefer-old-desktop: mostrar contenedor VIEJO, ocultar NUEVO */
+  body.prefer-old-desktop #contenedor {
+    display: block !important;
+  }
+
+  body.prefer-old-desktop #desktop-noticias-new {
+    display: none !important;
+  }
+
+  /* Siempre ocultar mobile en desktop */
+  #mobile-noticias {
+    display: none !important;
+  }
+
+  /* Ocultar menú hamburger en desktop */
+  .menu-toggle,
+  #menu .navbar-logo {
+    display: none !important;
+  }
+
+}
